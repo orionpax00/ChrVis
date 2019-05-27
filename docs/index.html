@@ -6,12 +6,24 @@
 		<style>
 			body { margin: 0; }
 			canvas { width: 100%; height: 100% }
+      #controls{
+        position:fixed;
+      }
 		</style>
     <script src="js/three.min.js"></script>
     <script src="js/WEBGL.js"></script>
     <script src="js/OrbitControls.js"></script>
 	</head>
 	<body>
+    <div id="controls">
+      <button type="button" name="Rotate" onclick="rotate()">
+        Rotate on
+      </button>
+      <br>
+      <button type="button" name="Rotate" onclick="rotateoff()">
+        Rotate off
+      </button>
+    </div>
 		<script>
       if( WEBGL.isWebGLAvailable() ){
         var scene = new THREE.Scene();
@@ -24,7 +36,7 @@
 
 
         var geometry0 = new THREE.Geometry()
-        geometry0.vertices = [new THREE.Vector3(3, 3, 3)];
+        geometry0.vertices = [new THREE.Vector3(3, 3, 3), new THREE.Vector3(-3, -3, -3)];
 
         // var spheres = [];
         // for (var i=0 ; i<geometry0.vertices.length ; i++){
@@ -40,12 +52,20 @@
         var sphereGeometry = new THREE.SphereGeometry(2,50,50);
         var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
         var sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
+        sphere.position.set(geometry0.vertices[1].x,
+                              geometry0.vertices[1].y,
+                              geometry0.vertices[1].z);
 
         var sphereMaterial2 = new THREE.MeshBasicMaterial({color: 0xffff00,opacity:1});
         var sphere2 = new THREE.Mesh(sphereGeometry,sphereMaterial2);
         sphere2.position.set(geometry0.vertices[0].x,
                               geometry0.vertices[0].y,
                               geometry0.vertices[0].z);
+
+        var gridXZ = new THREE.GridHelper(10, 1);
+        var axes = new THREE.AxesHelper(2);
+        scene.add(axes);
+        scene.add(gridXZ);
 
         scene.add(sphere);
         scene.add(sphere2);
@@ -55,16 +75,27 @@
         camera.position.set( 0, 20, 100 );
         controls.update();
 
-  			var animate = function () {
-  				requestAnimationFrame( animate );
-          sphere.rotation.x += 0.01;
-          sphere.rotation.y += 0.01;
 
+  			var render = function () {
+          requestAnimationFrame( render );
+          // controls.autoRotate(true);
+          controls.update();
           renderer.render( scene, camera );
   			};
+  			render();
 
-  			animate();
+        function rotate() {
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 30;
+            controls.update()
+        }
+
+        function rotateoff() {
+            controls.autoRotate = false;
+            controls.update()
+        }
       }
+
 
       else {
       	var warning = WEBGL.getWebGLErrorMessage();
