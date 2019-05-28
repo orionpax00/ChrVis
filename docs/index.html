@@ -62,6 +62,12 @@
                               geometry0.vertices[0].y,
                               geometry0.vertices[0].z);
 
+        var material = new THREE.LineBasicMaterial( { color: 0x0000ff,
+                                                      linewidth: 50,
+                                                      linecap:'round',
+                                                      linejoin:'round'} );
+        var line = new THREE.Line( geometry0, material );
+
         var gridXZ = new THREE.GridHelper(10, 1);
         var axes = new THREE.AxesHelper(2);
         scene.add(axes);
@@ -69,6 +75,7 @@
 
         scene.add(sphere);
         scene.add(sphere2);
+        scene.add(line);
 
 
         //controls.update() must be called after any manual changes to the camera's transform
