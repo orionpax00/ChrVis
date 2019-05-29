@@ -10,6 +10,10 @@
         position:fixed;
       }
 		</style>
+		<script
+	  src="https://code.jquery.com/jquery-3.4.1.js"
+	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	  crossorigin="anonymous"></script>
     <script src="js/three.min.js"></script>
     <script src="js/WebGL.js"></script>
     <script src="js/OrbitControls.js"></script>
@@ -25,11 +29,37 @@
       </button>
     </div>
 		<script>
-      if( WEBGL.isWebGLAvailable() ){
-        var scene = new THREE.Scene();
+
+      if( WEBGL.isWebGLAvailable()) {
+
+				var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
         var controls = new THREE.OrbitControls( camera );
         var renderer = new THREE.WebGLRenderer();
+
+				var geometry = new THREE.Geometry()
+				geometry.vertices = [];
+				console.log("Visiting https://raw.githubusercontent.com/orionpax00/ChrVis/master/docs/data/model.136.xyz?token=AIUYHSNGDSFBQZRRZNSEAGS465ZDW ...")
+				jQuery.get('https://raw.githubusercontent.com/orionpax00/ChrVis/master/docs/data/model.136.xyz?token=AIUYHSNGDSFBQZRRZNSEAGS465ZDW', function(data) {
+								var chrdata = data;
+								// console.log(myvar)
+								var lines = chrdata.split("\n")
+								// console.log(lines)
+								lines = lines.filter(function(line){return line})
+								// console.log(lines)
+
+								for (var i=0; i < lines.length - 1; ++i){
+									// console.log(lines[i].split(/\s/))
+
+									if (lines[i].split(/\s/)[0] !== '#'){
+										list_ = lines[i].split(/\s/);
+										// console.log(list_[2]);
+										var chr_center = new THREE.Vector3(parseFloat(list_[2])/100, parseFloat(list_[3])/100, parseFloat(list_[4])/100)
+										geometry.vertices.push(chr_center)
+										// console.log("dbhsdbhj")
+
+										}
+									}
 
         renderer.setSize( window.innerWidth, window.innerHeight );
         document.body.appendChild( renderer.domElement );
@@ -38,32 +68,33 @@
         var geometry0 = new THREE.Geometry()
         geometry0.vertices = [new THREE.Vector3(3, 3, 3), new THREE.Vector3(-3, -3, -3)];
 
-        var sphereGeometry = new THREE.SphereGeometry(2,50,50);
+        var sphereGeometry = new THREE.SphereGeometry(1,50,50);
         var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
-        var sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
-        sphere.position.set(geometry0.vertices[1].x,
-                              geometry0.vertices[1].y,
-                              geometry0.vertices[1].z);
-
-        var sphereMaterial2 = new THREE.MeshBasicMaterial({color: 0xffff00,opacity:1});
-        var sphere2 = new THREE.Mesh(sphereGeometry,sphereMaterial2);
-        sphere2.position.set(geometry0.vertices[0].x,
-                              geometry0.vertices[0].y,
-                              geometry0.vertices[0].z);
-
-        var material = new THREE.LineBasicMaterial( { color: 0x0000ff,
+				var material = new THREE.LineBasicMaterial( { color: 0x0000ff,
                                                       linewidth: 50,
                                                       linecap:'round',
                                                       linejoin:'round'} );
-        var line = new THREE.Line( geometry0, material );
+        var line = new THREE.Line( geometry, material );
+
+				for (var j = 0; j <geometry.vertices.length -1; ++j){
+					var allsphers = [ ];
+					allsphers[j] = new THREE.Mesh(sphereGeometry,sphereMaterial);
+	        allsphers[j].position.x = geometry.vertices[j].x;
+					allsphers[j].position.y = geometry.vertices[j].y;
+					allsphers[j].position.z = geometry.vertices[j].z;
+					scene.add(allsphers[j]);
+					allsphers[j].updateMatrix();
+ 				  allsphers[j].matrixAutoUpdate=false;
+
+				}
 
         var gridXZ = new THREE.GridHelper(10, 1);
         var axes = new THREE.AxesHelper(2);
         scene.add(axes);
         scene.add(gridXZ);
 
-        scene.add(sphere);
-        scene.add(sphere2);
+        // scene.add(sphere);
+        // scene.add(sphere2);
         scene.add(line);
 
 
@@ -78,7 +109,8 @@
           controls.update();
           renderer.render( scene, camera );
   			};
-  			render();
+				//uncoment thisline to for visulisation
+				render()
 
         function rotate() {
             controls.autoRotate = true;
@@ -90,6 +122,16 @@
             controls.autoRotate = false;
             controls.update()
         }
+				});
+				function rotate() {
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 30;
+            controls.update()
+        }
+				function rotateoff() {
+            controls.autoRotate = false;
+            controls.update()
+        }
       }
 
 
@@ -98,5 +140,6 @@
       	document.getElementById( 'container' ).appendChild( warning );
       }
 		</script>
+
 	</body>
 </html>
