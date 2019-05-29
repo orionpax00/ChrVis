@@ -11,7 +11,7 @@
       }
 		</style>
     <script src="js/three.min.js"></script>
-    <script src="js/WEBGL.js"></script>
+    <script src="js/WebGL.js"></script>
     <script src="js/OrbitControls.js"></script>
 	</head>
 	<body>
@@ -37,17 +37,6 @@
 
         var geometry0 = new THREE.Geometry()
         geometry0.vertices = [new THREE.Vector3(3, 3, 3), new THREE.Vector3(-3, -3, -3)];
-
-        // var spheres = [];
-        // for (var i=0 ; i<geometry0.vertices.length ; i++){
-        //   var sphereGeometry = new THREE.SphereGeometry(0.2,10,10);
-        //   var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
-        //   var spheres[i] = new THREE.Mesh(sphereGeometry,sphereMaterial);
-        //   spheres[i].position.set(geometry0.vertices[i].x,
-        //                       geometry0.vertices[i].y,
-        //                       geometry0.vertices[i].z);
-        //   scene.add(spheres[i]);
-        // }
 
         var sphereGeometry = new THREE.SphereGeometry(2,50,50);
         var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});

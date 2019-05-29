@@ -1,0 +1,6 @@
+docs/data/matrix_files/*
+
+.DS_Store
+
+docs/data/.DS_Store
+docs/.DS_Store
