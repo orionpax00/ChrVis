@@ -27,6 +27,10 @@
       <button type="button" name="Rotate" onclick="rotateoff()">
         Rotate off
       </button>
+			<br>
+      <button type="button" name="Rotate" onclick="rotateoff()">
+        Off atoms
+      </button>
     </div>
 		<script>
 
@@ -128,6 +132,11 @@
             controls.autoRotateSpeed = 30;
             controls.update()
         }
+				function rotateoff() {
+            controls.autoRotate = false;
+            controls.update()
+        }
+
 				function rotateoff() {
             controls.autoRotate = false;
             controls.update()
