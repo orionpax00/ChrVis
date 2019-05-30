@@ -7,8 +7,15 @@
 			body { margin: 0; }
 			canvas { width: 100%; height: 100% }
       #controls{
-        position:fixed;
+        position:absolute;
       }
+			#tooltip_id{
+				position: fixed;
+				right: 100px
+			}
+			#tooltip_id span{
+				color:#fff
+			}
 		</style>
 		<script
 	  src="https://code.jquery.com/jquery-3.4.1.js"
@@ -20,6 +27,12 @@
 		<script src="js/Raycaster.js"></script>
 	</head>
 	<body>
+		<div id=tooltip_id>
+			<div id="tooltip-div">
+				<span>Name:</span>
+				<span id="tooltip-name"></span>
+			</div>
+		</div>
     <div id="controls">
       <button type="button" name="Rotate" onclick="rotate()">
         Rotate on
@@ -33,6 +46,7 @@
         Off atoms
       </button>
     </div>
+
 		<script>
 
       if( WEBGL.isWebGLAvailable()) {
@@ -41,6 +55,7 @@
         var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
         var controls = new THREE.OrbitControls( camera );
         var renderer = new THREE.WebGLRenderer();
+
 
 				var geometry = new THREE.Geometry()
 				geometry.vertices = [];
@@ -97,8 +112,8 @@
 
         var gridXZ = new THREE.GridHelper(10, 1);
         var axes = new THREE.AxesHelper(2);
-        scene.add(axes);
-        scene.add(gridXZ);
+        // scene.add(axes);
+        // scene.add(gridXZ);
 
         // scene.add(sphere);
         // scene.add(sphere2);
@@ -136,17 +151,21 @@
 				    var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
 				    var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
 
-				    console.log(mouseYOnMouseDown)
-						var text2 = document.createElement('div');
-						text2.style.position = 'absolute';
-						//text2.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
-						text2.style.width = 100;
-						text2.style.height = 100;
-						text2.style.backgroundColor = "blue";
-						text2.innerHTML = "hi there!";
-						text2.style.top = event.clientY + 'px';
-						text2.style.left = event.clientX + 'px';
-						document.body.appendChild(text2);
+						// console.log(intersects);
+
+						var istooltipexist = document.getElementById('tooltip-name');
+						if(intersects.length>0){
+							// console.log(intersects[0].object.name);
+							if (intersects[0].object.name === 'chr1'){
+								istooltipexist.innerHTML = "chr1";
+							}
+							if (intersects[0].object.name === 'chr1'){
+								istooltipexist.innerHTML = "chr1";
+							}
+						}
+						else{
+							istooltipexist.innerHTML = "";
+						}
 
 				}
 
