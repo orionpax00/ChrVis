@@ -138,6 +138,7 @@
 				render()
 
 				});
+				var intersected = [];
 				function onDocumentMouseMove(event) {
 
 				    event.preventDefault();
@@ -152,15 +153,21 @@
 				    var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
 
 						// console.log(intersects);
+						var setsphereGeometry = new THREE.SphereGeometry(2,50,50);
+						var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
+		        var setsphereMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff,opacity:1});
 
 						var istooltipexist = document.getElementById('tooltip-name');
+
 						if(intersects.length>0){
 							// console.log(intersects[0].object.name);
 							if (intersects[0].object.name === 'chr1'){
+								if (intersected.length > 0) {
+									intersected[0].object.material = sphereMaterial;
+								}
 								istooltipexist.innerHTML = "chr1";
-							}
-							if (intersects[0].object.name === 'chr1'){
-								istooltipexist.innerHTML = "chr1";
+								intersects[0].object.material = setsphereMaterial;
+								intersected[0] = intersects[0];
 							}
 						}
 						else{
