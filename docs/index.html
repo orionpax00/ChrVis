@@ -17,6 +17,7 @@
     <script src="js/three.min.js"></script>
     <script src="js/WebGL.js"></script>
     <script src="js/OrbitControls.js"></script>
+		<script src="js/Raycaster.js"></script>
 	</head>
 	<body>
     <div id="controls">
@@ -74,6 +75,7 @@
 
         var sphereGeometry = new THREE.SphereGeometry(1,50,50);
         var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
+				var setsphereMaterial = new THREE.MeshPhongMaterial( { color: 0x00d9ff } );
 				var material = new THREE.LineBasicMaterial( { color: 0x0000ff,
                                                       linewidth: 50,
                                                       linecap:'round',
@@ -86,6 +88,7 @@
 	        allsphers[j].position.x = geometry.vertices[j].x;
 					allsphers[j].position.y = geometry.vertices[j].y;
 					allsphers[j].position.z = geometry.vertices[j].z;
+					allsphers[j].name = "chr1"
 					scene.add(allsphers[j]);
 					allsphers[j].updateMatrix();
  				  allsphers[j].matrixAutoUpdate=false;
@@ -100,6 +103,9 @@
         // scene.add(sphere);
         // scene.add(sphere2);
         scene.add(line);
+
+				document.addEventListener('mousedown', onDocumentMouseDown, false);
+				document.addEventListener('mousemove', onDocumentMouseMove, false);
 
 
         //controls.update() must be called after any manual changes to the camera's transform
@@ -116,17 +122,52 @@
 				//uncoment thisline to for visulisation
 				render()
 
-        function rotate() {
-            controls.autoRotate = true;
-            controls.autoRotateSpeed = 30;
-            controls.update()
-        }
-
-        function rotateoff() {
-            controls.autoRotate = false;
-            controls.update()
-        }
 				});
+				function onDocumentMouseMove(event) {
+
+				    event.preventDefault();
+
+						mouseYOnMouseDown = - ( event.clientY / window.innerHeight ) * 2 + 1
+				    mouseXOnMouseDown = ( event.clientX / window.innerWidth ) * 2 - 1;
+
+				    var vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
+				    vector = vector.unproject(camera);
+
+				    var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+				    var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
+
+				    console.log(mouseYOnMouseDown)
+						var text2 = document.createElement('div');
+						text2.style.position = 'absolute';
+						//text2.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
+						text2.style.width = 100;
+						text2.style.height = 100;
+						text2.style.backgroundColor = "blue";
+						text2.innerHTML = "hi there!";
+						text2.style.top = event.clientY + 'px';
+						text2.style.left = event.clientX + 'px';
+						document.body.appendChild(text2);
+
+				}
+
+
+				function onDocumentMouseDown(event) {
+
+				    event.preventDefault();
+
+				    mouseYOnMouseDown = - ( event.clientY / window.innerHeight ) * 2 + 1
+				    mouseXOnMouseDown = ( event.clientX / window.innerWidth ) * 2 - 1;
+
+				    var vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
+				    vector = vector.unproject(camera);
+
+				    var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+				    var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
+
+				    // console.log(intersects)
+
+				}
+
 				function rotate() {
             controls.autoRotate = true;
             controls.autoRotateSpeed = 30;
