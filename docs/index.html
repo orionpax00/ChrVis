@@ -25,6 +25,11 @@
     <script src="js/WebGL.js"></script>
     <script src="js/OrbitControls.js"></script>
 		<script src="js/Raycaster.js"></script>
+		<script src='js/LineSegmentsGeometry.js'></script>
+		<script src='js/LineSegments2.js'></script>
+		<script src='js/LineGeometry.js'></script>
+		<script src='js/LineMaterial.js'></script>
+		<script src='js/Line2.js'></script>
 	</head>
 	<body>
 		<div id=tooltip_id>
@@ -42,8 +47,22 @@
         Rotate off
       </button>
 			<br>
-      <button type="button" name="Rotate" onclick="rotateoff()">
-        Off atoms
+      <button type="button" name="Rotate" onclick="removelinetype()">
+        remove line type
+      </button>
+			<br>
+      <button type="button" name="Rotate" onclick="removeatomtype()">
+        off atom one by one
+      </button>
+
+			<br>
+      <button type="button" name="Rotate" onclick="removeatomtypeall()">
+        off atom all
+      </button>
+
+			<br>
+      <button type="button" name="Rotate" onclick="changelinetype()">
+        change line type
       </button>
     </div>
 
@@ -59,7 +78,9 @@
 
 				var geometry = new THREE.Geometry()
 				geometry.vertices = [];
+
 				console.log("Visiting https://raw.githubusercontent.com/orionpax00/ChrVis/master/docs/data/model.136.xyz?token=AIUYHSNGDSFBQZRRZNSEAGS465ZDW ...")
+
 				jQuery.get('https://raw.githubusercontent.com/orionpax00/ChrVis/master/docs/data/model.136.xyz?token=AIUYHSNGDSFBQZRRZNSEAGS465ZDW', function(data) {
 								var chrdata = data;
 								// console.log(myvar)
@@ -85,14 +106,13 @@
         document.body.appendChild( renderer.domElement );
 
 
-        var geometry0 = new THREE.Geometry()
-        geometry0.vertices = [new THREE.Vector3(3, 3, 3), new THREE.Vector3(-3, -3, -3)];
+
 
         var sphereGeometry = new THREE.SphereGeometry(1,50,50);
         var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
 				var setsphereMaterial = new THREE.MeshPhongMaterial( { color: 0x00d9ff } );
 				var material = new THREE.LineBasicMaterial( { color: 0x0000ff,
-                                                      linewidth: 50,
+                                                      linewidth: 5,
                                                       linecap:'round',
                                                       linejoin:'round'} );
         var line = new THREE.Line( geometry, material );
@@ -117,6 +137,7 @@
 
         // scene.add(sphere);
         // scene.add(sphere2);
+				line.name = "chr_line";
         scene.add(line);
 
 				document.addEventListener('mousedown', onDocumentMouseDown, false);
@@ -138,6 +159,69 @@
 				render()
 
 				});
+
+				function removelinetype(){
+					var selectedObject = scene.getObjectByName("chr_line");
+					scene.remove( selectedObject );
+				};
+				function removeatomtype(){
+					var selectedObject = scene.getObjectByName("chr1");
+					scene.remove( selectedObject )
+				}
+				function removeatomtypeall(){
+					while(scene.getObjectByName("chr1", 'true')){
+						var selectedObject = scene.getObjectByName("chr1");
+						scene.remove( selectedObject )
+
+					}
+				}
+				function changelinetype(){
+					removelinetype();
+				// 	var positions = [];
+				// 	var colors = [];
+				// 	var color = new THREE.Color();
+				// 	for (var i =0; i < geometry.vertices.length -1 ;++i ){
+				// 		positions.push(geometry.vertices[i].x/100,geometry.vertices[i].y/100,geometry.vertices[i].y/100)
+				// 		color.setHSL( i / geometry.vertices.length -1, 1.0, 0.5 );
+				// 		colors.push( color.r, color.g, color.b );
+				// 	}
+				// 	var geometry_update = new THREE.LineGeometry();
+				// 	geometry_update.setPositions(positions);
+				// 	geometry_update.setColors( colors );
+				// 	console.log(positions)
+				//
+				// 	matLine = new THREE.LineMaterial( {
+				//
+				// 	color: 0xfffff,
+				// 	linewidth: 1, // in pixels
+				// 	vertexColors: THREE.VertexColors,
+				// 	//resolution:  // to be set by renderer, eventually
+				// 	dashed: false
+				//
+				// } );
+				// line = new THREE.Line2( geometry_update, matLine );
+				// line.scale.set( 0, 20, 100 );
+				// scene.add( line );
+
+				var numpoints =100000,
+				spline = new THREE.CatmullRomCurve3(geometry.vertices)
+
+				var material = new THREE.LineBasicMaterial({
+				    color: 0xff00f0,
+						linewidth:5,
+				});
+
+				var geometry_ = new THREE.Geometry();
+				var splinePoints = spline.getPoints(numpoints);
+
+				for(var i = 0; i < splinePoints.length; i++){
+				    geometry_.vertices.push(splinePoints[i]);
+				}
+
+				var line = new THREE.Line(geometry_, material);
+				scene.add(line);
+
+				};
 				var intersected = [];
 				function onDocumentMouseMove(event) {
 
