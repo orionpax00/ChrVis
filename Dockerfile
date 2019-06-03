@@ -32,4 +32,12 @@ RUN apt-get update --fix-missing && \
     apt-get autoclean -y && \
     rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update --fix-missing && \
+    apt-get install -y locales python3 python3-pip && \
+    wget --quiet --no-check-certificate https://github.com/orionpax00/ChrVis/archive/version1.zip && \
+    cd ChrVis-version1 && \
+    pip3 install -r requirements.txt && \
+    cd chrvis-server && \
+    python3 manage.py runserver 9999
+
 CMD [ "/bin/bash" ]
