@@ -7,6 +7,10 @@ RUN apt-get update --fix-missing && \
     wget --quiet --no-check-certificate https://github.com/orionpax00/ChrVis/archive/version1.zip && unzip ChrVis-version1.zip && \
     cd ChrVis-version1 && \
     pip3 install -r requirements.txt && \
-    cd chrvis-server 
+    cd .. && rm -rf Chrvis-version1.zip && \
+    apt-get remove -y --purge unzip build-essential && \
+    apt-get autoremove -y && \
+    apt-get autoclean -y && \
+    rm -rf /var/lib/apt/lists/*
 
 CMD [ "/bin/bash" ]
