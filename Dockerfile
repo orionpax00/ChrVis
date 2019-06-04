@@ -7,7 +7,6 @@ RUN apt-get update --fix-missing && \
     wget --quiet --no-check-certificate https://github.com/orionpax00/ChrVis/archive/version1.zip && unzip ChrVis-version1.zip && \
     cd ChrVis-version1 && \
     pip3 install -r requirements.txt && \
-    cd chrvis-server && \
-    python3 manage.py runserver 9999
+    cd chrvis-server 
 
 CMD [ "/bin/bash" ]
