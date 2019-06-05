@@ -28,7 +28,7 @@ def submitjob(request):
                 password_ = ''.join(random.choice(string.ascii_lowercase) for i in range(6))
             else:
                 password_ = request.POST['password']
-            user = User.Objects.create_user(request.POST['email'].split('@')[0],request.POST['email'],password_)
+            user = User.objects.create_user(request.POST['email'].split('@')[0],request.POST['email'],password_)
             user.save()
             generate_str.run_file()
 
