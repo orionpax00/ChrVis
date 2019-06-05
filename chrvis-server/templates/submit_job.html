@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="container">
+    <div class="shadow bg-white rounded padding margin-top">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+     <div class="shadow-sm bg-white rounded">
+       <div class="row fieldset_form">
+         <b>Data Parameters</b>
+       </div>
+       <div class="form-row">
+         <div class="form-group col-md-11 mb-0 padding_left padding_top ">
+          {{ form.title|as_crispy_field }}
+        </div>
+      </div>
+    </div>
+
+    <div class="shadow-sm bg-white rounded">
+      <div class="row fieldset_form">
+        <b>Upload Files</b>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-0 padding_left padding_top">
+         {{ form.matrix_file|as_crispy_field }}
+       </div>
+       <div class="form-group col-md-6 mb-0 padding_top">
+        {{ form.annotation_file|as_crispy_field }}
+      </div>
+     </div>
+   </div>
+
+
+    <div class="shadow-sm bg-white rounded padding_bottom">
+      <div class="row fieldset_form">
+        <b>Authenticate</b>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-5 mb-0 padding_left padding_top">
+         {{ form.email|as_crispy_field }}
+         <div class="helper_text">
+           <span>File should be in same format as mentioned in documentation<span>
+         </div>
+       </div>
+       <div class="form-group col-md-1 mb-0">
+      </div>
+       <div class="form-group col-md-5 mb-0 padding_top">
+        {{ form.password|as_crispy_field }}
+        <div class="helper_text">
+          <span>File should be in same format as mentioned in documentation<span>
+        </div>
+      </div>
+     </div>
+   </div>
+   <button type="submit" class="btn btn-primary btn-lg btn-block margin-top">Upload</button>
+  </form>
+  <!-- <a href="{% url 'submitjob' %}"><button id="refresh button">Refresh</button></a> -->
+  <div>
+    </div>
+</div>
+
+  <p><a href="{% url 'submitjob' %}">Refresh</a></p>
+{% endblock %}

@@ -14,9 +14,12 @@ from .forms import DocumentForm
 
 # Create your views here.
 def homepage(request):
-    return HttpResponse("<H1>I'm back to my bussiness</H1>")
+    context={
+        'messsage':"You are not logged in"
+    }
+    return render(request,'index.html',context=context)
 
-def viewer(request):
+def submitjob(request):
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
@@ -41,7 +44,7 @@ def viewer(request):
             'email':"dkumar@ce.iitr.ac.in"
         }
         handleupload.maketmplocation(user_data)
-    return render(request, 'viewer.html',{'form':form})
+    return render(request, 'submit_job.html',{'form':form})
 
 def get_results(request):
     if request.method == 'POST':

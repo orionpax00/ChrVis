@@ -1,0 +1,60 @@
+.sidebar{
+  position:relative;
+  width:320px;
+  height:100vh;
+  background-color: #fff;
+}
+.logo{
+  height:80px;
+  width:320px;
+}
+.sidebar-bottom{
+  border-top:1px solid #dfdfdf;
+  height:50px;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:320px
+}
+
+.main_bar{
+  width:calc(100vw - 320px);
+  position:fixed;
+  height:100vh;
+  right:0px;
+  top:0px;
+  background: #f7f7f7;
+}
+
+/* Extra class styling */
+.align_center{
+  text-align: center;
+}
+.align_right{
+  text-align: right;
+}
+.margin_right{
+  margin-right: 4px;
+}
+
+.fieldset_form{
+  width:50%;
+  margin-left: 20px !important;
+  border-bottom:1px solid #dfdfdf;
+}
+.fieldset_form b{
+  font-size: 24px;
+}
+/* Font Awesome Icon styling */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.74); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

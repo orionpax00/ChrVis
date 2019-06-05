@@ -9,7 +9,7 @@ def user_directory_path_annot(instance, filename):
 
 
 class Document(models.Model):
-    description = models.CharField(max_length=255, blank=True)
+    title = models.CharField(max_length=255, blank=True)
     email = models.CharField(max_length=255, blank=True)
     password = models.CharField(max_length=255, blank=True)
     matrix_file = models.FileField(upload_to=user_directory_path_matrix)
