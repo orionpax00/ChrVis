@@ -10,6 +10,7 @@ import random
 
 from . import handleupload
 from . import generate_str
+from . import send_mail
 from .forms import DocumentForm
 
 # Create your views here.
@@ -36,6 +37,7 @@ def submitjob(request):
                 'username' : request.POST['email'].split('@')[0],
                 'password' : password_
             }
+            send_mail.send_mail()
             return render(request,'job_submitted.html' ,context=context)
     else:
         form = DocumentForm()
