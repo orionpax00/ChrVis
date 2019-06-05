@@ -3,6 +3,7 @@
 	<head>
 		<meta charset=utf-8>
 		<title>ChrVis</title>
+		<link rel="stylesheet" href="./css/color-picker.css">
 		<style>
 			body { margin: 0; }
 			canvas { width: 100%; height: 100% }
@@ -25,6 +26,7 @@
     <script src="js/WebGL.js"></script>
     <script src="js/OrbitControls.js"></script>
 		<script src="js/Raycaster.js"></script>
+		<script src="js/color-picker.min.js"></script>
 	</head>
 	<body>
 		<div id=tooltip_id>
@@ -59,11 +61,19 @@
       <button type="button" name="Rotate" onclick="changelinetype()">
         change line type
       </button>
+				<br>
+			<button type="button" name="Rotate" onclick="changetheme()">
+        change background color <input type="text">
+      </button>
+
     </div>
 
 		<script>
 
       if( WEBGL.isWebGLAvailable()) {
+
+				//color picker instance
+				var picker = new CP(document.querySelector('input[type="text"]'));
 
 				var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -76,7 +86,7 @@
 
 				console.log("Visiting https://raw.githubusercontent.com/orionpax00/ChrVis/master/docs/data/model.136.xyz?token=AIUYHSNGDSFBQZRRZNSEAGS465ZDW ...")
 
-				jQuery.get('https://raw.githubusercontent.com/orionpax00/ChrVis/master/docs/data/model.136.xyz?token=AIUYHSNGDSFBQZRRZNSEAGS465ZDW', function(data) {
+				jQuery.get('https://raw.githubusercontent.com/primus00/jsonhost/master/model.136.xyz', function(data) {
 								var chrdata = data;
 								// console.log(myvar)
 								var lines = chrdata.split("\n")
@@ -233,7 +243,7 @@
 						// console.log(intersects);
 						var setsphereGeometry = new THREE.SphereGeometry(2,50,50);
 						var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
-		        var setsphereMaterial = new THREE.MeshBasicMaterial({color: 0xff00ff,opacity:1});
+		        var setsphereMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00,opacity:1});
 
 						var istooltipexist = document.getElementById('tooltip-name');
 
@@ -286,6 +296,11 @@
             controls.autoRotate = false;
             controls.update()
         }
+				picker.set('rgb(0, 0, 0)');
+				picker.on("change", function(color_) {
+							scene.background = new THREE.Color("#"+ color_ );
+					});
+				// scene.background = new THREE.Color( 0x000000 );
       }
 
 
@@ -293,6 +308,10 @@
       	var warning = WEBGL.getWebGLErrorMessage();
       	document.getElementById( 'container' ).appendChild( warning );
       }
+		</script>
+
+		<!-- General function not related to threejs -->
+		<script>
 		</script>
 
 	</body>
