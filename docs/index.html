@@ -83,25 +83,27 @@
 
 				var geometry = new THREE.Geometry()
 				geometry.vertices = [];
+				var data_loc = 'https://raw.githubusercontent.com/primus00/jsonhost/master/dummy_chromatin_str.txt';
+				var_data_small = 'https://raw.githubusercontent.com/primus00/jsonhost/master/model.136.xyz';
 
-				console.log("Visiting https://raw.githubusercontent.com/orionpax00/ChrVis/master/docs/data/model.136.xyz?token=AIUYHSNGDSFBQZRRZNSEAGS465ZDW ...")
-
-				jQuery.get('https://raw.githubusercontent.com/primus00/jsonhost/master/model.136.xyz', function(data) {
+				jQuery.get(data_loc, function(data) {
 								var chrdata = data;
-								// console.log(myvar)
+								// console.log(chrdata)
 								var lines = chrdata.split("\n")
 								// console.log(lines)
 								lines = lines.filter(function(line){return line})
 								// console.log(lines)
 
-								for (var i=0; i < lines.length - 1; ++i){
+								for (var i=1; i < lines.length - 1; ++i){
 									// console.log(lines[i].split(/\s/))
 
 									if (lines[i].split(/\s/)[0] !== '#'){
 										list_ = lines[i].split(/\s/);
 										// console.log(list_[2]);
-										var chr_center = new THREE.Vector3(parseFloat(list_[2])/100, parseFloat(list_[3])/100, parseFloat(list_[4])/100)
-										geometry.vertices.push(chr_center)
+										if (parseInt(list_[0]) === 1){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry.vertices.push(chr_center)
+											}
 										// console.log("dbhsdbhj")
 
 										}
@@ -182,32 +184,6 @@
 				}
 				function changelinetype(){
 					removelinetype();
-				// 	var positions = [];
-				// 	var colors = [];
-				// 	var color = new THREE.Color();
-				// 	for (var i =0; i < geometry.vertices.length -1 ;++i ){
-				// 		positions.push(geometry.vertices[i].x/100,geometry.vertices[i].y/100,geometry.vertices[i].y/100)
-				// 		color.setHSL( i / geometry.vertices.length -1, 1.0, 0.5 );
-				// 		colors.push( color.r, color.g, color.b );
-				// 	}
-				// 	var geometry_update = new THREE.LineGeometry();
-				// 	geometry_update.setPositions(positions);
-				// 	geometry_update.setColors( colors );
-				// 	console.log(positions)
-				//
-				// 	matLine = new THREE.LineMaterial( {
-				//
-				// 	color: 0xfffff,
-				// 	linewidth: 1, // in pixels
-				// 	vertexColors: THREE.VertexColors,
-				// 	//resolution:  // to be set by renderer, eventually
-				// 	dashed: false
-				//
-				// } );
-				// line = new THREE.Line2( geometry_update, matLine );
-				// line.scale.set( 0, 20, 100 );
-				// scene.add( line );
-
 				var numpoints =100000,
 				spline = new THREE.CatmullRomCurve3(geometry.vertices)
 
@@ -252,6 +228,7 @@
 							if (intersects[0].object.name === 'chr1'){
 								if (intersected.length > 0) {
 									intersected[0].object.material = sphereMaterial;
+									// console.log(mouseYOnMouseDown, mouseXOnMouseDown)
 								}
 								istooltipexist.innerHTML = "chr1";
 								intersects[0].object.material = setsphereMaterial;
