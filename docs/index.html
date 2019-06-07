@@ -77,7 +77,7 @@
 
 				var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
-        var controls = new THREE.OrbitControls( camera );
+        var controls = new THREE.OrbitControls( camera, renderer.domElement);
         var renderer = new THREE.WebGLRenderer();
 
 
