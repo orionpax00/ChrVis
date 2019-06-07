@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: bash -c "python chrvis-server/manage.py makemigrations && python chrvis-server/manage.py migrate && python chrvis-server/manage.py runserver 0.0.0.0:8000"
+    container_name: chrvis
+    volumes:
+      - .:/chrvis/
+    ports:
+      - "8000:8000"
