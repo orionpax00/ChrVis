@@ -7,6 +7,10 @@ class DocumentForm(forms.ModelForm):
     class Meta:
         model = Document
         fields = ('title', 'matrix_file','annotation_file','email','password' )
+        widgets = {
+            # telling Django your password field in the mode is a password input on the template
+            'password': forms.PasswordInput()
+        }
 
     def __init__(self, *args, **kwargs):
         super(DocumentForm, self).__init__(*args, **kwargs)
