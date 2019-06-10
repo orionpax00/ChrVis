@@ -37,7 +37,7 @@ def submitjob(request):
                 'username' : request.POST['email'].split('@')[0],
                 'password' : password_
             }
-            # task.sendMail.delay()
+            task.sendMail.delay()
             return render(request,'job_submitted.html' ,context=context)
     else:
         form = DocumentForm()
