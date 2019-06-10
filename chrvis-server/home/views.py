@@ -8,9 +8,9 @@ from django.contrib.auth import authenticate
 import string
 import random
 
+from . import task
 from . import handleupload
 from . import generate_str
-from . import send_mail
 from .forms import DocumentForm
 
 # Create your views here.
@@ -31,13 +31,13 @@ def submitjob(request):
                 password_ = request.POST['password']
             user = User.objects.create_user(request.POST['email'].split('@')[0],request.POST['email'],password_)
             user.save()
-            generate_str.run_file()
+            # generate_str.run_file()
 
             context = {
                 'username' : request.POST['email'].split('@')[0],
                 'password' : password_
             }
-            send_mail.send_mail()
+            task.sendMail.delay()
             return render(request,'job_submitted.html' ,context=context)
     else:
         form = DocumentForm()
