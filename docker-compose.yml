@@ -9,3 +9,7 @@ services:
       - .:/chrvis/
     ports:
       - "8000:8000"
+    depends_on:
+      - rabbitmq
+  rabbitmq:
+    image: rabbitmq:3.7-alpine
