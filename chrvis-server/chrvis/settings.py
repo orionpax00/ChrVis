@@ -26,7 +26,7 @@ SECRET_KEY = 'x6gw^7j6gq6w^^8t0##n2ogwaqra1o0)7y1(+8k^asyu8=r@=#'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# broker_url = 'amqp://guest:guest@rabbitmq:5672//'
 
 # Application definition
 
