@@ -38,6 +38,13 @@
 			</div>
 		</div>
     <div id="controls">
+
+
+			<button type="button" name="Rotate" onclick="try_()">
+        Try
+      </button>
+
+
       <button type="button" name="Rotate" onclick="rotate()">
         Rotate on
       </button>
@@ -209,12 +216,19 @@
 				//color picker instance
 				var picker = new CP(document.querySelector('input[type="text"]'));
 
+
+
+        var renderer = new THREE.WebGLRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
 				var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.001, 1000 );
-        var controls = new THREE.OrbitControls( camera);
-        var renderer = new THREE.WebGLRenderer();
+				// var camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 0.001, 10000 );
+        var controls = new THREE.OrbitControls( camera,renderer.domElement );
+				controls.zoomSpeed = 0.5;
 
-				var sphereGeometry = new THREE.SphereGeometry(1,50,50);
+				var sphereGeometry = new THREE.SphereGeometry(0.1,5,5);
+				var setsphereMaterial = new THREE.MeshPhongMaterial( { color: 0x00d9ff } );
 
 				var sphere_materials = new Array();
 				var allspheres = new Array();
@@ -282,8 +296,6 @@
 
 									if (lines[i].split(/\s/)[0] !== '#'){
 										list_ = lines[i].split(/\s/);
-										// console.log(list_[2]);
-										console.log(parseInt(list_[0]));
 										if (parseInt(list_[0]) === 1){
 												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
 												geometry_chr1.vertices.push(chr_center)
@@ -401,8 +413,7 @@
 					geometry_chr22,
 				]);
 
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        document.body.appendChild( renderer.domElement );
+
 
 
 
@@ -461,7 +472,6 @@
                                                       linewidth: 5,
                                                       linecap:'round',
                                                       linejoin:'round'} );
-
 
         var line_chr1 = new THREE.Line( geometry_chr1, sphereMaterial_chr1 );
 				line_chr1.name = "Chromosome 1";
@@ -559,7 +569,7 @@
 	        allspheres_.position.x = geometry_chr1.vertices[j].x;
 					allspheres_.position.y = geometry_chr1.vertices[j].y;
 					allspheres_.position.z = geometry_chr1.vertices[j].z;
-					allspheres_.name = "#Chr";
+					allspheres_.name = "Chromosome 1 Atom no."+j;
 					allspheres_.userData = {annotation : "Chromosome 1 Atom no."+j, chrnum : 1};
 					allspheres.push(allspheres_)
 					scene.add(allspheres_);
@@ -874,7 +884,7 @@
 
 
         //controls.update() must be called after any manual changes to the camera's transform
-        camera.position.set( 30, 20, 10 );
+        camera.position.set( 0, 120, 0 );
         controls.update();
 
 
@@ -990,7 +1000,7 @@
 							console.log(intersects[0].object.name.slice(0,11));
 							if (intersects[0].object.name === '#Chr'){
 								if (intersected.length > 0) {
-									console.log(intersects[0].object.userData.chrnum);
+									console.log(intersects[0]);
 									intersected[0].object.material = sphere_materials[0][parseInt(intersects[0].object.userData.chrnum)-1];
 									// console.log(mouseYOnMouseDown, mouseXOnMouseDown)
 								}
@@ -1037,6 +1047,15 @@
             controls.autoRotate = false;
             controls.update()
         }
+
+				function try_() {
+					var selectedObject = scene.getObjectByName("Chromosome 1 Atom no.1",true);
+					// scene.remove( selectedObject )
+					console.log(selectedObject)
+					camera.position.sub(selectedObject.position).setLength(10).add(selectedObject.position);
+					selectedObject.geometry.boundingSphere.radius = 5;
+        }
+
 				picker.set('rgb(0, 0, 0)');
 				picker.on("change", function(color_) {
 							scene.background = new THREE.Color("#"+ color_ );
