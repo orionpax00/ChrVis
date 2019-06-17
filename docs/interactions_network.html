@@ -1,0 +1,29 @@
+<html>
+<head>
+<style type="text/css">
+  #container {
+    max-width: 100vw;
+    height: 100vh;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
+<div id="container"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.parsers.json.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.parsers.gexf.min.js"></script>
+<script>
+  sigma.parsers.gexf('test.gexf', {
+    container: 'container',
+    settings: {
+      defaultNodeColor: '#ec5148'
+    }
+
+
+
+
+  });
+</script>
+</body>
+</html>

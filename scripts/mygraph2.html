@@ -1,0 +1,229 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1000px;
+            height: 1000px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+        #loadingBar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width: 1000px;
+            height: 1000px;
+            background-color:rgba(200,200,200,0.8);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            opacity:1;
+        }
+
+        #bar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:20px;
+            height:20px;
+            margin:auto auto auto auto;
+            border-radius:11px;
+            border:2px solid rgba(30,30,30,0.05);
+            background: rgb(0, 173, 246); /* Old browsers */
+            box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+        }
+
+        #border {
+            position:absolute;
+            top:10px;
+            left:10px;
+            width:500px;
+            height:23px;
+            margin:auto auto auto auto;
+            box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+            border-radius:10px;
+        }
+
+        #text {
+            position:absolute;
+            top:8px;
+            left:530px;
+            width:30px;
+            height:50px;
+            margin:auto auto auto auto;
+            font-size:22px;
+            color: #000000;
+        }
+
+        div.outerBorder {
+            position:relative;
+            top:400px;
+            width:600px;
+            height:44px;
+            margin:auto auto auto auto;
+            border:8px solid rgba(0,0,0,0.1);
+            background: rgb(252,252,252); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+            border-radius:72px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+<div id="loadingBar">
+    <div class="outerBorder">
+        <div id="text">0%</div>
+        <div id="border">
+            <div id="bar"></div>
+        </div>
+    </div>
+</div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "chr_1_5048", "label": "chr_1_5048", "shape": "dot", "title": "chr_1_5048"}, {"id": "chr_8_2548", "label": "chr_8_2548", "shape": "dot", "title": "chr_8_2548"}, {"id": "chr_11_766", "label": "chr_11_766", "shape": "dot", "title": "chr_11_766"}, {"id": "chr_5_718", "label": "chr_5_718", "shape": "dot", "title": "chr_5_718"}, {"id": "chr_5_438", "label": "chr_5_438", "shape": "dot", "title": "chr_5_438"}, {"id": "chr_19_140", "label": "chr_19_140", "shape": "dot", "title": "chr_19_140"}, {"id": "chr_13_1216", "label": "chr_13_1216", "shape": "dot", "title": "chr_13_1216"}, {"id": "chr_3_632", "label": "chr_3_632", "shape": "dot", "title": "chr_3_632"}, {"id": "chr_12_954", "label": "chr_12_954", "shape": "dot", "title": "chr_12_954"}, {"id": "chr_3_692", "label": "chr_3_692", "shape": "dot", "title": "chr_3_692"}, {"id": "chr_10_2051", "label": "chr_10_2051", "shape": "dot", "title": "chr_10_2051"}, {"id": "chr_14_1149", "label": "chr_14_1149", "shape": "dot", "title": "chr_14_1149"}, {"id": "chr_16_624", "label": "chr_16_624", "shape": "dot", "title": "chr_16_624"}, {"id": "chr_19_800", "label": "chr_19_800", "shape": "dot", "title": "chr_19_800"}, {"id": "chr_11_2406", "label": "chr_11_2406", "shape": "dot", "title": "chr_11_2406"}, {"id": "chr_4_3069", "label": "chr_4_3069", "shape": "dot", "title": "chr_4_3069"}, {"id": "chr_3_112", "label": "chr_3_112", "shape": "dot", "title": "chr_3_112"}, {"id": "chr_3_2992", "label": "chr_3_2992", "shape": "dot", "title": "chr_3_2992"}, {"id": "chr_3_1752", "label": "chr_3_1752", "shape": "dot", "title": "chr_3_1752"}, {"id": "chr_19_200", "label": "chr_19_200", "shape": "dot", "title": "chr_19_200"}, {"id": "chr_10_931", "label": "chr_10_931", "shape": "dot", "title": "chr_10_931"}, {"id": "chr_4_3829", "label": "chr_4_3829", "shape": "dot", "title": "chr_4_3829"}, {"id": "chr_8_68", "label": "chr_8_68", "shape": "dot", "title": "chr_8_68"}, {"id": "chr_15_1070", "label": "chr_15_1070", "shape": "dot", "title": "chr_15_1070"}, {"id": "chr_11_126", "label": "chr_11_126", "shape": "dot", "title": "chr_11_126"}, {"id": "chr_19_260", "label": "chr_19_260", "shape": "dot", "title": "chr_19_260"}, {"id": "chr_10_2752", "label": "chr_10_2752", "shape": "dot", "title": "chr_10_2752"}, {"id": "chr_9_2065", "label": "chr_9_2065", "shape": "dot", "title": "chr_9_2065"}, {"id": "chr_15_810", "label": "chr_15_810", "shape": "dot", "title": "chr_15_810"}, {"id": "chr_13_516", "label": "chr_13_516", "shape": "dot", "title": "chr_13_516"}, {"id": "chr_17_1356", "label": "chr_17_1356", "shape": "dot", "title": "chr_17_1356"}, {"id": "chr_7_57", "label": "chr_7_57", "shape": "dot", "title": "chr_7_57"}, {"id": "chr_13_816", "label": "chr_13_816", "shape": "dot", "title": "chr_13_816"}, {"id": "chr_9_2645", "label": "chr_9_2645", "shape": "dot", "title": "chr_9_2645"}, {"id": "chr_8_668", "label": "chr_8_668", "shape": "dot", "title": "chr_8_668"}, {"id": "chr_13_976", "label": "chr_13_976", "shape": "dot", "title": "chr_13_976"}, {"id": "chr_20_321", "label": "chr_20_321", "shape": "dot", "title": "chr_20_321"}, {"id": "chr_17_196", "label": "chr_17_196", "shape": "dot", "title": "chr_17_196"}, {"id": "chr_19_1208", "label": "chr_19_1208", "shape": "dot", "title": "chr_19_1208"}, {"id": "chr_22_863", "label": "chr_22_863", "shape": "dot", "title": "chr_22_863"}, {"id": "chr_9_265", "label": "chr_9_265", "shape": "dot", "title": "chr_9_265"}, {"id": "chr_16_544", "label": "chr_16_544", "shape": "dot", "title": "chr_16_544"}, {"id": "chr_11_66", "label": "chr_11_66", "shape": "dot", "title": "chr_11_66"}, {"id": "chr_22_503", "label": "chr_22_503", "shape": "dot", "title": "chr_22_503"}, {"id": "chr_8_2328", "label": "chr_8_2328", "shape": "dot", "title": "chr_8_2328"}, {"id": "chr_9_2365", "label": "chr_9_2365", "shape": "dot", "title": "chr_9_2365"}, {"id": "chr_15_1610", "label": "chr_15_1610", "shape": "dot", "title": "chr_15_1610"}, {"id": "chr_13_1576", "label": "chr_13_1576", "shape": "dot", "title": "chr_13_1576"}, {"id": "chr_14_1609", "label": "chr_14_1609", "shape": "dot", "title": "chr_14_1609"}, {"id": "chr_15_850", "label": "chr_15_850", "shape": "dot", "title": "chr_15_850"}, {"id": "chr_14_969", "label": "chr_14_969", "shape": "dot", "title": "chr_14_969"}, {"id": "chr_4_30", "label": "chr_4_30", "shape": "dot", "title": "chr_4_30"}, {"id": "chr_12_1554", "label": "chr_12_1554", "shape": "dot", "title": "chr_12_1554"}, {"id": "chr_5_3278", "label": "chr_5_3278", "shape": "dot", "title": "chr_5_3278"}, {"id": "chr_11_926", "label": "chr_11_926", "shape": "dot", "title": "chr_11_926"}, {"id": "chr_10_671", "label": "chr_10_671", "shape": "dot", "title": "chr_10_671"}, {"id": "chr_12_554", "label": "chr_12_554", "shape": "dot", "title": "chr_12_554"}, {"id": "chr_5_1238", "label": "chr_5_1238", "shape": "dot", "title": "chr_5_1238"}, {"id": "chr_10_111", "label": "chr_10_111", "shape": "dot", "title": "chr_10_111"}, {"id": "chr_15_1830", "label": "chr_15_1830", "shape": "dot", "title": "chr_15_1830"}, {"id": "chr_5_198", "label": "chr_5_198", "shape": "dot", "title": "chr_5_198"}, {"id": "chr_9_1965", "label": "chr_9_1965", "shape": "dot", "title": "chr_9_1965"}, {"id": "chr_10_1091", "label": "chr_10_1091", "shape": "dot", "title": "chr_10_1091"}, {"id": "chr_12_1794", "label": "chr_12_1794", "shape": "dot", "title": "chr_12_1794"}, {"id": "chr_16_1044", "label": "chr_16_1044", "shape": "dot", "title": "chr_16_1044"}, {"id": "chr_9_625", "label": "chr_9_625", "shape": "dot", "title": "chr_9_625"}, {"id": "chr_18_375", "label": "chr_18_375", "shape": "dot", "title": "chr_18_375"}, {"id": "chr_7_1857", "label": "chr_7_1857", "shape": "dot", "title": "chr_7_1857"}, {"id": "chr_9_1985", "label": "chr_9_1985", "shape": "dot", "title": "chr_9_1985"}, {"id": "chr_1_42", "label": "chr_1_42", "shape": "dot", "title": "chr_1_42"}, {"id": "chr_2_72", "label": "chr_2_72", "shape": "dot", "title": "chr_2_72"}, {"id": "chr_9_2465", "label": "chr_9_2465", "shape": "dot", "title": "chr_9_2465"}, {"id": "chr_8_828", "label": "chr_8_828", "shape": "dot", "title": "chr_8_828"}, {"id": "chr_5_3558", "label": "chr_5_3558", "shape": "dot", "title": "chr_5_3558"}, {"id": "chr_3_1592", "label": "chr_3_1592", "shape": "dot", "title": "chr_3_1592"}, {"id": "chr_16_84", "label": "chr_16_84", "shape": "dot", "title": "chr_16_84"}, {"id": "chr_11_1626", "label": "chr_11_1626", "shape": "dot", "title": "chr_11_1626"}, {"id": "chr_4_2509", "label": "chr_4_2509", "shape": "dot", "title": "chr_4_2509"}, {"id": "chr_2_732", "label": "chr_2_732", "shape": "dot", "title": "chr_2_732"}, {"id": "chr_22_983", "label": "chr_22_983", "shape": "dot", "title": "chr_22_983"}, {"id": "chr_7_2777", "label": "chr_7_2777", "shape": "dot", "title": "chr_7_2777"}, {"id": "chr_10_531", "label": "chr_10_531", "shape": "dot", "title": "chr_10_531"}, {"id": "chr_9_725", "label": "chr_9_725", "shape": "dot", "title": "chr_9_725"}, {"id": "chr_7_1557", "label": "chr_7_1557", "shape": "dot", "title": "chr_7_1557"}, {"id": "chr_8_2388", "label": "chr_8_2388", "shape": "dot", "title": "chr_8_2388"}, {"id": "chr_12_114", "label": "chr_12_114", "shape": "dot", "title": "chr_12_114"}, {"id": "chr_13_23", "label": "chr_13_23", "shape": "dot", "title": "chr_13_23"}, {"id": "chr_2_4832", "label": "chr_2_4832", "shape": "dot", "title": "chr_2_4832"}, {"id": "chr_12_2334", "label": "chr_12_2334", "shape": "dot", "title": "chr_12_2334"}, {"id": "chr_12_614", "label": "chr_12_614", "shape": "dot", "title": "chr_12_614"}, {"id": "chr_12_194", "label": "chr_12_194", "shape": "dot", "title": "chr_12_194"}, {"id": "chr_19_160", "label": "chr_19_160", "shape": "dot", "title": "chr_19_160"}, {"id": "chr_16_104", "label": "chr_16_104", "shape": "dot", "title": "chr_16_104"}, {"id": "chr_21_347", "label": "chr_21_347", "shape": "dot", "title": "chr_21_347"}, {"id": "chr_15_590", "label": "chr_15_590", "shape": "dot", "title": "chr_15_590"}, {"id": "chr_21_247", "label": "chr_21_247", "shape": "dot", "title": "chr_21_247"}, {"id": "chr_11_1506", "label": "chr_11_1506", "shape": "dot", "title": "chr_11_1506"}, {"id": "chr_12_1414", "label": "chr_12_1414", "shape": "dot", "title": "chr_12_1414"}, {"id": "chr_18_915", "label": "chr_18_915", "shape": "dot", "title": "chr_18_915"}, {"id": "chr_14_1309", "label": "chr_14_1309", "shape": "dot", "title": "chr_14_1309"}, {"id": "chr_9_165", "label": "chr_9_165", "shape": "dot", "title": "chr_9_165"}, {"id": "chr_9_2245", "label": "chr_9_2245", "shape": "dot", "title": "chr_9_2245"}, {"id": "chr_5_118", "label": "chr_5_118", "shape": "dot", "title": "chr_5_118"}, {"id": "chr_13_1596", "label": "chr_13_1596", "shape": "dot", "title": "chr_13_1596"}, {"id": "chr_21_287", "label": "chr_21_287", "shape": "dot", "title": "chr_21_287"}, {"id": "chr_5_2298", "label": "chr_5_2298", "shape": "dot", "title": "chr_5_2298"}, {"id": "chr_9_2745", "label": "chr_9_2745", "shape": "dot", "title": "chr_9_2745"}, {"id": "chr_10_2151", "label": "chr_10_2151", "shape": "dot", "title": "chr_10_2151"}, {"id": "chr_16_1164", "label": "chr_16_1164", "shape": "dot", "title": "chr_16_1164"}, {"id": "chr_10_1511", "label": "chr_10_1511", "shape": "dot", "title": "chr_10_1511"}, {"id": "chr_9_405", "label": "chr_9_405", "shape": "dot", "title": "chr_9_405"}, {"id": "chr_12_54", "label": "chr_12_54", "shape": "dot", "title": "chr_12_54"}, {"id": "chr_18_655", "label": "chr_18_655", "shape": "dot", "title": "chr_18_655"}, {"id": "chr_20_201", "label": "chr_20_201", "shape": "dot", "title": "chr_20_201"}, {"id": "chr_14_1709", "label": "chr_14_1709", "shape": "dot", "title": "chr_14_1709"}, {"id": "chr_18_455", "label": "chr_18_455", "shape": "dot", "title": "chr_18_455"}, {"id": "chr_18_1375", "label": "chr_18_1375", "shape": "dot", "title": "chr_18_1375"}, {"id": "chr_18_1315", "label": "chr_18_1315", "shape": "dot", "title": "chr_18_1315"}, {"id": "chr_6_65", "label": "chr_6_65", "shape": "dot", "title": "chr_6_65"}, {"id": "chr_10_1671", "label": "chr_10_1671", "shape": "dot", "title": "chr_10_1671"}, {"id": "chr_13_1136", "label": "chr_13_1136", "shape": "dot", "title": "chr_13_1136"}, {"id": "chr_12_1434", "label": "chr_12_1434", "shape": "dot", "title": "chr_12_1434"}, {"id": "chr_7_2357", "label": "chr_7_2357", "shape": "dot", "title": "chr_7_2357"}, {"id": "chr_7_2537", "label": "chr_7_2537", "shape": "dot", "title": "chr_7_2537"}, {"id": "chr_14_469", "label": "chr_14_469", "shape": "dot", "title": "chr_14_469"}, {"id": "chr_11_666", "label": "chr_11_666", "shape": "dot", "title": "chr_11_666"}, {"id": "chr_12_2134", "label": "chr_12_2134", "shape": "dot", "title": "chr_12_2134"}, {"id": "chr_19_940", "label": "chr_19_940", "shape": "dot", "title": "chr_19_940"}, {"id": "chr_16_1724", "label": "chr_16_1724", "shape": "dot", "title": "chr_16_1724"}, {"id": "chr_17_1196", "label": "chr_17_1196", "shape": "dot", "title": "chr_17_1196"}, {"id": "chr_11_286", "label": "chr_11_286", "shape": "dot", "title": "chr_11_286"}, {"id": "chr_14_1469", "label": "chr_14_1469", "shape": "dot", "title": "chr_14_1469"}, {"id": "chr_16_1264", "label": "chr_16_1264", "shape": "dot", "title": "chr_16_1264"}, {"id": "chr_12_2274", "label": "chr_12_2274", "shape": "dot", "title": "chr_12_2274"}, {"id": "chr_10_651", "label": "chr_10_651", "shape": "dot", "title": "chr_10_651"}, {"id": "chr_14_709", "label": "chr_14_709", "shape": "dot", "title": "chr_14_709"}, {"id": "chr_15_2100", "label": "chr_15_2100", "shape": "dot", "title": "chr_15_2100"}, {"id": "chr_18_975", "label": "chr_18_975", "shape": "dot", "title": "chr_18_975"}, {"id": "chr_20_741", "label": "chr_20_741", "shape": "dot", "title": "chr_20_741"}, {"id": "chr_21_327", "label": "chr_21_327", "shape": "dot", "title": "chr_21_327"}, {"id": "chr_19_100", "label": "chr_19_100", "shape": "dot", "title": "chr_19_100"}, {"id": "chr_20_101", "label": "chr_20_101", "shape": "dot", "title": "chr_20_101"}]);
+        edges = new vis.DataSet([{"from": "chr_1_5048", "to": "chr_8_2548"}, {"from": "chr_1_5048", "to": "chr_11_766"}, {"from": "chr_1_5048", "to": "chr_5_718"}, {"from": "chr_1_5048", "to": "chr_5_438"}, {"from": "chr_1_5048", "to": "chr_19_140"}, {"from": "chr_1_5048", "to": "chr_13_1216"}, {"from": "chr_1_5048", "to": "chr_3_632"}, {"from": "chr_1_5048", "to": "chr_12_954"}, {"from": "chr_1_5048", "to": "chr_3_692"}, {"from": "chr_1_5048", "to": "chr_10_2051"}, {"from": "chr_1_5048", "to": "chr_14_1149"}, {"from": "chr_1_5048", "to": "chr_16_624"}, {"from": "chr_1_5048", "to": "chr_19_800"}, {"from": "chr_1_5048", "to": "chr_11_2406"}, {"from": "chr_1_5048", "to": "chr_4_3069"}, {"from": "chr_1_5048", "to": "chr_3_112"}, {"from": "chr_1_5048", "to": "chr_3_2992"}, {"from": "chr_1_5048", "to": "chr_3_1752"}, {"from": "chr_1_5048", "to": "chr_19_200"}, {"from": "chr_1_5048", "to": "chr_10_931"}, {"from": "chr_1_5048", "to": "chr_4_3829"}, {"from": "chr_8_68", "to": "chr_15_1070"}, {"from": "chr_8_68", "to": "chr_11_2406"}, {"from": "chr_8_68", "to": "chr_11_126"}, {"from": "chr_8_68", "to": "chr_19_260"}, {"from": "chr_8_68", "to": "chr_10_2752"}, {"from": "chr_8_68", "to": "chr_9_2065"}, {"from": "chr_8_68", "to": "chr_15_810"}, {"from": "chr_8_68", "to": "chr_13_516"}, {"from": "chr_8_68", "to": "chr_17_1356"}, {"from": "chr_7_57", "to": "chr_13_816"}, {"from": "chr_7_57", "to": "chr_9_2645"}, {"from": "chr_7_57", "to": "chr_8_668"}, {"from": "chr_7_57", "to": "chr_13_976"}, {"from": "chr_7_57", "to": "chr_13_516"}, {"from": "chr_7_57", "to": "chr_20_321"}, {"from": "chr_7_57", "to": "chr_17_196"}, {"from": "chr_7_57", "to": "chr_19_1208"}, {"from": "chr_7_57", "to": "chr_22_863"}, {"from": "chr_7_57", "to": "chr_9_265"}, {"from": "chr_7_57", "to": "chr_16_544"}, {"from": "chr_7_57", "to": "chr_11_66"}, {"from": "chr_7_57", "to": "chr_22_503"}, {"from": "chr_7_57", "to": "chr_8_2328"}, {"from": "chr_7_57", "to": "chr_9_2365"}, {"from": "chr_7_57", "to": "chr_15_1610"}, {"from": "chr_7_57", "to": "chr_13_1576"}, {"from": "chr_7_57", "to": "chr_14_1609"}, {"from": "chr_7_57", "to": "chr_15_850"}, {"from": "chr_7_57", "to": "chr_14_969"}, {"from": "chr_4_30", "to": "chr_12_1554"}, {"from": "chr_4_30", "to": "chr_5_3278"}, {"from": "chr_4_30", "to": "chr_11_926"}, {"from": "chr_4_30", "to": "chr_10_671"}, {"from": "chr_4_30", "to": "chr_12_554"}, {"from": "chr_4_30", "to": "chr_5_1238"}, {"from": "chr_4_30", "to": "chr_10_111"}, {"from": "chr_4_30", "to": "chr_15_1830"}, {"from": "chr_4_30", "to": "chr_5_198"}, {"from": "chr_4_30", "to": "chr_9_1965"}, {"from": "chr_4_30", "to": "chr_10_1091"}, {"from": "chr_4_30", "to": "chr_12_1794"}, {"from": "chr_4_30", "to": "chr_16_1044"}, {"from": "chr_4_30", "to": "chr_9_625"}, {"from": "chr_4_30", "to": "chr_18_375"}, {"from": "chr_4_30", "to": "chr_7_1857"}, {"from": "chr_4_30", "to": "chr_9_1985"}, {"from": "chr_1_42", "to": "chr_2_72"}, {"from": "chr_1_42", "to": "chr_9_2465"}, {"from": "chr_1_42", "to": "chr_16_544"}, {"from": "chr_1_42", "to": "chr_8_828"}, {"from": "chr_1_42", "to": "chr_5_3558"}, {"from": "chr_1_42", "to": "chr_3_1592"}, {"from": "chr_1_42", "to": "chr_16_84"}, {"from": "chr_1_42", "to": "chr_11_1626"}, {"from": "chr_1_42", "to": "chr_4_2509"}, {"from": "chr_1_42", "to": "chr_2_732"}, {"from": "chr_1_42", "to": "chr_22_983"}, {"from": "chr_1_42", "to": "chr_7_2777"}, {"from": "chr_1_42", "to": "chr_10_531"}, {"from": "chr_1_42", "to": "chr_9_725"}, {"from": "chr_1_42", "to": "chr_7_1557"}, {"from": "chr_1_42", "to": "chr_8_2388"}, {"from": "chr_12_114", "to": "chr_13_23"}, {"from": "chr_12_114", "to": "chr_2_4832"}, {"from": "chr_13_23", "to": "chr_12_2334"}, {"from": "chr_11_66", "to": "chr_12_614"}, {"from": "chr_11_66", "to": "chr_12_194"}, {"from": "chr_11_66", "to": "chr_19_160"}, {"from": "chr_11_66", "to": "chr_16_104"}, {"from": "chr_11_66", "to": "chr_21_347"}, {"from": "chr_11_66", "to": "chr_15_590"}, {"from": "chr_11_66", "to": "chr_21_247"}, {"from": "chr_2_4832", "to": "chr_11_1506"}, {"from": "chr_2_4832", "to": "chr_19_200"}, {"from": "chr_2_4832", "to": "chr_12_1414"}, {"from": "chr_2_4832", "to": "chr_18_915"}, {"from": "chr_2_4832", "to": "chr_14_1309"}, {"from": "chr_2_4832", "to": "chr_9_165"}, {"from": "chr_2_4832", "to": "chr_9_2245"}, {"from": "chr_2_4832", "to": "chr_5_118"}, {"from": "chr_2_4832", "to": "chr_13_1596"}, {"from": "chr_2_4832", "to": "chr_21_287"}, {"from": "chr_2_4832", "to": "chr_5_2298"}, {"from": "chr_2_4832", "to": "chr_9_2745"}, {"from": "chr_2_4832", "to": "chr_10_2151"}, {"from": "chr_2_4832", "to": "chr_16_1164"}, {"from": "chr_2_4832", "to": "chr_10_1511"}, {"from": "chr_2_4832", "to": "chr_9_405"}, {"from": "chr_12_54", "to": "chr_18_655"}, {"from": "chr_12_54", "to": "chr_20_201"}, {"from": "chr_12_54", "to": "chr_14_1709"}, {"from": "chr_12_54", "to": "chr_18_455"}, {"from": "chr_12_54", "to": "chr_18_1375"}, {"from": "chr_12_54", "to": "chr_15_810"}, {"from": "chr_12_54", "to": "chr_18_1315"}, {"from": "chr_12_54", "to": "chr_16_104"}, {"from": "chr_6_65", "to": "chr_10_1671"}, {"from": "chr_6_65", "to": "chr_13_1136"}, {"from": "chr_6_65", "to": "chr_12_1434"}, {"from": "chr_6_65", "to": "chr_7_2357"}, {"from": "chr_6_65", "to": "chr_7_2537"}, {"from": "chr_6_65", "to": "chr_14_469"}, {"from": "chr_6_65", "to": "chr_11_666"}, {"from": "chr_6_65", "to": "chr_12_2134"}, {"from": "chr_6_65", "to": "chr_19_940"}, {"from": "chr_6_65", "to": "chr_16_1724"}, {"from": "chr_6_65", "to": "chr_17_1196"}, {"from": "chr_6_65", "to": "chr_11_286"}, {"from": "chr_6_65", "to": "chr_14_1469"}, {"from": "chr_6_65", "to": "chr_15_1830"}, {"from": "chr_6_65", "to": "chr_16_1264"}, {"from": "chr_6_65", "to": "chr_12_2274"}, {"from": "chr_6_65", "to": "chr_10_651"}, {"from": "chr_6_65", "to": "chr_14_709"}, {"from": "chr_6_65", "to": "chr_18_1375"}, {"from": "chr_15_2100", "to": "chr_18_975"}, {"from": "chr_15_2100", "to": "chr_22_983"}, {"from": "chr_15_2100", "to": "chr_20_741"}, {"from": "chr_15_2100", "to": "chr_21_327"}, {"from": "chr_15_2100", "to": "chr_19_100"}, {"from": "chr_19_1208", "to": "chr_20_101"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.01,
+            "damping": 0.4,
+            "gravitationalConstant": -50,
+            "springConstant": 0.08,
+            "springLength": 100
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        // default to using dot shape for nodes
+        options.nodes = {
+            shape: "dot"
+        }
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+        network.on("stabilizationProgress", function(params) {
+      		document.getElementById('loadingBar').removeAttribute("style");
+	        var maxWidth = 496;
+	        var minWidth = 20;
+	        var widthFactor = params.iterations/params.total;
+	        var width = Math.max(minWidth,maxWidth * widthFactor);
+
+	        document.getElementById('bar').style.width = width + 'px';
+	        document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+	    });
+	    network.once("stabilizationIterationsDone", function() {
+	        document.getElementById('text').innerHTML = '100%';
+	        document.getElementById('bar').style.width = '496px';
+	        document.getElementById('loadingBar').style.opacity = 0;
+	        // really clean the dom element
+	        setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+	    });
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
