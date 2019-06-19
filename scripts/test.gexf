@@ -3,1083 +3,1083 @@
   <graph defaultedgetype="undirected" mode="static" name="">
     <meta>
       <creator>NetworkX 2.3</creator>
-      <lastmodified>18/06/2019</lastmodified>
+      <lastmodified>19/06/2019</lastmodified>
     </meta>
     <nodes>
       <node id="chr_1_5048" label="chr_1_5048">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.38211658328312076" y="-0.036201649795722456" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.09944300887919465" y="0.21999030660027333" z="None" />
       </node>
       <node id="chr_8_2548" label="chr_8_2548">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.4287542597036347" y="0.0031076993116990552" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.1448950988634578" y="0.2072201930052392" z="None" />
       </node>
       <node id="chr_8_68" label="chr_8_68">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.11113573035909079" y="-0.09760026174925568" z="None" />
+        <viz:size value="7" />
+        <viz:position x="-0.08007997291731128" y="0.078452214404787" z="None" />
       </node>
       <node id="chr_15_1070" label="chr_15_1070">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.11925750402026916" y="-0.15633193676433174" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.09831278432631674" y="0.1256812261991902" z="None" />
       </node>
       <node id="chr_13_1856" label="chr_13_1856">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.8803409907910547" y="-0.28056208328532456" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.22978958564535962" y="-0.9619915061476116" z="None" />
       </node>
       <node id="chr_14_40" label="chr_14_40">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.8335400762072755" y="-0.2601497933327578" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.20544413647039766" y="-0.9650056033558735" z="None" />
       </node>
       <node id="chr_7_57" label="chr_7_57">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.07164358157301391" y="0.15841000734978067" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.03951197045817855" y="-0.23992782745746866" z="None" />
       </node>
       <node id="chr_13_816" label="chr_13_816">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.0228559166558272" y="0.14840009839785837" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.06316374132118416" y="-0.2711390981374599" z="None" />
       </node>
       <node id="chr_4_30" label="chr_4_30">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.5102561531352409" y="0.1635754167551735" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.5500131925833411" y="-0.0325934708703587" z="None" />
       </node>
       <node id="chr_12_1554" label="chr_12_1554">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.4790958880475875" y="0.17512031320816943" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.5500763184387647" y="-0.09751569228700724" z="None" />
       </node>
       <node id="chr_13_396" label="chr_13_396">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.553620702803635" y="-0.5028128738350605" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.3268230428468508" y="0.8523682343753817" z="None" />
       </node>
       <node id="chr_20_981" label="chr_20_981">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="1" />
-        <viz:position x="0.5852751141870179" y="-0.545077092946017" z="None" />
+        <viz:position x="-0.299366697594774" y="0.8585803866760865" z="None" />
       </node>
       <node id="chr_5_38" label="chr_5_38">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.5300779560400148" y="-0.6576346977396414" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.7917392308911146" y="-0.362494618713379" z="None" />
       </node>
       <node id="chr_6_985" label="chr_6_985">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.496787506230413" y="-0.6337953797373355" z="None" />
+        <viz:size value="5" />
+        <viz:position x="0.8361517191749385" y="-0.39204023135139293" z="None" />
       </node>
       <node id="chr_16_1784" label="chr_16_1784">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.126061691054901" y="0.7856623055731541" z="None" />
+        <viz:size value="8" />
+        <viz:position x="-0.8849637010725812" y="0.08353114499213178" z="None" />
       </node>
       <node id="chr_19_320" label="chr_19_320">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.11537101481315856" y="0.8154702377324352" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.9138124241015478" y="0.09871412587519682" z="None" />
       </node>
       <node id="chr_9_2645" label="chr_9_2645">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.019175901264989526" y="0.1718641221367076" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.023938953381825664" y="-0.3022017661509347" z="None" />
       </node>
       <node id="chr_11_766" label="chr_11_766">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.3944948650910066" y="0.018181369620417272" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.12248930930918893" y="0.24390525007722128" z="None" />
       </node>
       <node id="chr_1_42" label="chr_1_42">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.3747248862936182" y="0.34395754008683627" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.28641347310596843" y="-0.4931840825086533" z="None" />
       </node>
       <node id="chr_2_72" label="chr_2_72">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.42668232323868455" y="0.33816438100878954" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.3490360033946301" y="-0.48902075026282993" z="None" />
       </node>
       <node id="chr_12_114" label="chr_12_114">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.6332948393621739" y="-0.0856187826895345" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.040736481736267545" y="-0.09084417415606419" z="None" />
       </node>
       <node id="chr_13_23" label="chr_13_23">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.6662484676174861" y="-0.03798854274796818" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.045673812846980424" y="-0.10007248890188067" z="None" />
       </node>
       <node id="chr_8_668" label="chr_8_668">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.10271794444000233" y="0.1351037676465064" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.09846937772948168" y="-0.27328348569382754" z="None" />
       </node>
       <node id="chr_11_66" label="chr_11_66">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.04186203466757903" y="0.05059733518689574" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.023971968271619012" y="-0.0811028399592546" z="None" />
       </node>
       <node id="chr_12_614" label="chr_12_614">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.09356397863205314" y="0.04424643147446003" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.005160624198850444" y="-0.09337638169713165" z="None" />
       </node>
       <node id="chr_14_449" label="chr_14_449">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.1629173873512061" y="-0.7344801133693528" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.760965307386412" y="0.007907966535522174" z="None" />
       </node>
       <node id="chr_20_861" label="chr_20_861">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.17389695972552477" y="-0.7713419126011765" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.8033213089504198" y="-0.01233615375463124" z="None" />
       </node>
       <node id="chr_11_2406" label="chr_11_2406">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.24544573945533474" y="-0.07090454109044847" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.007777779003462696" y="0.1535470646566182" z="None" />
       </node>
       <node id="chr_2_4832" label="chr_2_4832">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.6147828040909404" y="-0.15241139701935716" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.12740104461622806" y="-0.05259521385610743" z="None" />
       </node>
       <node id="chr_11_1506" label="chr_11_1506">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.6670693714937873" y="-0.16222713046702922" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.15870168809541277" y="-0.01867467787767942" z="None" />
       </node>
       <node id="chr_5_718" label="chr_5_718">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.4151384526670904" y="-0.044081382782146024" z="None" />
+        <viz:size value="5" />
+        <viz:position x="0.12234951503116988" y="0.28970106848398935" z="None" />
       </node>
       <node id="chr_12_54" label="chr_12_54">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.14437544253316628" y="-0.1539773555851279" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.2545723032353838" y="0.13075192063618044" z="None" />
       </node>
       <node id="chr_18_655" label="chr_18_655">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.15949756668347545" y="-0.20996872099661482" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.3113811172363655" y="0.1641095260928795" z="None" />
       </node>
       <node id="chr_5_438" label="chr_5_438">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.3567201201811104" y="0.010111922432018396" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.1290416131237034" y="0.26919625666292535" z="None" />
       </node>
       <node id="chr_19_200" label="chr_19_200">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.49831032571941863" y="-0.09385394738226611" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.011438609060992184" y="0.0836313761656975" z="None" />
       </node>
       <node id="chr_19_140" label="chr_19_140">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.33469101975233667" y="-0.04115816746579294" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.1463709457071766" y="0.22923911950686476" z="None" />
       </node>
       <node id="chr_13_1456" label="chr_13_1456">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.5286398753056795" y="-0.6975323952750653" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.8209776160204482" y="-0.40689805843584714" z="None" />
       </node>
       <node id="chr_11_366" label="chr_11_366">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.40815439263713943" y="-0.6478406230079861" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.5558552381670187" y="-0.7546994121660565" z="None" />
       </node>
       <node id="chr_12_12" label="chr_12_12">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.38714309386348844" y="-0.6032719839798115" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.5869094265847093" y="-0.7681549817136354" z="None" />
       </node>
       <node id="chr_11_126" label="chr_11_126">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.08311293052549443" y="-0.13280774917792157" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.1266528493262252" y="0.09587931317975291" z="None" />
       </node>
       <node id="chr_12_1414" label="chr_12_1414">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.6468162905685539" y="-0.20449598695956583" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.19054333692778805" y="-0.04128316629456877" z="None" />
       </node>
       <node id="chr_20_201" label="chr_20_201">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.1787730761694384" y="-0.19008442100461964" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.2853636175506419" y="0.17323676081950842" z="None" />
       </node>
       <node id="chr_9_85" label="chr_9_85">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.7594553901370779" y="0.07884391665040204" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.7861702266644393" y="0.23695253732897736" z="None" />
       </node>
       <node id="chr_12_1014" label="chr_12_1014">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.7790234897754484" y="0.04810500653657364" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.839009439285125" y="0.23085940350773312" z="None" />
       </node>
       <node id="chr_13_976" label="chr_13_976">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.04390128110185262" y="0.18587417707710382" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.007032055554118765" y="-0.24579813177801602" z="None" />
       </node>
       <node id="chr_10_2571" label="chr_10_2571">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.049143065501626546" y="0.9531118262030266" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.4541025010518838" y="0.9786264386106479" z="None" />
       </node>
       <node id="chr_11_18" label="chr_11_18">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.05006656869971308" y="0.9034817766269542" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.4414414576927771" y="0.9298594739102246" z="None" />
       </node>
       <node id="chr_1_0" label="chr_1_0">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.4378434170248764" y="0.8187397772494944" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.10487115166552549" y="-0.8432935405138945" z="None" />
       </node>
       <node id="chr_2_1712" label="chr_2_1712">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.42127611066019605" y="0.7972193786343567" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.11258970040867086" y="-0.8997477320166489" z="None" />
       </node>
       <node id="chr_9_2465" label="chr_9_2465">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.35751357719421506" y="0.40071190060104367" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.3039514852687533" y="-0.5571480077749652" z="None" />
       </node>
       <node id="chr_12_194" label="chr_12_194">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.07065773050341571" y="0.08163593236596331" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.021474063005258743" y="-0.09927000499305007" z="None" />
       </node>
       <node id="chr_19_260" label="chr_19_260">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.09741162860694284" y="-0.1510885525853157" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.06898360562782957" y="0.12739111180818907" z="None" />
       </node>
       <node id="chr_6_65" label="chr_6_65">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.43338450341248386" y="-0.13372914712436784" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.373750930602984" y="0.3099799714811758" z="None" />
       </node>
       <node id="chr_10_1671" label="chr_10_1671">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.4707457753421455" y="-0.15922403547820796" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.36763152728895043" y="0.3750307328316203" z="None" />
       </node>
       <node id="chr_5_3278" label="chr_5_3278">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="5" />
-        <viz:position x="-0.5557193128369196" y="0.1422107362109406" z="None" />
+        <viz:position x="-0.582356477516632" y="0.008601157403703803" z="None" />
       </node>
       <node id="chr_18_915" label="chr_18_915">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="2" />
-        <viz:position x="0.5923929149646903" y="-0.19507552143243628" z="None" />
+        <viz:position x="-0.17418740608937228" y="-0.1087971232330128" z="None" />
       </node>
       <node id="chr_15_2100" label="chr_15_2100">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.5922001136433365" y="0.27456261729418857" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.35951967709409666" y="-0.6839157592819558" z="None" />
       </node>
       <node id="chr_18_975" label="chr_18_975">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.6361570291059785" y="0.3050710570200258" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.35039916979039554" y="-0.724043485577151" z="None" />
       </node>
       <node id="chr_14_1309" label="chr_14_1309">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.5952943565739568" y="-0.17297930966335534" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.18780218905078158" y="-0.09550168969218435" z="None" />
       </node>
       <node id="chr_19_380" label="chr_19_380">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.8093245527350386" y="0.05915681325095476" z="None" />
+        <viz:size value="5" />
+        <viz:position x="0.8277036731642037" y="0.2776817372166818" z="None" />
       </node>
       <node id="chr_11_2246" label="chr_11_2246">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="9" />
-        <viz:position x="-0.6880216541244932" y="0.35880293293363946" z="None" />
+        <viz:position x="-0.3508776038721106" y="0.7577159476148846" z="None" />
       </node>
       <node id="chr_12_34" label="chr_12_34">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.7123934206949669" y="0.38473304796316754" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.3758819450556684" y="0.7869296728311751" z="None" />
       </node>
       <node id="chr_16_544" label="chr_16_544">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.2223910391314291" y="0.2503438537667168" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.1638888558632965" y="-0.36625038200121046" z="None" />
       </node>
       <node id="chr_13_1136" label="chr_13_1136">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.4739648018391709" y="-0.12924962508732138" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.4420071958640502" y="0.3234512644586681" z="None" />
       </node>
       <node id="chr_12_1434" label="chr_12_1434">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.49211706370388864" y="-0.11865074119594342" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.4252892407532477" y="0.30282066073719255" z="None" />
       </node>
       <node id="chr_9_165" label="chr_9_165">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.6290440386316194" y="-0.2106076875579067" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.13665360523620848" y="-0.09041042511193685" z="None" />
       </node>
       <node id="chr_22_983" label="chr_22_983">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.48714427349639394" y="0.30482008428765023" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.32660904141789665" y="-0.5950515501383546" z="None" />
       </node>
       <node id="chr_13_516" label="chr_13_516">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.09151811492796388" y="0.02829318896141851" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.029022073348853223" y="-0.0820012764413666" z="None" />
       </node>
       <node id="chr_14_1709" label="chr_14_1709">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.12602879950480336" y="-0.18820544727695596" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.307005408126152" y="0.11766162669264386" z="None" />
       </node>
       <node id="chr_20_321" label="chr_20_321">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.11656870087886007" y="0.1597567196185782" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.10187084349050907" y="-0.24622180502819568" z="None" />
       </node>
       <node id="chr_8_828" label="chr_8_828">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.3430951664838218" y="0.3844422647027448" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.34296586707802496" y="-0.528080775258407" z="None" />
       </node>
       <node id="chr_10_51" label="chr_10_51">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.04597106048077177" y="-0.6398068268323481" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.027646115213876166" y="0.8292560110896772" z="None" />
       </node>
       <node id="chr_14_2069" label="chr_14_2069">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.020604396416832718" y="-0.680019377066263" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.004099072337937865" y="0.8621205207307316" z="None" />
       </node>
       <node id="chr_10_2752" label="chr_10_2752">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.11232344104072477" y="-0.13065213965946268" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.11974857597783044" y="0.124958376371351" z="None" />
       </node>
       <node id="chr_9_2065" label="chr_9_2065">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.14359574103207035" y="-0.1210307331793905" z="None" />
+        <viz:size value="7" />
+        <viz:position x="-0.10257671220216208" y="0.1037092982509753" z="None" />
       </node>
       <node id="chr_11_926" label="chr_11_926">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.5182383669055111" y="0.20594531473767558" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.5408356123317553" y="-0.05740281608752264" z="None" />
       </node>
       <node id="chr_2_4052" label="chr_2_4052">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.4600259611991828" y="0.8510413703145778" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.08212931427435424" y="-0.8660836405110424" z="None" />
       </node>
       <node id="chr_15_1790" label="chr_15_1790">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.1515213634706583" y="-0.7796850154996671" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.8154477661197305" y="0.009244538856023941" z="None" />
       </node>
       <node id="chr_18_1475" label="chr_18_1475">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.31656517290003405" y="-0.8487380399998582" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.787411923600883" y="0.4671396795077293" z="None" />
       </node>
       <node id="chr_19_1060" label="chr_19_1060">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.3343994770421616" y="-0.8941982969228582" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.7748302173208519" y="0.44652798597374777" z="None" />
       </node>
       <node id="chr_17_196" label="chr_17_196">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.04796531973094435" y="0.21150499595466096" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.010349503959788555" y="-0.2797859819144121" z="None" />
       </node>
       <node id="chr_10_671" label="chr_10_671">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.49633500005473036" y="0.22201787473969725" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.5809181494752246" y="-0.07646661324140822" z="None" />
       </node>
       <node id="chr_21_567" label="chr_21_567">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.13765808428962914" y="0.8350281628408193" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.9282095277939546" y="0.06601168681902983" z="None" />
       </node>
       <node id="chr_7_2277" label="chr_7_2277">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.5570532219071841" y="-0.7059234159240927" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.7444050381322289" y="-0.32620476200307635" z="None" />
       </node>
       <node id="chr_13_1216" label="chr_13_1216">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.34867491084268654" y="-0.008462551365628386" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.08377483684572179" y="0.28689360010714055" z="None" />
       </node>
       <node id="chr_3_632" label="chr_3_632">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.4159819629630493" y="-0.07769726555656697" z="None" />
+        <viz:size value="5" />
+        <viz:position x="0.165962139246672" y="0.20431737116155546" z="None" />
       </node>
       <node id="chr_19_1208" label="chr_19_1208">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.06763575064185631" y="0.24130949722419243" z="None" />
+        <viz:size value="1" />
+        <viz:position x="-0.0036627476811978664" y="-0.3218839223927216" z="None" />
       </node>
       <node id="chr_18_455" label="chr_18_455">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.15819276636498525" y="-0.18966551276692847" z="None" />
+        <viz:size value="7" />
+        <viz:position x="-0.32012261368244765" y="0.14024563978454552" z="None" />
       </node>
       <node id="chr_12_954" label="chr_12_954">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="4" />
-        <viz:position x="0.4116282434357555" y="-0.00922165870327518" z="None" />
+        <viz:position x="0.10360060628563948" y="0.29366632391690567" z="None" />
       </node>
       <node id="chr_9_2245" label="chr_9_2245">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="6" />
-        <viz:position x="0.6648185105995871" y="-0.19745923220200906" z="None" />
+        <viz:position x="-0.15699373642479386" y="-0.11493014698068484" z="None" />
       </node>
       <node id="chr_14_649" label="chr_14_649">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.5488032227437946" y="-0.6257314984068365" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.8301633932776955" y="-0.35186924429935806" z="None" />
       </node>
       <node id="chr_12_554" label="chr_12_554">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.5672182572929532" y="0.1589160241423262" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.5725558833851401" y="-0.10075122620742102" z="None" />
       </node>
       <node id="chr_6_545" label="chr_6_545">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.8981546786444102" y="-0.1362780532178139" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.37595524187395724" y="-0.8941435960712105" z="None" />
       </node>
       <node id="chr_7_24" label="chr_7_24">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.8784577786967556" y="-0.14836024459377517" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.3628256710670981" y="-0.8687274066685184" z="None" />
       </node>
       <node id="chr_2_4612" label="chr_2_4612">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.47165716327083085" y="0.8242612312758836" z="None" />
+        <viz:size value="1" />
+        <viz:position x="-0.09527900977406237" y="-0.7817996373913254" z="None" />
       </node>
       <node id="chr_12_1474" label="chr_12_1474">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.8131175538252282" y="0.09768404514196383" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.827476518400305" y="0.255802676697338" z="None" />
       </node>
       <node id="chr_16_1805" label="chr_16_1805">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="2" />
-        <viz:position x="-0.32469574345236024" y="-0.8338499447015727" z="None" />
+        <viz:position x="0.9679061749444637" y="-0.015516739228352503" z="None" />
       </node>
       <node id="chr_17_256" label="chr_17_256">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.3070741489045994" y="-0.7865132925248826" z="None" />
+        <viz:size value="8" />
+        <viz:position x="1.0" y="-0.01617885713983533" z="None" />
       </node>
       <node id="chr_11_446" label="chr_11_446">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.7305614529795029" y="0.4081478543814027" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.4055949441160644" y="0.8346694632751833" z="None" />
       </node>
       <node id="chr_7_2357" label="chr_7_2357">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.45860810462010476" y="-0.19547705825895265" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.3248670081246923" y="0.3174352803986443" z="None" />
       </node>
       <node id="chr_10_291" label="chr_10_291">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.07521982051090485" y="0.9020422526116462" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.46872899388760625" y="0.9506140002429063" z="None" />
       </node>
       <node id="chr_18_1375" label="chr_18_1375">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.2890457030345" y="-0.14837242965694813" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.3187003228786694" y="0.2236342179224289" z="None" />
       </node>
       <node id="chr_22_863" label="chr_22_863">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.09559514242362271" y="0.18022137020217782" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.09256581143986285" y="-0.2279640019675919" z="None" />
       </node>
       <node id="chr_5_1238" label="chr_5_1238">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.477492974447956" y="0.20377084889615588" z="None" />
+        <viz:size value="1" />
+        <viz:position x="-0.5979812634110204" y="-0.013218206467845066" z="None" />
       </node>
       <node id="chr_12_2374" label="chr_12_2374">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.022308506842523647" y="-0.614303244364537" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.026343576205327394" y="0.8896208891640669" z="None" />
       </node>
       <node id="chr_5_3558" label="chr_5_3558">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.4299190188095145" y="0.37537258169944376" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.31298023459103236" y="-0.5319478699286055" z="None" />
       </node>
       <node id="chr_7_2537" label="chr_7_2537">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.41494848387150063" y="-0.16498720537653114" z="None" />
+        <viz:size value="8" />
+        <viz:position x="-0.42386082282145704" y="0.33061414995378813" z="None" />
       </node>
       <node id="chr_5_118" label="chr_5_118">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.6470106741892665" y="-0.14508953755487272" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.1722166703458505" y="-0.03399865546251769" z="None" />
       </node>
       <node id="chr_3_1592" label="chr_3_1592">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.39253063760630574" y="0.39975064686999007" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.3220460889280386" y="-0.47943847594195627" z="None" />
       </node>
       <node id="chr_16_84" label="chr_16_84">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.4059510110104854" y="0.32446918122275287" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.25481807179284044" y="-0.5179125680712169" z="None" />
       </node>
       <node id="chr_13_1596" label="chr_13_1596">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.6265984962338671" y="-0.18498534941698078" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.18684775789306737" y="-0.0777206877368539" z="None" />
       </node>
       <node id="chr_3_692" label="chr_3_692">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.42871126636535345" y="-0.0601271756735153" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.14479207665659372" y="0.18528414441850385" z="None" />
       </node>
       <node id="chr_10_2051" label="chr_10_2051">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.37573251506552924" y="-0.0855785562302724" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.0627885447866042" y="0.2428847160452139" z="None" />
       </node>
       <node id="chr_19_160" label="chr_19_160">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.04516815845826084" y="0.015170265429628243" z="None" />
+        <viz:size value="7" />
+        <viz:position x="-0.002521607657863907" y="-0.038835975401600616" z="None" />
       </node>
       <node id="chr_7_3157" label="chr_7_3157">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.5713546299234898" y="-0.686826935472446" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.8482504602495378" y="-0.3737084433834436" z="None" />
       </node>
       <node id="chr_11_1626" label="chr_11_1626">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.41934225725102203" y="0.3881137613715324" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.32272548437521187" y="-0.507067950255682" z="None" />
       </node>
       <node id="chr_17_13" label="chr_17_13">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.5206894135185863" y="-0.4603025445088295" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.3474946547587759" y="0.8816403734046055" z="None" />
       </node>
       <node id="chr_9_265" label="chr_9_265">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.04612021567380723" y="0.12750259584220025" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.08488234914534803" y="-0.25984053919322747" z="None" />
       </node>
       <node id="chr_14_469" label="chr_14_469">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.40108727019470236" y="-0.1421290703495411" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.3981752326149097" y="0.37385969716424644" z="None" />
       </node>
       <node id="chr_4_2509" label="chr_4_2509">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="5" />
-        <viz:position x="0.39867224415044905" y="0.3773758126502266" z="None" />
+        <viz:position x="0.32936738429692825" y="-0.5454493831143447" z="None" />
       </node>
       <node id="chr_10_111" label="chr_10_111">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.49585957242984063" y="0.19876107479375407" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.6080247485591869" y="0.0013833156388764645" z="None" />
       </node>
       <node id="chr_11_666" label="chr_11_666">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.48916526081795103" y="-0.17327140395692892" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.4001165516128655" y="0.34382832995823764" z="None" />
       </node>
       <node id="chr_18_1455" label="chr_18_1455">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="1" />
-        <viz:position x="-0.8370264878541696" y="-0.4612998703458375" z="None" />
+        <viz:position x="-0.9499619187606025" y="0.15068792474506235" z="None" />
       </node>
       <node id="chr_21_507" label="chr_21_507">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.8790877163817074" y="-0.4884852742492002" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.9506404636691415" y="0.1251585899729776" z="None" />
       </node>
       <node id="chr_16_104" label="chr_16_104">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.09567604640262514" y="-0.054330527394691595" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.14213752257213438" y="0.027563197820807663" z="None" />
       </node>
       <node id="chr_15_810" label="chr_15_810">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.01565633765605357" y="-0.1364435343848556" z="None" />
+        <viz:size value="8" />
+        <viz:position x="-0.17405283893555135" y="0.11218652690582008" z="None" />
       </node>
       <node id="chr_21_347" label="chr_21_347">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.07340449238360004" y="0.04227216915027102" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.01736533489603954" y="-0.04636339592974683" z="None" />
       </node>
       <node id="chr_14_1149" label="chr_14_1149">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.39724444994345576" y="-0.08507795167808627" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.15803425115838407" y="0.2683002925689186" z="None" />
       </node>
       <node id="chr_15_1830" label="chr_15_1830">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.4660196586154511" y="0.015929094665743156" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.4499822938294302" y="0.13315581694888615" z="None" />
       </node>
       <node id="chr_21_287" label="chr_21_287">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.6538211236791471" y="-0.17966264413783045" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.13817986235493393" y="-0.11833099587902805" z="None" />
       </node>
       <node id="chr_12_2656" label="chr_12_2656">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.7913108019913357" y="0.10976293530026018" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.6901309984782481" y="0.20219207530850805" z="None" />
       </node>
       <node id="chr_12_2134" label="chr_12_2134">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="0" />
-        <viz:position x="-0.4101124000723313" y="-0.1836371150725864" z="None" />
+        <viz:position x="-0.31802774118101357" y="0.3476095476641452" z="None" />
       </node>
       <node id="chr_22_503" label="chr_22_503">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.09676866723595358" y="0.2072546352059945" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.01204665876692904" y="-0.25836717132501497" z="None" />
       </node>
       <node id="chr_8_2328" label="chr_8_2328">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.07342744862913111" y="0.19537794195638342" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.07177321169463176" y="-0.21830007512430005" z="None" />
       </node>
       <node id="chr_5_198" label="chr_5_198">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.5715981404580177" y="0.17838711209209648" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.6213170078827135" y="-0.023132017449854943" z="None" />
       </node>
       <node id="chr_19_940" label="chr_19_940">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.44924810685660715" y="-0.16361379008454338" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.34989126023947903" y="0.36021926143442085" z="None" />
       </node>
       <node id="chr_16_624" label="chr_16_624">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.37460651920720744" y="0.02092804789191306" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.14952038056663533" y="0.25214145375363" z="None" />
       </node>
       <node id="chr_5_2298" label="chr_5_2298">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.6101867062007863" y="-0.20672659914661515" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.1691359109325357" y="-0.060502167595578846" z="None" />
       </node>
       <node id="chr_19_800" label="chr_19_800">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.36180833297579235" y="-0.061493008130120645" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.08335470666041885" y="0.2587197982123002" z="None" />
       </node>
       <node id="chr_16_1724" label="chr_16_1724">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.47349769140133524" y="-0.184428508870716" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.34916925525444387" y="0.32326629460800915" z="None" />
       </node>
       <node id="chr_17_1196" label="chr_17_1196">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.4309042857757641" y="-0.19563546793130523" z="None" />
+        <viz:size value="1" />
+        <viz:position x="-0.3349464009033188" y="0.3431859751964473" z="None" />
       </node>
       <node id="chr_2_732" label="chr_2_732">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.4331817768342156" y="0.3582649446277394" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.2578333375883625" y="-0.5403088995442692" z="None" />
       </node>
       <node id="chr_16_684" label="chr_16_684">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.8076060988255547" y="0.07884136135006142" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.8480941083618222" y="0.25433215834306655" z="None" />
       </node>
       <node id="chr_20_741" label="chr_20_741">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.6358393191963151" y="0.24827462488122887" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.38211945369505906" y="-0.7394140370147958" z="None" />
       </node>
       <node id="chr_9_1965" label="chr_9_1965">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.5362711609906718" y="0.22278105181944158" z="None" />
+        <viz:size value="4" />
+        <viz:position x="-0.6160970679416886" y="-0.07047588347451614" z="None" />
       </node>
       <node id="chr_4_3069" label="chr_4_3069">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.3452424747276322" y="-0.07014410851915456" z="None" />
+        <viz:size value="5" />
+        <viz:position x="0.16886596731295636" y="0.24548157753085084" z="None" />
       </node>
       <node id="chr_15_430" label="chr_15_430">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.3112376954770363" y="0.6366472048162384" z="None" />
+        <viz:size value="1" />
+        <viz:position x="-0.6183875775289832" y="0.6466071541628235" z="None" />
       </node>
       <node id="chr_19_920" label="chr_19_920">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.2854533251266229" y="0.6431227774503756" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.6458860913318125" y="0.6687848040208961" z="None" />
       </node>
       <node id="chr_10_1091" label="chr_10_1091">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.49365798516120196" y="0.14014044000172585" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.5612070728434543" y="-0.07743162096043515" z="None" />
       </node>
       <node id="chr_3_112" label="chr_3_112">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.4359201424290686" y="-0.017211680873415777" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.11844002394897084" y="0.18860542612645806" z="None" />
       </node>
       <node id="chr_12_294" label="chr_12_294">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.05444128637969177" y="-0.6036178786495535" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.06157677730910234" y="0.8389628042669046" z="None" />
       </node>
       <node id="chr_9_2365" label="chr_9_2365">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.019720664466806134" y="0.19080938373488754" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.0056575887490753485" y="-0.29020827750539396" z="None" />
       </node>
       <node id="chr_11_2546" label="chr_11_2546">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.06244236440896775" y="-0.6715898180788796" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.048101093818345486" y="0.8753884591811049" z="None" />
       </node>
       <node id="chr_11_286" label="chr_11_286">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.4990137678521851" y="-0.13964817902056725" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.43137638578112225" y="0.35167609559121205" z="None" />
       </node>
       <node id="chr_15_1610" label="chr_15_1610">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.06837888424294726" y="0.21344432113496878" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.02352126350934071" y="-0.27398208728789614" z="None" />
       </node>
       <node id="chr_18_415" label="chr_18_415">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.1193124265574357" y="0.7225610476300764" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.8650111941272178" y="0.10783756779300671" z="None" />
       </node>
       <node id="chr_13_1576" label="chr_13_1576">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.07253288017882066" y="0.11907067703165608" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.0824011232790501" y="-0.28934299099951943" z="None" />
       </node>
       <node id="chr_18_795" label="chr_18_795">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.19185982766207932" y="-0.7445826572834562" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.8006837201047476" y="0.029274874608336773" z="None" />
       </node>
       <node id="chr_4_269" label="chr_4_269">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.13893762726719464" y="-0.9461260984443118" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.05622847474898373" y="-0.9161872431398149" z="None" />
       </node>
       <node id="chr_5_14" label="chr_5_14">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.13192081609613324" y="-0.9009958791425385" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.06256030819256947" y="-0.969433101584009" z="None" />
       </node>
       <node id="chr_15_590" label="chr_15_590">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.08912579955950878" y="0.06816284384115964" z="None" />
+        <viz:size value="8" />
+        <viz:position x="-0.028631300777949977" y="-0.04017675764547828" z="None" />
       </node>
       <node id="chr_8_288" label="chr_8_288">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.5466182538814922" y="-0.64258500076995" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.7277342695949875" y="-0.34152460937173407" z="None" />
       </node>
       <node id="chr_12_1794" label="chr_12_1794">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="5" />
-        <viz:position x="-0.5354339445021298" y="0.13274814022493883" z="None" />
+        <viz:position x="-0.6052445046460574" y="-0.040329284413747314" z="None" />
       </node>
       <node id="chr_3_2992" label="chr_3_2992">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.4381404103245268" y="-0.03758003746525457" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.14291214532194577" y="0.28297106263015276" z="None" />
       </node>
       <node id="chr_16_1044" label="chr_16_1044">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="8" />
-        <viz:position x="-0.5450736402046654" y="0.1718546574995701" z="None" />
+        <viz:position x="-0.6219781958669901" y="-0.04936819970387734" z="None" />
       </node>
       <node id="chr_14_1609" label="chr_14_1609">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.04199464630166717" y="0.15720850194948088" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.04386205070316075" y="-0.3108965694692872" z="None" />
       </node>
       <node id="chr_9_625" label="chr_9_625">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.5631397635162669" y="0.19509826608700132" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.5324435832754515" y="-0.08001664591664108" z="None" />
       </node>
       <node id="chr_8_2768" label="chr_8_2768">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.1575919202220613" y="0.9661300860696872" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.41760046276678525" y="-0.634191550228432" z="None" />
       </node>
       <node id="chr_9_38" label="chr_9_38">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.13646275490914792" y="0.9753978842081047" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.44022598944318425" y="-0.6643068994758553" z="None" />
       </node>
       <node id="chr_7_2777" label="chr_7_2777">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.3785836068858366" y="0.41128969356841694" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.34975884081010394" y="-0.508681163510998" z="None" />
       </node>
       <node id="chr_12_1294" label="chr_12_1294">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.676140439897129" y="0.0703004129464126" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.8046596679024542" y="0.2796656192691886" z="None" />
       </node>
       <node id="chr_18_375" label="chr_18_375">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.5389027162685663" y="0.1975723371070089" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.5943151366232864" y="-0.09374515191042782" z="None" />
       </node>
       <node id="chr_10_531" label="chr_10_531">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.37369044521941835" y="0.38718525816427607" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.3401665418756034" y="-0.46847002321959885" z="None" />
       </node>
       <node id="chr_3_1752" label="chr_3_1752">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.385153771521858" y="-0.0025365023751562693" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.1709908352010741" y="0.22621844137104247" z="None" />
       </node>
       <node id="chr_9_2745" label="chr_9_2745">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.6762696342053605" y="-0.1393675863006444" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.11841316743044791" y="-0.10848791255223542" z="None" />
       </node>
       <node id="chr_20_101" label="chr_20_101">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.06229049485868175" y="0.2950994865425949" z="None" />
+        <viz:size value="7" />
+        <viz:position x="-0.027548970626387698" y="-0.3803758945773515" z="None" />
       </node>
       <node id="chr_14_1469" label="chr_14_1469">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.4881810828870754" y="-0.153778163998815" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.3750019343745581" y="0.3515941709824122" z="None" />
       </node>
       <node id="chr_10_2151" label="chr_10_2151">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.6647551828120088" y="-0.12376850995481624" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.1973522011903791" y="-0.0615519394439136" z="None" />
       </node>
       <node id="chr_2_4888" label="chr_2_4888">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.9039944461926894" y="0.19601427608454253" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.494697162661029" y="0.7003060178738236" z="None" />
       </node>
       <node id="chr_3_152" label="chr_3_152">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.8916569487844975" y="0.21610506546081243" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.47666692191441656" y="0.6780461833226803" z="None" />
       </node>
       <node id="chr_17_1536" label="chr_17_1536">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.9657544109100268" y="0.14737509411252153" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.6367091833536487" y="0.4384010140588664" z="None" />
       </node>
       <node id="chr_19_1140" label="chr_19_1140">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="1.0" y="0.15342094600380204" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.6720495960514592" y="0.4743455340251238" z="None" />
       </node>
       <node id="chr_16_1264" label="chr_16_1264">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.42085293497029297" y="-0.10401417338635015" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.3482619150638191" y="0.38244833276598444" z="None" />
       </node>
       <node id="chr_15_850" label="chr_15_850">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="7" />
-        <viz:position x="0.11532072750938972" y="0.1870384247390878" z="None" />
+        <viz:position x="0.06762473277783082" y="-0.3042486463294931" z="None" />
       </node>
       <node id="chr_7_2517" label="chr_7_2517">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.40988131882790774" y="0.8786867594274019" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.8055823152754981" y="-0.1324812996939522" z="None" />
       </node>
       <node id="chr_8_29" label="chr_8_29">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.4321632892732277" y="0.8729512890584955" z="None" />
+        <viz:size value="3" />
+        <viz:position x="0.8572373760160324" y="-0.1438202745131424" z="None" />
       </node>
       <node id="chr_11_1866" label="chr_11_1866">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.7446118317392134" y="0.10541577651236703" z="None" />
+        <viz:size value="5" />
+        <viz:position x="0.8252532833485756" y="0.21538937993119" z="None" />
       </node>
       <node id="chr_10_931" label="chr_10_931">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.41095250290878194" y="0.019196280051842065" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.06533575767013516" y="0.27152529143561316" z="None" />
       </node>
       <node id="chr_2_3452" label="chr_2_3452">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.4372832690717294" y="0.8627764221066813" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.13557698670534532" y="-0.8523012160560439" z="None" />
       </node>
       <node id="chr_9_725" label="chr_9_725">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.40819819982269817" y="0.35390300229419797" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.28864888718563003" y="-0.5375501547431036" z="None" />
       </node>
       <node id="chr_4_3829" label="chr_4_3829">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.3504337322797069" y="-0.02836228786692309" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.10378394954581228" y="0.2695003010336508" z="None" />
       </node>
       <node id="chr_16_1164" label="chr_16_1164">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.6781084992971597" y="-0.18102207786628283" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.1053663717921218" y="-0.08451217327697655" z="None" />
       </node>
       <node id="chr_7_1557" label="chr_7_1557">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.4098069978662323" y="0.4033479385043211" z="None" />
+        <viz:size value="9" />
+        <viz:position x="0.27557068802412055" y="-0.5537178737708559" z="None" />
       </node>
       <node id="chr_10_1511" label="chr_10_1511">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.6441455643165982" y="-0.12051575750495663" z="None" />
+        <viz:size value="6" />
+        <viz:position x="-0.1257477613165024" y="-0.02057160090983219" z="None" />
       </node>
       <node id="chr_17_1356" label="chr_17_1356">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.137666852849211" y="-0.14377528582567042" z="None" />
+        <viz:size value="7" />
+        <viz:position x="-0.09192080568564695" y="0.14210627224098688" z="None" />
       </node>
       <node id="chr_11_2206" label="chr_11_2206">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.36230322024106276" y="-0.5498890373846047" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.6022191984154398" y="-0.7440393546810664" z="None" />
       </node>
       <node id="chr_14_969" label="chr_14_969">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.0307512078181915" y="0.20662418939840535" z="None" />
+        <viz:size value="1" />
+        <viz:position x="0.048642401982281404" y="-0.29070999405784376" z="None" />
       </node>
       <node id="chr_9_405" label="chr_9_405">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.6841458679826087" y="-0.15824272067030518" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.16093192997768138" y="-0.08710099635984839" z="None" />
       </node>
       <node id="chr_12_2274" label="chr_12_2274">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.4738269049256274" y="-0.10381903169490418" z="None" />
+        <viz:size value="7" />
+        <viz:position x="-0.41518869528657454" y="0.36590641067068214" z="None" />
       </node>
       <node id="chr_21_327" label="chr_21_327">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.646771839082497" y="0.2659182615299852" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.32866359259218386" y="-0.6997854965485152" z="None" />
       </node>
       <node id="chr_10_651" label="chr_10_651">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.44330071388455744" y="-0.18349264333728868" z="None" />
+        <viz:size value="2" />
+        <viz:position x="-0.3300845818505735" y="0.36913586494152945" z="None" />
       </node>
       <node id="chr_14_1389" label="chr_14_1389">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.0420732468669713" y="-0.6920163111382494" z="None" />
+        <viz:size value="5" />
+        <viz:position x="0.03204278005633176" y="0.7755867193620596" z="None" />
       </node>
       <node id="chr_18_1315" label="chr_18_1315">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.13655761741043915" y="-0.2070653267731839" z="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.2957165665522748" y="0.14488974719297593" z="None" />
       </node>
       <node id="chr_12_2334" label="chr_12_2334">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.706260555963236" y="-0.012991476568828427" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.10524253183887597" y="-0.10118344081425977" z="None" />
       </node>
       <node id="chr_7_1857" label="chr_7_1857">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.5164787047343221" y="0.22750520555100268" z="None" />
+        <viz:size value="3" />
+        <viz:position x="-0.5829877877574083" y="-0.04007971843260038" z="None" />
       </node>
       <node id="chr_21_247" label="chr_21_247">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.07526984286681979" y="0.01763777845457134" z="None" />
+        <viz:size value="7" />
+        <viz:position x="0.025991427441840857" y="-0.0661365572017976" z="None" />
       </node>
       <node id="chr_8_2388" label="chr_8_2388">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.34906295382657676" y="0.3654811164489907" z="None" />
+        <viz:size value="8" />
+        <viz:position x="0.30591247154450085" y="-0.46130943053836576" z="None" />
       </node>
       <node id="chr_15_1390" label="chr_15_1390">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.1586284664121105" y="-0.6826920268719698" z="None" />
+        <viz:size value="4" />
+        <viz:position x="0.6894996223327561" y="0.007694996026022687" z="None" />
       </node>
       <node id="chr_14_709" label="chr_14_709">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.4511663398106942" y="-0.09831750715385329" z="None" />
+        <viz:size value="9" />
+        <viz:position x="-0.38115223896597045" y="0.38502338274187536" z="None" />
       </node>
       <node id="chr_16_144" label="chr_16_144">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.07797165182164922" y="-0.6225616325716615" z="None" />
+        <viz:size value="2" />
+        <viz:position x="0.00641781011737338" y="0.7891367061110152" z="None" />
       </node>
       <node id="chr_9_1985" label="chr_9_1985">
         <viz:color a="None" b="256" g="0" r="0" />
         <viz:size value="7" />
-        <viz:position x="-0.5555615639834848" y="0.21263736685744836" z="None" />
+        <viz:position x="-0.5983183358809328" y="-0.07024460616981054" z="None" />
       </node>
       <node id="chr_19_100" label="chr_19_100">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.6456968279419463" y="0.2856900531490338" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.4024764571293678" y="-0.7264888815948378" z="None" />
       </node>
       <node id="chr_18_1515" label="chr_18_1515">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.7032541110490961" y="-0.4039470823162592" z="None" />
+        <viz:size value="0" />
+        <viz:position x="0.559762216550229" y="0.8320325589722042" z="None" />
       </node>
       <node id="chr_19_980" label="chr_19_980">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.6687295243125337" y="-0.37595701663409425" z="None" />
+        <viz:size value="6" />
+        <viz:position x="0.5352758607946906" y="0.8340161900330245" z="None" />
       </node>
       <node id="chr_17_1176" label="chr_17_1176">
         <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.33262524376699243" y="0.6208730850871368" z="None" />
+        <viz:size value="0" />
+        <viz:position x="-0.582108515846801" y="0.6131536476087668" z="None" />
       </node>
     </nodes>
     <edges>
