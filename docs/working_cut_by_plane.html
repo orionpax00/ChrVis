@@ -111,11 +111,11 @@
 
 													if (lines[i].split(/\s/)[0] !== '#'){
 														list_ = lines[i].split(/\s/);
-														if (parseInt(list_[0]) === 1){
+														// if (parseInt(list_[0]) === 1){
 																var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
 																points.push(chr_center)
 																// console.log(chr_center)
-															}
+															// }
 														}
 													}
 				            }
@@ -123,6 +123,7 @@
 				    }
 				    rawFile.send(null);
 				}
+
 				readTextFile("data/dummy_chromatin_str_fixed.txt");
 
 				var spline = new THREE.CatmullRomCurve3( points );
