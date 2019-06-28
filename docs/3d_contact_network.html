@@ -76,6 +76,37 @@
 
 		</script>
 
+		<script type="x-shader/x-vertex" id="vertexshader_line">
+
+			attribute vec3 custom_Color;
+			attribute float custom_Opacity;
+
+			varying vec3 vColor;
+			varying float vOpacity;
+
+			void main() {
+
+				vColor = custom_Color;
+				vOpacity = custom_Opacity;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+		</script>
+
+		<script type="x-shader/x-fragment" id="fragmentshader_line">
+
+			uniform vec3 color;
+
+			varying vec3 vColor;
+			varying float vOpacity;
+
+			void main() {
+				gl_FragColor = vec4( vColor * color, vOpacity);
+			}
+
+		</script>
+
 
 		<script>
 
@@ -99,15 +130,20 @@
 			let colors_ = ["#1f78b4", "#a6cee3", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00", "#cab2d6", "#6a3d9a", "#ffff99", "#b15928",
 			        "#8dd3c7", "#ffffb3", "#bebada", "#fb8072", "#80b1d3", "#fdb462", "#b3de69", "#fccde5", "#d9d9d9", "#bc80bd", "#ccebc5", "#ffed6f"];
 
+			let colors_link_ = ["#1f78b4", "#ffff99"];
+
 
 			var json = $.getJSON("data/complete3d_network.json")
 				.done(function(data){
+					console.log(data)
 
 					var data_={
 						chr_position:[],
 						link:[],
+						freq:[],
 						colors:[],
 						size:[],
+						colors_link:[],
 					}
 					for (var i=0; i < data.data.length; ++i){
 							data_.chr_position.push(parseFloat(data.data[i].position[0]))
@@ -129,6 +165,20 @@
 								data_.link.push(parseFloat(data.data[i].trans_intreract_list_loc[j][0]))
 								data_.link.push(parseFloat(data.data[i].trans_intreract_list_loc[j][1]))
 								data_.link.push(parseFloat(data.data[i].trans_intreract_list_loc[j][2]))
+
+								data_.freq.push(parseFloat(data.data[i].trans_intreract_list_freq[j]))
+								data_.freq.push(parseFloat(data.data[i].trans_intreract_list_freq[j]))
+
+								var color_ = new THREE.Color(colors_link_[Math.floor((Math.random() * 1) +0.5)]);
+
+								data_.colors_link.push(color_.r)
+								data_.colors_link.push(color_.g)
+								data_.colors_link.push(color_.b)
+
+								data_.colors_link.push(color_.r)
+								data_.colors_link.push(color_.g)
+								data_.colors_link.push(color_.b)
+
 							}
 						}
 
@@ -191,8 +241,8 @@
 
 					blending: THREE.AdditiveBlending,
 					depthTest: false,
-					transparent: true,
-					sizeAttenuation: true,
+					transparent: false,
+					// sizeAttenuation: true,
 				} );
 
 
@@ -200,6 +250,11 @@
 				particlePositions = new Float32Array( data_.chr_position.length );
 				particleColors = new Float32Array( data_.chr_position.length);
 				sizes = new Float32Array( data_.size.length  );
+
+				linkColors = new Float32Array( data_.colors_link.length);
+				linkopacity = new Float32Array( data_.freq.length);
+
+
 
 				for ( var i = 0; i < data_.chr_position.length; i ++ ) {
 						particlePositions[ i ] = data_.chr_position[i];
@@ -210,8 +265,16 @@
 						sizes[ i ] = data_.size[i];
 					}
 
-					for ( var i = 0; i < data_.link.length; i ++ ) {
-							positions[ i ] = data_.link[i];
+				for ( var i = 0; i < data_.link.length; i ++ ) {
+						positions[ i ] = data_.link[i];
+					}
+
+				for ( var i = 0; i < data_.colors_link.length; i ++ ) {
+						linkColors[ i ] = data_.colors_link[i];
+					}
+
+					for ( var i = 0; i < data_.freq.length; i ++ ) {
+							linkopacity[ i ] = data_.freq[i];
 						}
 
 				particles.setDrawRange( 0, data_.chr_position.length );
@@ -221,8 +284,6 @@
 
 				particles.computeBoundingSphere();
 
-				console.log(particles);
-				console.log(pMaterial);
 
 				centerx = -particles.boundingSphere.center.x;
 				centery = -particles.boundingSphere.center.y;
@@ -237,7 +298,10 @@
 				var geometry = new THREE.BufferGeometry();
 
 				geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 , true ) );
-				// geometry.addAttribute( 'color', new THREE.BufferAttribute( colors, 3 , true ) );
+				geometry.addAttribute( 'custom_Color', new THREE.BufferAttribute( linkColors, 3 , true ) );
+				geometry.addAttribute( 'custom_Opacity', new THREE.BufferAttribute( linkopacity, 1 , true ) );
+
+				console.log(geometry)
 
 				geometry.computeBoundingSphere();
 
@@ -251,10 +315,24 @@
 					color:'#ffffff',
 					// vertexColors: THREE.VertexColors,
 					blending: THREE.AdditiveBlending,
-					transparent: true
+					transparent: true,
+					opacity: 0.25,
 				} );
 
-				linesMesh = new THREE.LineSegments( geometry, material );
+				var lineshaderMaterial = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) }
+					},
+					vertexShader: document.getElementById( 'vertexshader_line' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader_line' ).textContent,
+					blending: THREE.AdditiveBlending,
+					depthTest: false,
+					transparent: true
+
+				} );
+
+				linesMesh = new THREE.LineSegments( geometry, lineshaderMaterial );
 				linesMesh.geometry.setDrawRange( 0, data_.link.length);
 				group.add( linesMesh );
 
