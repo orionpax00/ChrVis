@@ -38,6 +38,8 @@
 			var camera, scene, renderer, startTime, object, stats, controls;
 			var insetWidth;
 			var insetHeight;
+			var matLine;
+			var r
 
 			init();
 			animate();
@@ -54,7 +56,7 @@
 
 				camera = new THREE.PerspectiveCamera( 36, window.innerWidth / window.innerHeight, 0.25, 1000 );
 
-				camera.position.z = 100;
+
 
 
 				controls = new THREE.TrackballControls( camera, renderer.domElement );
@@ -155,16 +157,26 @@
 					linewidth: 5, // in pixels
 					vertexColors: THREE.VertexColors,
 					dashed: false,
-					clippingPlanes : [globalPlane],
 				} );
+				matLine.clipping = true;
 
-				// object1 = new THREE.Line2( geometry, matLine );
-				// scene.add(object1)
+
+
+				r = geometry.boundingSphere.radius * 2;
 
 				thick_line = new THREE.Line2( geometry, matLine );
 				thick_line.computeLineDistances();
 				thick_line.visible = true;
 				scene.add(thick_line)
+
+				var helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxBufferGeometry( r, r, r ) ) );
+				helper.material.color.setHex( 0xffffff);
+				helper.material.opacity = 0.25;
+				helper.material.blending = THREE.AdditiveBlending;
+				helper.material.transparent = true;
+				scene.add( helper );
+
+				console.log(matLine);
 
 
 				var geo = new THREE.BufferGeometry();
@@ -177,7 +189,7 @@
 		    middlez = -(geo.boundingBox.max.z + geo.boundingBox.min.z) / 2;
 				geo.applyMatrix( new THREE.Matrix4().makeTranslation( middlex, middlez, middlez ) );
 
-				matLineBasic = new THREE.LineBasicMaterial( { vertexColors: THREE.VertexColors } );
+				matLineBasic = new THREE.LineBasicMaterial( { vertexColors: THREE.VertexColors, clippingPlanes : [globalPlane] } );
 				thin_line = new THREE.Line( geo, matLineBasic );
 				thin_line.computeLineDistances();
 				thin_line.visible = false;
@@ -185,8 +197,8 @@
 
 
 				var helpers = new THREE.Group();
-				helpers.add( new THREE.PlaneHelper( globalPlane, 100, 0xff0ff0 ) );
-
+				helpers.add( new THREE.PlaneHelper( globalPlane, r, 0xf00f00 ) );
+				helper.material.opacity = 0.25;
 				helpers.visible = true;
 				scene.add( helpers );
 
@@ -196,7 +208,9 @@
 				var globalPlanes = [ globalPlane ],
 					Empty = Object.freeze( [] );
 				renderer.clippingPlanes = Empty; // GUI sets it to globalPlanes
-				renderer.localClippingEnabled = false;
+				renderer.localClippingEnabled = true;
+
+				camera.position.z = r * 2 ;
 
 				var gui = new dat.GUI(),
 
@@ -204,14 +218,11 @@
 					propsGlobal = {
 
 						get 'Enabled'() {
-							return renderer.clippingPlanes !== Empty;
+							return !matLine.clipping;
 						},
 
 						set 'Enabled'( v ) {
-							console.log(v);
-							thick_line.visible = !v;
-							thin_line.visible = v;
-							renderer.clippingPlanes = v ? globalPlanes : Empty;
+							matLine.clippingPlanes = [globalPlane] ;
 						},
 
 						get 'Plane'() {
@@ -238,7 +249,7 @@
 					};
 
 				folderGlobal.add( propsGlobal, 'Enabled' );
-				folderGlobal.add( propsGlobal, 'Plane', - 240, 300 );
+				folderGlobal.add( propsGlobal, 'Plane', - r/2, r/2 );
 				folderplane.add( propsplane, 'Enabled' );
 
 				// Start

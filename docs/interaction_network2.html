@@ -30,11 +30,11 @@
       arrowStrikethrough: true,
       chosen: true,
       color: {
-      color:'red',
-      highlight:'#848484',
-      hover: '#848484',
-      inherit: 'from',
-      opacity:1.0,
+        color:'red',
+        highlight:'yellow',
+        hover: '#ff00ff',
+        inherit: 'from',
+        opacity:1.0,
       },
       scaling:{
         max:5,
@@ -88,8 +88,17 @@
     nodes: {
         shape: "circle",
         size:0.5,
+        borderWidth:2,
+        color:{
+          background:"green",
+          border:"green",
+          hover : {
+            border:"#2B7CE9",
+            background:"#000000",
+          }
+        },
         font: {
-          color: '#343434',
+
           size: 5, // px
           face: 'arial',
           background: 'none',
@@ -178,6 +187,9 @@
       timestep: 0.5,
       adaptiveTimestep: true
     },
+    interaction:{
+      hover:true
+    }
   };
 
 var json = $.getJSON("./test_visjs.json")
