@@ -1,1281 +1,1679 @@
 <?xml version='1.0' encoding='utf-8'?>
-<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
   <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes class="edge" mode="static">
+      <attribute id="0" title="source" type="string" />
+      <attribute id="1" title="target" type="string" />
+      <attribute id="2" title="size" type="long" />
+    </attributes>
     <meta>
       <creator>NetworkX 2.3</creator>
-      <lastmodified>19/06/2019</lastmodified>
+      <lastmodified>26/06/2019</lastmodified>
     </meta>
     <nodes>
-      <node id="chr_1_5048" label="chr_1_5048">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.09944300887919465" y="0.21999030660027333" z="None" />
-      </node>
-      <node id="chr_8_2548" label="chr_8_2548">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.1448950988634578" y="0.2072201930052392" z="None" />
-      </node>
-      <node id="chr_8_68" label="chr_8_68">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.08007997291731128" y="0.078452214404787" z="None" />
-      </node>
-      <node id="chr_15_1070" label="chr_15_1070">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.09831278432631674" y="0.1256812261991902" z="None" />
-      </node>
-      <node id="chr_13_1856" label="chr_13_1856">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.22978958564535962" y="-0.9619915061476116" z="None" />
-      </node>
-      <node id="chr_14_40" label="chr_14_40">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.20544413647039766" y="-0.9650056033558735" z="None" />
-      </node>
-      <node id="chr_7_57" label="chr_7_57">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.03951197045817855" y="-0.23992782745746866" z="None" />
-      </node>
-      <node id="chr_13_816" label="chr_13_816">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.06316374132118416" y="-0.2711390981374599" z="None" />
-      </node>
-      <node id="chr_4_30" label="chr_4_30">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.5500131925833411" y="-0.0325934708703587" z="None" />
-      </node>
-      <node id="chr_12_1554" label="chr_12_1554">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.5500763184387647" y="-0.09751569228700724" z="None" />
-      </node>
-      <node id="chr_13_396" label="chr_13_396">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.3268230428468508" y="0.8523682343753817" z="None" />
-      </node>
-      <node id="chr_20_981" label="chr_20_981">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.299366697594774" y="0.8585803866760865" z="None" />
-      </node>
-      <node id="chr_5_38" label="chr_5_38">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.7917392308911146" y="-0.362494618713379" z="None" />
-      </node>
-      <node id="chr_6_985" label="chr_6_985">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.8361517191749385" y="-0.39204023135139293" z="None" />
-      </node>
-      <node id="chr_16_1784" label="chr_16_1784">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.8849637010725812" y="0.08353114499213178" z="None" />
-      </node>
-      <node id="chr_19_320" label="chr_19_320">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.9138124241015478" y="0.09871412587519682" z="None" />
-      </node>
-      <node id="chr_9_2645" label="chr_9_2645">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.023938953381825664" y="-0.3022017661509347" z="None" />
-      </node>
-      <node id="chr_11_766" label="chr_11_766">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.12248930930918893" y="0.24390525007722128" z="None" />
-      </node>
-      <node id="chr_1_42" label="chr_1_42">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.28641347310596843" y="-0.4931840825086533" z="None" />
-      </node>
-      <node id="chr_2_72" label="chr_2_72">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.3490360033946301" y="-0.48902075026282993" z="None" />
-      </node>
-      <node id="chr_12_114" label="chr_12_114">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.040736481736267545" y="-0.09084417415606419" z="None" />
-      </node>
-      <node id="chr_13_23" label="chr_13_23">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.045673812846980424" y="-0.10007248890188067" z="None" />
-      </node>
-      <node id="chr_8_668" label="chr_8_668">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.09846937772948168" y="-0.27328348569382754" z="None" />
-      </node>
-      <node id="chr_11_66" label="chr_11_66">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.023971968271619012" y="-0.0811028399592546" z="None" />
-      </node>
-      <node id="chr_12_614" label="chr_12_614">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.005160624198850444" y="-0.09337638169713165" z="None" />
-      </node>
-      <node id="chr_14_449" label="chr_14_449">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.760965307386412" y="0.007907966535522174" z="None" />
-      </node>
-      <node id="chr_20_861" label="chr_20_861">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.8033213089504198" y="-0.01233615375463124" z="None" />
-      </node>
-      <node id="chr_11_2406" label="chr_11_2406">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.007777779003462696" y="0.1535470646566182" z="None" />
-      </node>
-      <node id="chr_2_4832" label="chr_2_4832">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.12740104461622806" y="-0.05259521385610743" z="None" />
-      </node>
-      <node id="chr_11_1506" label="chr_11_1506">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.15870168809541277" y="-0.01867467787767942" z="None" />
-      </node>
-      <node id="chr_5_718" label="chr_5_718">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.12234951503116988" y="0.28970106848398935" z="None" />
-      </node>
-      <node id="chr_12_54" label="chr_12_54">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.2545723032353838" y="0.13075192063618044" z="None" />
-      </node>
-      <node id="chr_18_655" label="chr_18_655">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.3113811172363655" y="0.1641095260928795" z="None" />
-      </node>
-      <node id="chr_5_438" label="chr_5_438">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.1290416131237034" y="0.26919625666292535" z="None" />
-      </node>
-      <node id="chr_19_200" label="chr_19_200">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.011438609060992184" y="0.0836313761656975" z="None" />
-      </node>
-      <node id="chr_19_140" label="chr_19_140">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.1463709457071766" y="0.22923911950686476" z="None" />
-      </node>
-      <node id="chr_13_1456" label="chr_13_1456">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.8209776160204482" y="-0.40689805843584714" z="None" />
-      </node>
-      <node id="chr_11_366" label="chr_11_366">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.5558552381670187" y="-0.7546994121660565" z="None" />
-      </node>
-      <node id="chr_12_12" label="chr_12_12">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.5869094265847093" y="-0.7681549817136354" z="None" />
-      </node>
-      <node id="chr_11_126" label="chr_11_126">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.1266528493262252" y="0.09587931317975291" z="None" />
-      </node>
-      <node id="chr_12_1414" label="chr_12_1414">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.19054333692778805" y="-0.04128316629456877" z="None" />
-      </node>
-      <node id="chr_20_201" label="chr_20_201">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.2853636175506419" y="0.17323676081950842" z="None" />
-      </node>
-      <node id="chr_9_85" label="chr_9_85">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.7861702266644393" y="0.23695253732897736" z="None" />
-      </node>
-      <node id="chr_12_1014" label="chr_12_1014">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.839009439285125" y="0.23085940350773312" z="None" />
-      </node>
-      <node id="chr_13_976" label="chr_13_976">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.007032055554118765" y="-0.24579813177801602" z="None" />
-      </node>
-      <node id="chr_10_2571" label="chr_10_2571">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.4541025010518838" y="0.9786264386106479" z="None" />
-      </node>
-      <node id="chr_11_18" label="chr_11_18">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.4414414576927771" y="0.9298594739102246" z="None" />
-      </node>
-      <node id="chr_1_0" label="chr_1_0">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.10487115166552549" y="-0.8432935405138945" z="None" />
-      </node>
-      <node id="chr_2_1712" label="chr_2_1712">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.11258970040867086" y="-0.8997477320166489" z="None" />
-      </node>
-      <node id="chr_9_2465" label="chr_9_2465">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.3039514852687533" y="-0.5571480077749652" z="None" />
-      </node>
-      <node id="chr_12_194" label="chr_12_194">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.021474063005258743" y="-0.09927000499305007" z="None" />
-      </node>
-      <node id="chr_19_260" label="chr_19_260">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.06898360562782957" y="0.12739111180818907" z="None" />
-      </node>
-      <node id="chr_6_65" label="chr_6_65">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.373750930602984" y="0.3099799714811758" z="None" />
-      </node>
-      <node id="chr_10_1671" label="chr_10_1671">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.36763152728895043" y="0.3750307328316203" z="None" />
-      </node>
-      <node id="chr_5_3278" label="chr_5_3278">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.582356477516632" y="0.008601157403703803" z="None" />
-      </node>
-      <node id="chr_18_915" label="chr_18_915">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.17418740608937228" y="-0.1087971232330128" z="None" />
-      </node>
-      <node id="chr_15_2100" label="chr_15_2100">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.35951967709409666" y="-0.6839157592819558" z="None" />
-      </node>
-      <node id="chr_18_975" label="chr_18_975">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.35039916979039554" y="-0.724043485577151" z="None" />
-      </node>
-      <node id="chr_14_1309" label="chr_14_1309">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.18780218905078158" y="-0.09550168969218435" z="None" />
-      </node>
-      <node id="chr_19_380" label="chr_19_380">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.8277036731642037" y="0.2776817372166818" z="None" />
-      </node>
-      <node id="chr_11_2246" label="chr_11_2246">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.3508776038721106" y="0.7577159476148846" z="None" />
-      </node>
-      <node id="chr_12_34" label="chr_12_34">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.3758819450556684" y="0.7869296728311751" z="None" />
-      </node>
-      <node id="chr_16_544" label="chr_16_544">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.1638888558632965" y="-0.36625038200121046" z="None" />
-      </node>
-      <node id="chr_13_1136" label="chr_13_1136">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.4420071958640502" y="0.3234512644586681" z="None" />
-      </node>
-      <node id="chr_12_1434" label="chr_12_1434">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.4252892407532477" y="0.30282066073719255" z="None" />
-      </node>
-      <node id="chr_9_165" label="chr_9_165">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.13665360523620848" y="-0.09041042511193685" z="None" />
-      </node>
-      <node id="chr_22_983" label="chr_22_983">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.32660904141789665" y="-0.5950515501383546" z="None" />
-      </node>
-      <node id="chr_13_516" label="chr_13_516">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.029022073348853223" y="-0.0820012764413666" z="None" />
-      </node>
-      <node id="chr_14_1709" label="chr_14_1709">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.307005408126152" y="0.11766162669264386" z="None" />
-      </node>
-      <node id="chr_20_321" label="chr_20_321">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.10187084349050907" y="-0.24622180502819568" z="None" />
-      </node>
-      <node id="chr_8_828" label="chr_8_828">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.34296586707802496" y="-0.528080775258407" z="None" />
-      </node>
-      <node id="chr_10_51" label="chr_10_51">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.027646115213876166" y="0.8292560110896772" z="None" />
-      </node>
-      <node id="chr_14_2069" label="chr_14_2069">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.004099072337937865" y="0.8621205207307316" z="None" />
-      </node>
-      <node id="chr_10_2752" label="chr_10_2752">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.11974857597783044" y="0.124958376371351" z="None" />
-      </node>
-      <node id="chr_9_2065" label="chr_9_2065">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.10257671220216208" y="0.1037092982509753" z="None" />
-      </node>
-      <node id="chr_11_926" label="chr_11_926">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.5408356123317553" y="-0.05740281608752264" z="None" />
-      </node>
-      <node id="chr_2_4052" label="chr_2_4052">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.08212931427435424" y="-0.8660836405110424" z="None" />
-      </node>
-      <node id="chr_15_1790" label="chr_15_1790">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.8154477661197305" y="0.009244538856023941" z="None" />
-      </node>
-      <node id="chr_18_1475" label="chr_18_1475">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.787411923600883" y="0.4671396795077293" z="None" />
-      </node>
-      <node id="chr_19_1060" label="chr_19_1060">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.7748302173208519" y="0.44652798597374777" z="None" />
-      </node>
-      <node id="chr_17_196" label="chr_17_196">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.010349503959788555" y="-0.2797859819144121" z="None" />
-      </node>
-      <node id="chr_10_671" label="chr_10_671">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.5809181494752246" y="-0.07646661324140822" z="None" />
-      </node>
-      <node id="chr_21_567" label="chr_21_567">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.9282095277939546" y="0.06601168681902983" z="None" />
-      </node>
-      <node id="chr_7_2277" label="chr_7_2277">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.7444050381322289" y="-0.32620476200307635" z="None" />
-      </node>
-      <node id="chr_13_1216" label="chr_13_1216">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.08377483684572179" y="0.28689360010714055" z="None" />
-      </node>
-      <node id="chr_3_632" label="chr_3_632">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.165962139246672" y="0.20431737116155546" z="None" />
-      </node>
-      <node id="chr_19_1208" label="chr_19_1208">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.0036627476811978664" y="-0.3218839223927216" z="None" />
-      </node>
-      <node id="chr_18_455" label="chr_18_455">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.32012261368244765" y="0.14024563978454552" z="None" />
-      </node>
-      <node id="chr_12_954" label="chr_12_954">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.10360060628563948" y="0.29366632391690567" z="None" />
-      </node>
-      <node id="chr_9_2245" label="chr_9_2245">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.15699373642479386" y="-0.11493014698068484" z="None" />
-      </node>
-      <node id="chr_14_649" label="chr_14_649">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.8301633932776955" y="-0.35186924429935806" z="None" />
-      </node>
-      <node id="chr_12_554" label="chr_12_554">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.5725558833851401" y="-0.10075122620742102" z="None" />
-      </node>
-      <node id="chr_6_545" label="chr_6_545">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.37595524187395724" y="-0.8941435960712105" z="None" />
-      </node>
-      <node id="chr_7_24" label="chr_7_24">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.3628256710670981" y="-0.8687274066685184" z="None" />
-      </node>
-      <node id="chr_2_4612" label="chr_2_4612">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.09527900977406237" y="-0.7817996373913254" z="None" />
-      </node>
-      <node id="chr_12_1474" label="chr_12_1474">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.827476518400305" y="0.255802676697338" z="None" />
-      </node>
-      <node id="chr_16_1805" label="chr_16_1805">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.9679061749444637" y="-0.015516739228352503" z="None" />
-      </node>
-      <node id="chr_17_256" label="chr_17_256">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="1.0" y="-0.01617885713983533" z="None" />
-      </node>
-      <node id="chr_11_446" label="chr_11_446">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.4055949441160644" y="0.8346694632751833" z="None" />
-      </node>
-      <node id="chr_7_2357" label="chr_7_2357">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.3248670081246923" y="0.3174352803986443" z="None" />
-      </node>
-      <node id="chr_10_291" label="chr_10_291">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.46872899388760625" y="0.9506140002429063" z="None" />
-      </node>
-      <node id="chr_18_1375" label="chr_18_1375">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.3187003228786694" y="0.2236342179224289" z="None" />
-      </node>
-      <node id="chr_22_863" label="chr_22_863">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.09256581143986285" y="-0.2279640019675919" z="None" />
-      </node>
-      <node id="chr_5_1238" label="chr_5_1238">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.5979812634110204" y="-0.013218206467845066" z="None" />
-      </node>
-      <node id="chr_12_2374" label="chr_12_2374">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.026343576205327394" y="0.8896208891640669" z="None" />
-      </node>
-      <node id="chr_5_3558" label="chr_5_3558">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.31298023459103236" y="-0.5319478699286055" z="None" />
-      </node>
-      <node id="chr_7_2537" label="chr_7_2537">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.42386082282145704" y="0.33061414995378813" z="None" />
-      </node>
-      <node id="chr_5_118" label="chr_5_118">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.1722166703458505" y="-0.03399865546251769" z="None" />
-      </node>
-      <node id="chr_3_1592" label="chr_3_1592">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.3220460889280386" y="-0.47943847594195627" z="None" />
-      </node>
-      <node id="chr_16_84" label="chr_16_84">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.25481807179284044" y="-0.5179125680712169" z="None" />
-      </node>
-      <node id="chr_13_1596" label="chr_13_1596">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.18684775789306737" y="-0.0777206877368539" z="None" />
-      </node>
-      <node id="chr_3_692" label="chr_3_692">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.14479207665659372" y="0.18528414441850385" z="None" />
-      </node>
-      <node id="chr_10_2051" label="chr_10_2051">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.0627885447866042" y="0.2428847160452139" z="None" />
-      </node>
-      <node id="chr_19_160" label="chr_19_160">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.002521607657863907" y="-0.038835975401600616" z="None" />
-      </node>
-      <node id="chr_7_3157" label="chr_7_3157">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.8482504602495378" y="-0.3737084433834436" z="None" />
-      </node>
-      <node id="chr_11_1626" label="chr_11_1626">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.32272548437521187" y="-0.507067950255682" z="None" />
-      </node>
-      <node id="chr_17_13" label="chr_17_13">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.3474946547587759" y="0.8816403734046055" z="None" />
-      </node>
-      <node id="chr_9_265" label="chr_9_265">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.08488234914534803" y="-0.25984053919322747" z="None" />
-      </node>
-      <node id="chr_14_469" label="chr_14_469">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.3981752326149097" y="0.37385969716424644" z="None" />
-      </node>
-      <node id="chr_4_2509" label="chr_4_2509">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.32936738429692825" y="-0.5454493831143447" z="None" />
-      </node>
-      <node id="chr_10_111" label="chr_10_111">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.6080247485591869" y="0.0013833156388764645" z="None" />
-      </node>
-      <node id="chr_11_666" label="chr_11_666">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.4001165516128655" y="0.34382832995823764" z="None" />
-      </node>
-      <node id="chr_18_1455" label="chr_18_1455">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.9499619187606025" y="0.15068792474506235" z="None" />
-      </node>
-      <node id="chr_21_507" label="chr_21_507">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.9506404636691415" y="0.1251585899729776" z="None" />
-      </node>
-      <node id="chr_16_104" label="chr_16_104">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.14213752257213438" y="0.027563197820807663" z="None" />
-      </node>
-      <node id="chr_15_810" label="chr_15_810">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.17405283893555135" y="0.11218652690582008" z="None" />
-      </node>
-      <node id="chr_21_347" label="chr_21_347">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.01736533489603954" y="-0.04636339592974683" z="None" />
-      </node>
-      <node id="chr_14_1149" label="chr_14_1149">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.15803425115838407" y="0.2683002925689186" z="None" />
-      </node>
-      <node id="chr_15_1830" label="chr_15_1830">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.4499822938294302" y="0.13315581694888615" z="None" />
-      </node>
-      <node id="chr_21_287" label="chr_21_287">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.13817986235493393" y="-0.11833099587902805" z="None" />
-      </node>
-      <node id="chr_12_2656" label="chr_12_2656">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.6901309984782481" y="0.20219207530850805" z="None" />
-      </node>
-      <node id="chr_12_2134" label="chr_12_2134">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.31802774118101357" y="0.3476095476641452" z="None" />
-      </node>
-      <node id="chr_22_503" label="chr_22_503">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.01204665876692904" y="-0.25836717132501497" z="None" />
-      </node>
-      <node id="chr_8_2328" label="chr_8_2328">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.07177321169463176" y="-0.21830007512430005" z="None" />
-      </node>
-      <node id="chr_5_198" label="chr_5_198">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.6213170078827135" y="-0.023132017449854943" z="None" />
-      </node>
-      <node id="chr_19_940" label="chr_19_940">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.34989126023947903" y="0.36021926143442085" z="None" />
-      </node>
-      <node id="chr_16_624" label="chr_16_624">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.14952038056663533" y="0.25214145375363" z="None" />
-      </node>
-      <node id="chr_5_2298" label="chr_5_2298">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.1691359109325357" y="-0.060502167595578846" z="None" />
-      </node>
-      <node id="chr_19_800" label="chr_19_800">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.08335470666041885" y="0.2587197982123002" z="None" />
-      </node>
-      <node id="chr_16_1724" label="chr_16_1724">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.34916925525444387" y="0.32326629460800915" z="None" />
-      </node>
-      <node id="chr_17_1196" label="chr_17_1196">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.3349464009033188" y="0.3431859751964473" z="None" />
-      </node>
-      <node id="chr_2_732" label="chr_2_732">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.2578333375883625" y="-0.5403088995442692" z="None" />
-      </node>
-      <node id="chr_16_684" label="chr_16_684">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.8480941083618222" y="0.25433215834306655" z="None" />
-      </node>
-      <node id="chr_20_741" label="chr_20_741">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.38211945369505906" y="-0.7394140370147958" z="None" />
-      </node>
-      <node id="chr_9_1965" label="chr_9_1965">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="-0.6160970679416886" y="-0.07047588347451614" z="None" />
-      </node>
-      <node id="chr_4_3069" label="chr_4_3069">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.16886596731295636" y="0.24548157753085084" z="None" />
-      </node>
-      <node id="chr_15_430" label="chr_15_430">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="-0.6183875775289832" y="0.6466071541628235" z="None" />
-      </node>
-      <node id="chr_19_920" label="chr_19_920">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.6458860913318125" y="0.6687848040208961" z="None" />
-      </node>
-      <node id="chr_10_1091" label="chr_10_1091">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.5612070728434543" y="-0.07743162096043515" z="None" />
-      </node>
-      <node id="chr_3_112" label="chr_3_112">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.11844002394897084" y="0.18860542612645806" z="None" />
-      </node>
-      <node id="chr_12_294" label="chr_12_294">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.06157677730910234" y="0.8389628042669046" z="None" />
-      </node>
-      <node id="chr_9_2365" label="chr_9_2365">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.0056575887490753485" y="-0.29020827750539396" z="None" />
-      </node>
-      <node id="chr_11_2546" label="chr_11_2546">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.048101093818345486" y="0.8753884591811049" z="None" />
-      </node>
-      <node id="chr_11_286" label="chr_11_286">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.43137638578112225" y="0.35167609559121205" z="None" />
-      </node>
-      <node id="chr_15_1610" label="chr_15_1610">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.02352126350934071" y="-0.27398208728789614" z="None" />
-      </node>
-      <node id="chr_18_415" label="chr_18_415">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.8650111941272178" y="0.10783756779300671" z="None" />
-      </node>
-      <node id="chr_13_1576" label="chr_13_1576">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.0824011232790501" y="-0.28934299099951943" z="None" />
-      </node>
-      <node id="chr_18_795" label="chr_18_795">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.8006837201047476" y="0.029274874608336773" z="None" />
-      </node>
-      <node id="chr_4_269" label="chr_4_269">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.05622847474898373" y="-0.9161872431398149" z="None" />
-      </node>
-      <node id="chr_5_14" label="chr_5_14">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.06256030819256947" y="-0.969433101584009" z="None" />
-      </node>
-      <node id="chr_15_590" label="chr_15_590">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.028631300777949977" y="-0.04017675764547828" z="None" />
-      </node>
-      <node id="chr_8_288" label="chr_8_288">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.7277342695949875" y="-0.34152460937173407" z="None" />
-      </node>
-      <node id="chr_12_1794" label="chr_12_1794">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.6052445046460574" y="-0.040329284413747314" z="None" />
-      </node>
-      <node id="chr_3_2992" label="chr_3_2992">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.14291214532194577" y="0.28297106263015276" z="None" />
-      </node>
-      <node id="chr_16_1044" label="chr_16_1044">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="-0.6219781958669901" y="-0.04936819970387734" z="None" />
-      </node>
-      <node id="chr_14_1609" label="chr_14_1609">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.04386205070316075" y="-0.3108965694692872" z="None" />
-      </node>
-      <node id="chr_9_625" label="chr_9_625">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.5324435832754515" y="-0.08001664591664108" z="None" />
-      </node>
-      <node id="chr_8_2768" label="chr_8_2768">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.41760046276678525" y="-0.634191550228432" z="None" />
-      </node>
-      <node id="chr_9_38" label="chr_9_38">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.44022598944318425" y="-0.6643068994758553" z="None" />
-      </node>
-      <node id="chr_7_2777" label="chr_7_2777">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.34975884081010394" y="-0.508681163510998" z="None" />
-      </node>
-      <node id="chr_12_1294" label="chr_12_1294">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.8046596679024542" y="0.2796656192691886" z="None" />
-      </node>
-      <node id="chr_18_375" label="chr_18_375">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.5943151366232864" y="-0.09374515191042782" z="None" />
-      </node>
-      <node id="chr_10_531" label="chr_10_531">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.3401665418756034" y="-0.46847002321959885" z="None" />
-      </node>
-      <node id="chr_3_1752" label="chr_3_1752">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.1709908352010741" y="0.22621844137104247" z="None" />
-      </node>
-      <node id="chr_9_2745" label="chr_9_2745">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.11841316743044791" y="-0.10848791255223542" z="None" />
-      </node>
-      <node id="chr_20_101" label="chr_20_101">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.027548970626387698" y="-0.3803758945773515" z="None" />
-      </node>
-      <node id="chr_14_1469" label="chr_14_1469">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.3750019343745581" y="0.3515941709824122" z="None" />
-      </node>
-      <node id="chr_10_2151" label="chr_10_2151">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.1973522011903791" y="-0.0615519394439136" z="None" />
-      </node>
-      <node id="chr_2_4888" label="chr_2_4888">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.494697162661029" y="0.7003060178738236" z="None" />
-      </node>
-      <node id="chr_3_152" label="chr_3_152">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.47666692191441656" y="0.6780461833226803" z="None" />
-      </node>
-      <node id="chr_17_1536" label="chr_17_1536">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.6367091833536487" y="0.4384010140588664" z="None" />
-      </node>
-      <node id="chr_19_1140" label="chr_19_1140">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.6720495960514592" y="0.4743455340251238" z="None" />
-      </node>
-      <node id="chr_16_1264" label="chr_16_1264">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.3482619150638191" y="0.38244833276598444" z="None" />
-      </node>
-      <node id="chr_15_850" label="chr_15_850">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.06762473277783082" y="-0.3042486463294931" z="None" />
-      </node>
-      <node id="chr_7_2517" label="chr_7_2517">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.8055823152754981" y="-0.1324812996939522" z="None" />
-      </node>
-      <node id="chr_8_29" label="chr_8_29">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="0.8572373760160324" y="-0.1438202745131424" z="None" />
-      </node>
-      <node id="chr_11_1866" label="chr_11_1866">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.8252532833485756" y="0.21538937993119" z="None" />
-      </node>
-      <node id="chr_10_931" label="chr_10_931">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.06533575767013516" y="0.27152529143561316" z="None" />
-      </node>
-      <node id="chr_2_3452" label="chr_2_3452">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.13557698670534532" y="-0.8523012160560439" z="None" />
-      </node>
-      <node id="chr_9_725" label="chr_9_725">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.28864888718563003" y="-0.5375501547431036" z="None" />
-      </node>
-      <node id="chr_4_3829" label="chr_4_3829">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.10378394954581228" y="0.2695003010336508" z="None" />
-      </node>
-      <node id="chr_16_1164" label="chr_16_1164">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.1053663717921218" y="-0.08451217327697655" z="None" />
-      </node>
-      <node id="chr_7_1557" label="chr_7_1557">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="0.27557068802412055" y="-0.5537178737708559" z="None" />
-      </node>
-      <node id="chr_10_1511" label="chr_10_1511">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="-0.1257477613165024" y="-0.02057160090983219" z="None" />
-      </node>
-      <node id="chr_17_1356" label="chr_17_1356">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.09192080568564695" y="0.14210627224098688" z="None" />
-      </node>
-      <node id="chr_11_2206" label="chr_11_2206">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.6022191984154398" y="-0.7440393546810664" z="None" />
-      </node>
-      <node id="chr_14_969" label="chr_14_969">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="1" />
-        <viz:position x="0.048642401982281404" y="-0.29070999405784376" z="None" />
-      </node>
-      <node id="chr_9_405" label="chr_9_405">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.16093192997768138" y="-0.08710099635984839" z="None" />
-      </node>
-      <node id="chr_12_2274" label="chr_12_2274">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.41518869528657454" y="0.36590641067068214" z="None" />
-      </node>
-      <node id="chr_21_327" label="chr_21_327">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.32866359259218386" y="-0.6997854965485152" z="None" />
-      </node>
-      <node id="chr_10_651" label="chr_10_651">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="-0.3300845818505735" y="0.36913586494152945" z="None" />
-      </node>
-      <node id="chr_14_1389" label="chr_14_1389">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="0.03204278005633176" y="0.7755867193620596" z="None" />
-      </node>
-      <node id="chr_18_1315" label="chr_18_1315">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="5" />
-        <viz:position x="-0.2957165665522748" y="0.14488974719297593" z="None" />
-      </node>
-      <node id="chr_12_2334" label="chr_12_2334">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.10524253183887597" y="-0.10118344081425977" z="None" />
-      </node>
-      <node id="chr_7_1857" label="chr_7_1857">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="3" />
-        <viz:position x="-0.5829877877574083" y="-0.04007971843260038" z="None" />
-      </node>
-      <node id="chr_21_247" label="chr_21_247">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="0.025991427441840857" y="-0.0661365572017976" z="None" />
-      </node>
-      <node id="chr_8_2388" label="chr_8_2388">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="8" />
-        <viz:position x="0.30591247154450085" y="-0.46130943053836576" z="None" />
-      </node>
-      <node id="chr_15_1390" label="chr_15_1390">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="4" />
-        <viz:position x="0.6894996223327561" y="0.007694996026022687" z="None" />
-      </node>
-      <node id="chr_14_709" label="chr_14_709">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="9" />
-        <viz:position x="-0.38115223896597045" y="0.38502338274187536" z="None" />
-      </node>
-      <node id="chr_16_144" label="chr_16_144">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="2" />
-        <viz:position x="0.00641781011737338" y="0.7891367061110152" z="None" />
-      </node>
-      <node id="chr_9_1985" label="chr_9_1985">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="7" />
-        <viz:position x="-0.5983183358809328" y="-0.07024460616981054" z="None" />
-      </node>
-      <node id="chr_19_100" label="chr_19_100">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.4024764571293678" y="-0.7264888815948378" z="None" />
-      </node>
-      <node id="chr_18_1515" label="chr_18_1515">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="0.559762216550229" y="0.8320325589722042" z="None" />
-      </node>
-      <node id="chr_19_980" label="chr_19_980">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="6" />
-        <viz:position x="0.5352758607946906" y="0.8340161900330245" z="None" />
-      </node>
-      <node id="chr_17_1176" label="chr_17_1176">
-        <viz:color a="None" b="256" g="0" r="0" />
-        <viz:size value="0" />
-        <viz:position x="-0.582108515846801" y="0.6131536476087668" z="None" />
-      </node>
+      <node id="chr1-7000000" label="chr1-7000000" />
+      <node id="chr1-7100000" label="chr1-7100000" />
+      <node id="chr1-9700000" label="chr1-9700000" />
+      <node id="chr1-9800000" label="chr1-9800000" />
+      <node id="chr1-13600000" label="chr1-13600000" />
+      <node id="chr1-13500000" label="chr1-13500000" />
+      <node id="chr1-16600000" label="chr1-16600000" />
+      <node id="chr1-16500000" label="chr1-16500000" />
+      <node id="chr1-36200000" label="chr1-36200000" />
+      <node id="chr1-36100000" label="chr1-36100000" />
+      <node id="chr1-36300000" label="chr1-36300000" />
+      <node id="chr1-36600000" label="chr1-36600000" />
+      <node id="chr1-36500000" label="chr1-36500000" />
+      <node id="chr1-36700000" label="chr1-36700000" />
+      <node id="chr1-36800000" label="chr1-36800000" />
+      <node id="chr1-36900000" label="chr1-36900000" />
+      <node id="chr1-37400000" label="chr1-37400000" />
+      <node id="chr1-37300000" label="chr1-37300000" />
+      <node id="chr1-37500000" label="chr1-37500000" />
+      <node id="chr1-37600000" label="chr1-37600000" />
+      <node id="chr1-38700000" label="chr1-38700000" />
+      <node id="chr1-38600000" label="chr1-38600000" />
+      <node id="chr1-40100000" label="chr1-40100000" />
+      <node id="chr1-40000000" label="chr1-40000000" />
+      <node id="chr1-43900000" label="chr1-43900000" />
+      <node id="chr1-44000000" label="chr1-44000000" />
+      <node id="chr1-51500000" label="chr1-51500000" />
+      <node id="chr1-51400000" label="chr1-51400000" />
+      <node id="chr1-52200000" label="chr1-52200000" />
+      <node id="chr1-52100000" label="chr1-52100000" />
+      <node id="chr1-52700000" label="chr1-52700000" />
+      <node id="chr1-52800000" label="chr1-52800000" />
+      <node id="chr1-53800000" label="chr1-53800000" />
+      <node id="chr1-53700000" label="chr1-53700000" />
+      <node id="chr1-54900000" label="chr1-54900000" />
+      <node id="chr1-54800000" label="chr1-54800000" />
+      <node id="chr1-55100000" label="chr1-55100000" />
+      <node id="chr1-55000000" label="chr1-55000000" />
+      <node id="chr1-55300000" label="chr1-55300000" />
+      <node id="chr1-55200000" label="chr1-55200000" />
+      <node id="chr1-58300000" label="chr1-58300000" />
+      <node id="chr1-58400000" label="chr1-58400000" />
+      <node id="chr1-58800000" label="chr1-58800000" />
+      <node id="chr1-58700000" label="chr1-58700000" />
+      <node id="chr1-58900000" label="chr1-58900000" />
+      <node id="chr1-60900000" label="chr1-60900000" />
+      <node id="chr1-60800000" label="chr1-60800000" />
+      <node id="chr1-64500000" label="chr1-64500000" />
+      <node id="chr1-64600000" label="chr1-64600000" />
+      <node id="chr1-66800000" label="chr1-66800000" />
+      <node id="chr1-66700000" label="chr1-66700000" />
+      <node id="chr1-74300000" label="chr1-74300000" />
+      <node id="chr1-74200000" label="chr1-74200000" />
+      <node id="chr1-74800000" label="chr1-74800000" />
+      <node id="chr1-74700000" label="chr1-74700000" />
+      <node id="chr1-75200000" label="chr1-75200000" />
+      <node id="chr1-75100000" label="chr1-75100000" />
+      <node id="chr1-75500000" label="chr1-75500000" />
+      <node id="chr1-75400000" label="chr1-75400000" />
+      <node id="chr1-80300000" label="chr1-80300000" />
+      <node id="chr1-80200000" label="chr1-80200000" />
+      <node id="chr1-80600000" label="chr1-80600000" />
+      <node id="chr1-80700000" label="chr1-80700000" />
+      <node id="chr1-85400000" label="chr1-85400000" />
+      <node id="chr1-83600000" label="chr1-83600000" />
+      <node id="chr1-85100000" label="chr1-85100000" />
+      <node id="chr1-84900000" label="chr1-84900000" />
+      <node id="chr1-85000000" label="chr1-85000000" />
+      <node id="chr1-85200000" label="chr1-85200000" />
+      <node id="chr1-85300000" label="chr1-85300000" />
+      <node id="chr1-85600000" label="chr1-85600000" />
+      <node id="chr1-85500000" label="chr1-85500000" />
+      <node id="chr1-85700000" label="chr1-85700000" />
+      <node id="chr1-85800000" label="chr1-85800000" />
+      <node id="chr1-86000000" label="chr1-86000000" />
+      <node id="chr1-86300000" label="chr1-86300000" />
+      <node id="chr1-86100000" label="chr1-86100000" />
+      <node id="chr1-86200000" label="chr1-86200000" />
+      <node id="chr1-86400000" label="chr1-86400000" />
+      <node id="chr1-86500000" label="chr1-86500000" />
+      <node id="chr1-87600000" label="chr1-87600000" />
+      <node id="chr1-87500000" label="chr1-87500000" />
+      <node id="chr1-87800000" label="chr1-87800000" />
+      <node id="chr1-87700000" label="chr1-87700000" />
+      <node id="chr1-87900000" label="chr1-87900000" />
+      <node id="chr1-88000000" label="chr1-88000000" />
+      <node id="chr1-88100000" label="chr1-88100000" />
+      <node id="chr1-88200000" label="chr1-88200000" />
+      <node id="chr1-91100000" label="chr1-91100000" />
+      <node id="chr1-91000000" label="chr1-91000000" />
+      <node id="chr1-91200000" label="chr1-91200000" />
+      <node id="chr1-91300000" label="chr1-91300000" />
+      <node id="chr1-93900000" label="chr1-93900000" />
+      <node id="chr1-94000000" label="chr1-94000000" />
+      <node id="chr1-95900000" label="chr1-95900000" />
+      <node id="chr1-96000000" label="chr1-96000000" />
+      <node id="chr1-106000000" label="chr1-106000000" />
+      <node id="chr1-105900000" label="chr1-105900000" />
+      <node id="chr1-106100000" label="chr1-106100000" />
+      <node id="chr1-106600000" label="chr1-106600000" />
+      <node id="chr1-106500000" label="chr1-106500000" />
+      <node id="chr1-106700000" label="chr1-106700000" />
+      <node id="chr1-118400000" label="chr1-118400000" />
+      <node id="chr1-118300000" label="chr1-118300000" />
+      <node id="chr1-127200000" label="chr1-127200000" />
+      <node id="chr1-127300000" label="chr1-127300000" />
+      <node id="chr1-127600000" label="chr1-127600000" />
+      <node id="chr1-127500000" label="chr1-127500000" />
+      <node id="chr1-128600000" label="chr1-128600000" />
+      <node id="chr1-128500000" label="chr1-128500000" />
+      <node id="chr1-128700000" label="chr1-128700000" />
+      <node id="chr1-128300000" label="chr1-128300000" />
+      <node id="chr1-128800000" label="chr1-128800000" />
+      <node id="chr1-130900000" label="chr1-130900000" />
+      <node id="chr1-131000000" label="chr1-131000000" />
+      <node id="chr1-131100000" label="chr1-131100000" />
+      <node id="chr1-131200000" label="chr1-131200000" />
+      <node id="chr1-131300000" label="chr1-131300000" />
+      <node id="chr1-131400000" label="chr1-131400000" />
+      <node id="chr1-131500000" label="chr1-131500000" />
+      <node id="chr1-131700000" label="chr1-131700000" />
+      <node id="chr1-131600000" label="chr1-131600000" />
+      <node id="chr1-131800000" label="chr1-131800000" />
+      <node id="chr1-132000000" label="chr1-132000000" />
+      <node id="chr1-131900000" label="chr1-131900000" />
+      <node id="chr1-132100000" label="chr1-132100000" />
+      <node id="chr1-132200000" label="chr1-132200000" />
+      <node id="chr1-132300000" label="chr1-132300000" />
+      <node id="chr1-132400000" label="chr1-132400000" />
+      <node id="chr1-133100000" label="chr1-133100000" />
+      <node id="chr1-133000000" label="chr1-133000000" />
+      <node id="chr1-133500000" label="chr1-133500000" />
+      <node id="chr1-133400000" label="chr1-133400000" />
+      <node id="chr1-133600000" label="chr1-133600000" />
+      <node id="chr1-133700000" label="chr1-133700000" />
+      <node id="chr1-133800000" label="chr1-133800000" />
+      <node id="chr1-134100000" label="chr1-134100000" />
+      <node id="chr1-134000000" label="chr1-134000000" />
+      <node id="chr1-134200000" label="chr1-134200000" />
+      <node id="chr1-134900000" label="chr1-134900000" />
+      <node id="chr1-135000000" label="chr1-135000000" />
+      <node id="chr1-136200000" label="chr1-136200000" />
+      <node id="chr1-136100000" label="chr1-136100000" />
+      <node id="chr1-138200000" label="chr1-138200000" />
+      <node id="chr1-138100000" label="chr1-138100000" />
+      <node id="chr1-152600000" label="chr1-152600000" />
+      <node id="chr1-152500000" label="chr1-152500000" />
+      <node id="chr1-152700000" label="chr1-152700000" />
+      <node id="chr1-152800000" label="chr1-152800000" />
+      <node id="chr1-153500000" label="chr1-153500000" />
+      <node id="chr1-153600000" label="chr1-153600000" />
+      <node id="chr1-153700000" label="chr1-153700000" />
+      <node id="chr1-155100000" label="chr1-155100000" />
+      <node id="chr1-155000000" label="chr1-155000000" />
+      <node id="chr1-155200000" label="chr1-155200000" />
+      <node id="chr1-157000000" label="chr1-157000000" />
+      <node id="chr1-156900000" label="chr1-156900000" />
+      <node id="chr1-160000000" label="chr1-160000000" />
+      <node id="chr1-159900000" label="chr1-159900000" />
+      <node id="chr1-160900000" label="chr1-160900000" />
+      <node id="chr1-161000000" label="chr1-161000000" />
+      <node id="chr1-161100000" label="chr1-161100000" />
+      <node id="chr1-161800000" label="chr1-161800000" />
+      <node id="chr1-161700000" label="chr1-161700000" />
+      <node id="chr1-161900000" label="chr1-161900000" />
+      <node id="chr1-164100000" label="chr1-164100000" />
+      <node id="chr1-164000000" label="chr1-164000000" />
+      <node id="chr1-164400000" label="chr1-164400000" />
+      <node id="chr1-164500000" label="chr1-164500000" />
+      <node id="chr1-164600000" label="chr1-164600000" />
+      <node id="chr1-164700000" label="chr1-164700000" />
+      <node id="chr1-164800000" label="chr1-164800000" />
+      <node id="chr1-165700000" label="chr1-165700000" />
+      <node id="chr1-165600000" label="chr1-165600000" />
+      <node id="chr1-165800000" label="chr1-165800000" />
+      <node id="chr1-165900000" label="chr1-165900000" />
+      <node id="chr1-166500000" label="chr1-166500000" />
+      <node id="chr1-166600000" label="chr1-166600000" />
+      <node id="chr1-166700000" label="chr1-166700000" />
+      <node id="chr1-166800000" label="chr1-166800000" />
+      <node id="chr1-166900000" label="chr1-166900000" />
+      <node id="chr1-167300000" label="chr1-167300000" />
+      <node id="chr1-167200000" label="chr1-167200000" />
+      <node id="chr1-171000000" label="chr1-171000000" />
+      <node id="chr1-170900000" label="chr1-170900000" />
+      <node id="chr1-171100000" label="chr1-171100000" />
+      <node id="chr1-171200000" label="chr1-171200000" />
+      <node id="chr1-171300000" label="chr1-171300000" />
+      <node id="chr1-171400000" label="chr1-171400000" />
+      <node id="chr1-171600000" label="chr1-171600000" />
+      <node id="chr1-171500000" label="chr1-171500000" />
+      <node id="chr1-171700000" label="chr1-171700000" />
+      <node id="chr1-171800000" label="chr1-171800000" />
+      <node id="chr1-171900000" label="chr1-171900000" />
+      <node id="chr1-172000000" label="chr1-172000000" />
+      <node id="chr1-172100000" label="chr1-172100000" />
+      <node id="chr1-172200000" label="chr1-172200000" />
+      <node id="chr1-172300000" label="chr1-172300000" />
+      <node id="chr1-172500000" label="chr1-172500000" />
+      <node id="chr1-172400000" label="chr1-172400000" />
+      <node id="chr1-172600000" label="chr1-172600000" />
+      <node id="chr1-174300000" label="chr1-174300000" />
+      <node id="chr1-173200000" label="chr1-173200000" />
+      <node id="chr1-173600000" label="chr1-173600000" />
+      <node id="chr1-173400000" label="chr1-173400000" />
+      <node id="chr1-173500000" label="chr1-173500000" />
+      <node id="chr1-173900000" label="chr1-173900000" />
+      <node id="chr1-173700000" label="chr1-173700000" />
+      <node id="chr1-173800000" label="chr1-173800000" />
+      <node id="chr1-176800000" label="chr1-176800000" />
+      <node id="chr1-176700000" label="chr1-176700000" />
+      <node id="chr1-177200000" label="chr1-177200000" />
+      <node id="chr1-177300000" label="chr1-177300000" />
+      <node id="chr1-177400000" label="chr1-177400000" />
+      <node id="chr1-177500000" label="chr1-177500000" />
+      <node id="chr1-178000000" label="chr1-178000000" />
+      <node id="chr1-177900000" label="chr1-177900000" />
+      <node id="chr1-178100000" label="chr1-178100000" />
+      <node id="chr1-178400000" label="chr1-178400000" />
+      <node id="chr1-178300000" label="chr1-178300000" />
+      <node id="chr1-180200000" label="chr1-180200000" />
+      <node id="chr1-180100000" label="chr1-180100000" />
+      <node id="chr1-180300000" label="chr1-180300000" />
+      <node id="chr1-180400000" label="chr1-180400000" />
+      <node id="chr1-180500000" label="chr1-180500000" />
+      <node id="chr1-180700000" label="chr1-180700000" />
+      <node id="chr1-180600000" label="chr1-180600000" />
+      <node id="chr1-180800000" label="chr1-180800000" />
+      <node id="chr1-180900000" label="chr1-180900000" />
+      <node id="chr1-181000000" label="chr1-181000000" />
+      <node id="chr1-181100000" label="chr1-181100000" />
+      <node id="chr1-181200000" label="chr1-181200000" />
+      <node id="chr1-181900000" label="chr1-181900000" />
+      <node id="chr1-182000000" label="chr1-182000000" />
+      <node id="chr1-182300000" label="chr1-182300000" />
+      <node id="chr1-182400000" label="chr1-182400000" />
+      <node id="chr1-183400000" label="chr1-183400000" />
+      <node id="chr1-183300000" label="chr1-183300000" />
+      <node id="chr1-184000000" label="chr1-184000000" />
+      <node id="chr1-183900000" label="chr1-183900000" />
+      <node id="chr1-189800000" label="chr1-189800000" />
+      <node id="chr1-189700000" label="chr1-189700000" />
+      <node id="chr1-191000000" label="chr1-191000000" />
+      <node id="chr1-190900000" label="chr1-190900000" />
+      <node id="chr1-191200000" label="chr1-191200000" />
+      <node id="chr1-191100000" label="chr1-191100000" />
+      <node id="chr1-191400000" label="chr1-191400000" />
+      <node id="chr1-191300000" label="chr1-191300000" />
+      <node id="chr1-191500000" label="chr1-191500000" />
+      <node id="chr1-191600000" label="chr1-191600000" />
+      <node id="chr1-191700000" label="chr1-191700000" />
+      <node id="chr1-192000000" label="chr1-192000000" />
+      <node id="chr1-191900000" label="chr1-191900000" />
+      <node id="chr1-192700000" label="chr1-192700000" />
+      <node id="chr1-192800000" label="chr1-192800000" />
+      <node id="chr1-192900000" label="chr1-192900000" />
+      <node id="chr1-193200000" label="chr1-193200000" />
+      <node id="chr1-193100000" label="chr1-193100000" />
+      <node id="chr1-193300000" label="chr1-193300000" />
+      <node id="chr1-195200000" label="chr1-195200000" />
+      <node id="chr1-195100000" label="chr1-195100000" />
     </nodes>
     <edges>
-      <edge id="0" source="chr_1_5048" target="chr_8_2548" />
-      <edge id="1" source="chr_1_5048" target="chr_11_766" />
-      <edge id="2" source="chr_1_5048" target="chr_5_718" />
-      <edge id="3" source="chr_1_5048" target="chr_5_438" />
-      <edge id="4" source="chr_1_5048" target="chr_19_140" />
-      <edge id="5" source="chr_1_5048" target="chr_13_1216" />
-      <edge id="6" source="chr_1_5048" target="chr_3_632" />
-      <edge id="7" source="chr_1_5048" target="chr_12_954" />
-      <edge id="8" source="chr_1_5048" target="chr_3_692" />
-      <edge id="9" source="chr_1_5048" target="chr_10_2051" />
-      <edge id="10" source="chr_1_5048" target="chr_14_1149" />
-      <edge id="11" source="chr_1_5048" target="chr_16_624" />
-      <edge id="12" source="chr_1_5048" target="chr_19_800" />
-      <edge id="13" source="chr_1_5048" target="chr_11_2406" />
-      <edge id="14" source="chr_1_5048" target="chr_4_3069" />
-      <edge id="15" source="chr_1_5048" target="chr_3_112" />
-      <edge id="16" source="chr_1_5048" target="chr_3_2992" />
-      <edge id="17" source="chr_1_5048" target="chr_3_1752" />
-      <edge id="18" source="chr_1_5048" target="chr_19_200" />
-      <edge id="19" source="chr_1_5048" target="chr_10_931" />
-      <edge id="20" source="chr_1_5048" target="chr_4_3829" />
-      <edge id="21" source="chr_8_68" target="chr_15_1070" />
-      <edge id="22" source="chr_8_68" target="chr_11_2406" />
-      <edge id="23" source="chr_8_68" target="chr_11_126" />
-      <edge id="24" source="chr_8_68" target="chr_19_260" />
-      <edge id="25" source="chr_8_68" target="chr_10_2752" />
-      <edge id="26" source="chr_8_68" target="chr_9_2065" />
-      <edge id="27" source="chr_8_68" target="chr_15_810" />
-      <edge id="28" source="chr_8_68" target="chr_13_516" />
-      <edge id="29" source="chr_8_68" target="chr_17_1356" />
-      <edge id="30" source="chr_13_1856" target="chr_14_40" />
-      <edge id="31" source="chr_7_57" target="chr_13_816" />
-      <edge id="32" source="chr_7_57" target="chr_9_2645" />
-      <edge id="33" source="chr_7_57" target="chr_8_668" />
-      <edge id="34" source="chr_7_57" target="chr_13_976" />
-      <edge id="35" source="chr_7_57" target="chr_13_516" />
-      <edge id="36" source="chr_7_57" target="chr_20_321" />
-      <edge id="37" source="chr_7_57" target="chr_17_196" />
-      <edge id="38" source="chr_7_57" target="chr_19_1208" />
-      <edge id="39" source="chr_7_57" target="chr_22_863" />
-      <edge id="40" source="chr_7_57" target="chr_9_265" />
-      <edge id="41" source="chr_7_57" target="chr_16_544" />
-      <edge id="42" source="chr_7_57" target="chr_11_66" />
-      <edge id="43" source="chr_7_57" target="chr_22_503" />
-      <edge id="44" source="chr_7_57" target="chr_8_2328" />
-      <edge id="45" source="chr_7_57" target="chr_9_2365" />
-      <edge id="46" source="chr_7_57" target="chr_15_1610" />
-      <edge id="47" source="chr_7_57" target="chr_13_1576" />
-      <edge id="48" source="chr_7_57" target="chr_14_1609" />
-      <edge id="49" source="chr_7_57" target="chr_15_850" />
-      <edge id="50" source="chr_7_57" target="chr_14_969" />
-      <edge id="51" source="chr_4_30" target="chr_12_1554" />
-      <edge id="52" source="chr_4_30" target="chr_5_3278" />
-      <edge id="53" source="chr_4_30" target="chr_11_926" />
-      <edge id="54" source="chr_4_30" target="chr_10_671" />
-      <edge id="55" source="chr_4_30" target="chr_12_554" />
-      <edge id="56" source="chr_4_30" target="chr_5_1238" />
-      <edge id="57" source="chr_4_30" target="chr_10_111" />
-      <edge id="58" source="chr_4_30" target="chr_15_1830" />
-      <edge id="59" source="chr_4_30" target="chr_5_198" />
-      <edge id="60" source="chr_4_30" target="chr_9_1965" />
-      <edge id="61" source="chr_4_30" target="chr_10_1091" />
-      <edge id="62" source="chr_4_30" target="chr_12_1794" />
-      <edge id="63" source="chr_4_30" target="chr_16_1044" />
-      <edge id="64" source="chr_4_30" target="chr_9_625" />
-      <edge id="65" source="chr_4_30" target="chr_18_375" />
-      <edge id="66" source="chr_4_30" target="chr_7_1857" />
-      <edge id="67" source="chr_4_30" target="chr_9_1985" />
-      <edge id="68" source="chr_13_396" target="chr_20_981" />
-      <edge id="69" source="chr_13_396" target="chr_17_13" />
-      <edge id="70" source="chr_5_38" target="chr_6_985" />
-      <edge id="71" source="chr_5_38" target="chr_13_1456" />
-      <edge id="72" source="chr_5_38" target="chr_7_2277" />
-      <edge id="73" source="chr_5_38" target="chr_14_649" />
-      <edge id="74" source="chr_5_38" target="chr_7_3157" />
-      <edge id="75" source="chr_5_38" target="chr_8_288" />
-      <edge id="76" source="chr_16_1784" target="chr_19_320" />
-      <edge id="77" source="chr_16_1784" target="chr_21_567" />
-      <edge id="78" source="chr_16_1784" target="chr_18_415" />
-      <edge id="79" source="chr_1_42" target="chr_2_72" />
-      <edge id="80" source="chr_1_42" target="chr_9_2465" />
-      <edge id="81" source="chr_1_42" target="chr_16_544" />
-      <edge id="82" source="chr_1_42" target="chr_8_828" />
-      <edge id="83" source="chr_1_42" target="chr_5_3558" />
-      <edge id="84" source="chr_1_42" target="chr_3_1592" />
-      <edge id="85" source="chr_1_42" target="chr_16_84" />
-      <edge id="86" source="chr_1_42" target="chr_11_1626" />
-      <edge id="87" source="chr_1_42" target="chr_4_2509" />
-      <edge id="88" source="chr_1_42" target="chr_2_732" />
-      <edge id="89" source="chr_1_42" target="chr_22_983" />
-      <edge id="90" source="chr_1_42" target="chr_7_2777" />
-      <edge id="91" source="chr_1_42" target="chr_10_531" />
-      <edge id="92" source="chr_1_42" target="chr_9_725" />
-      <edge id="93" source="chr_1_42" target="chr_7_1557" />
-      <edge id="94" source="chr_1_42" target="chr_8_2388" />
-      <edge id="95" source="chr_12_114" target="chr_13_23" />
-      <edge id="96" source="chr_12_114" target="chr_2_4832" />
-      <edge id="97" source="chr_13_23" target="chr_12_2334" />
-      <edge id="98" source="chr_11_66" target="chr_12_614" />
-      <edge id="99" source="chr_11_66" target="chr_12_194" />
-      <edge id="100" source="chr_11_66" target="chr_19_160" />
-      <edge id="101" source="chr_11_66" target="chr_16_104" />
-      <edge id="102" source="chr_11_66" target="chr_21_347" />
-      <edge id="103" source="chr_11_66" target="chr_15_590" />
-      <edge id="104" source="chr_11_66" target="chr_21_247" />
-      <edge id="105" source="chr_14_449" target="chr_20_861" />
-      <edge id="106" source="chr_14_449" target="chr_15_1790" />
-      <edge id="107" source="chr_14_449" target="chr_18_795" />
-      <edge id="108" source="chr_14_449" target="chr_15_1390" />
-      <edge id="109" source="chr_2_4832" target="chr_11_1506" />
-      <edge id="110" source="chr_2_4832" target="chr_19_200" />
-      <edge id="111" source="chr_2_4832" target="chr_12_1414" />
-      <edge id="112" source="chr_2_4832" target="chr_18_915" />
-      <edge id="113" source="chr_2_4832" target="chr_14_1309" />
-      <edge id="114" source="chr_2_4832" target="chr_9_165" />
-      <edge id="115" source="chr_2_4832" target="chr_9_2245" />
-      <edge id="116" source="chr_2_4832" target="chr_5_118" />
-      <edge id="117" source="chr_2_4832" target="chr_13_1596" />
-      <edge id="118" source="chr_2_4832" target="chr_21_287" />
-      <edge id="119" source="chr_2_4832" target="chr_5_2298" />
-      <edge id="120" source="chr_2_4832" target="chr_9_2745" />
-      <edge id="121" source="chr_2_4832" target="chr_10_2151" />
-      <edge id="122" source="chr_2_4832" target="chr_16_1164" />
-      <edge id="123" source="chr_2_4832" target="chr_10_1511" />
-      <edge id="124" source="chr_2_4832" target="chr_9_405" />
-      <edge id="125" source="chr_12_54" target="chr_18_655" />
-      <edge id="126" source="chr_12_54" target="chr_20_201" />
-      <edge id="127" source="chr_12_54" target="chr_14_1709" />
-      <edge id="128" source="chr_12_54" target="chr_18_455" />
-      <edge id="129" source="chr_12_54" target="chr_18_1375" />
-      <edge id="130" source="chr_12_54" target="chr_15_810" />
-      <edge id="131" source="chr_12_54" target="chr_18_1315" />
-      <edge id="132" source="chr_12_54" target="chr_16_104" />
-      <edge id="133" source="chr_11_366" target="chr_12_12" />
-      <edge id="134" source="chr_12_12" target="chr_11_2206" />
-      <edge id="135" source="chr_9_85" target="chr_12_1014" />
-      <edge id="136" source="chr_9_85" target="chr_19_380" />
-      <edge id="137" source="chr_9_85" target="chr_12_1474" />
-      <edge id="138" source="chr_9_85" target="chr_12_2656" />
-      <edge id="139" source="chr_9_85" target="chr_16_684" />
-      <edge id="140" source="chr_9_85" target="chr_12_1294" />
-      <edge id="141" source="chr_9_85" target="chr_11_1866" />
-      <edge id="142" source="chr_10_2571" target="chr_11_18" />
-      <edge id="143" source="chr_11_18" target="chr_10_291" />
-      <edge id="144" source="chr_1_0" target="chr_2_1712" />
-      <edge id="145" source="chr_1_0" target="chr_2_4052" />
-      <edge id="146" source="chr_1_0" target="chr_2_4612" />
-      <edge id="147" source="chr_1_0" target="chr_2_3452" />
-      <edge id="148" source="chr_6_65" target="chr_10_1671" />
-      <edge id="149" source="chr_6_65" target="chr_13_1136" />
-      <edge id="150" source="chr_6_65" target="chr_12_1434" />
-      <edge id="151" source="chr_6_65" target="chr_7_2357" />
-      <edge id="152" source="chr_6_65" target="chr_7_2537" />
-      <edge id="153" source="chr_6_65" target="chr_14_469" />
-      <edge id="154" source="chr_6_65" target="chr_11_666" />
-      <edge id="155" source="chr_6_65" target="chr_12_2134" />
-      <edge id="156" source="chr_6_65" target="chr_19_940" />
-      <edge id="157" source="chr_6_65" target="chr_16_1724" />
-      <edge id="158" source="chr_6_65" target="chr_17_1196" />
-      <edge id="159" source="chr_6_65" target="chr_11_286" />
-      <edge id="160" source="chr_6_65" target="chr_14_1469" />
-      <edge id="161" source="chr_6_65" target="chr_15_1830" />
-      <edge id="162" source="chr_6_65" target="chr_16_1264" />
-      <edge id="163" source="chr_6_65" target="chr_12_2274" />
-      <edge id="164" source="chr_6_65" target="chr_10_651" />
-      <edge id="165" source="chr_6_65" target="chr_14_709" />
-      <edge id="166" source="chr_6_65" target="chr_18_1375" />
-      <edge id="167" source="chr_15_2100" target="chr_18_975" />
-      <edge id="168" source="chr_15_2100" target="chr_22_983" />
-      <edge id="169" source="chr_15_2100" target="chr_20_741" />
-      <edge id="170" source="chr_15_2100" target="chr_21_327" />
-      <edge id="171" source="chr_15_2100" target="chr_19_100" />
-      <edge id="172" source="chr_11_2246" target="chr_12_34" />
-      <edge id="173" source="chr_12_34" target="chr_11_446" />
-      <edge id="174" source="chr_10_51" target="chr_14_2069" />
-      <edge id="175" source="chr_10_51" target="chr_12_2374" />
-      <edge id="176" source="chr_10_51" target="chr_12_294" />
-      <edge id="177" source="chr_10_51" target="chr_11_2546" />
-      <edge id="178" source="chr_10_51" target="chr_14_1389" />
-      <edge id="179" source="chr_10_51" target="chr_16_144" />
-      <edge id="180" source="chr_18_1475" target="chr_19_1060" />
-      <edge id="181" source="chr_19_1208" target="chr_20_101" />
-      <edge id="182" source="chr_6_545" target="chr_7_24" />
-      <edge id="183" source="chr_16_1805" target="chr_17_256" />
-      <edge id="184" source="chr_18_1455" target="chr_21_507" />
-      <edge id="185" source="chr_15_430" target="chr_19_920" />
-      <edge id="186" source="chr_15_430" target="chr_17_1176" />
-      <edge id="187" source="chr_4_269" target="chr_5_14" />
-      <edge id="188" source="chr_8_2768" target="chr_9_38" />
-      <edge id="189" source="chr_2_4888" target="chr_3_152" />
-      <edge id="190" source="chr_17_1536" target="chr_19_1140" />
-      <edge id="191" source="chr_7_2517" target="chr_8_29" />
-      <edge id="192" source="chr_18_1515" target="chr_19_980" />
+      <edge id="0" source="chr1-7000000" target="chr1-7100000" weight="0.025135623869801085">
+        <attvalues>
+          <attvalue for="0" value="chr1-7000000" />
+          <attvalue for="1" value="chr1-7100000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="1" source="chr1-9700000" target="chr1-9800000" weight="0.02700145560407569">
+        <attvalues>
+          <attvalue for="0" value="chr1-9700000" />
+          <attvalue for="1" value="chr1-9800000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="2" source="chr1-13600000" target="chr1-13500000" weight="0.02872542802790108">
+        <attvalues>
+          <attvalue for="0" value="chr1-13500000" />
+          <attvalue for="1" value="chr1-13600000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="3" source="chr1-16600000" target="chr1-16500000" weight="0.026855123674911663">
+        <attvalues>
+          <attvalue for="0" value="chr1-16500000" />
+          <attvalue for="1" value="chr1-16600000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="4" source="chr1-36200000" target="chr1-36100000" weight="0.030485436893203887">
+        <attvalues>
+          <attvalue for="0" value="chr1-36100000" />
+          <attvalue for="1" value="chr1-36200000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="5" source="chr1-36200000" target="chr1-36300000" weight="0.036099365750528536">
+        <attvalues>
+          <attvalue for="0" value="chr1-36200000" />
+          <attvalue for="1" value="chr1-36300000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="6" source="chr1-36600000" target="chr1-36500000" weight="0.031507513330101794">
+        <attvalues>
+          <attvalue for="0" value="chr1-36500000" />
+          <attvalue for="1" value="chr1-36600000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="7" source="chr1-36700000" target="chr1-36800000" weight="0.025542041248016917">
+        <attvalues>
+          <attvalue for="0" value="chr1-36700000" />
+          <attvalue for="1" value="chr1-36800000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="8" source="chr1-36800000" target="chr1-36900000" weight="0.028698501872659182">
+        <attvalues>
+          <attvalue for="0" value="chr1-36800000" />
+          <attvalue for="1" value="chr1-36900000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="9" source="chr1-37400000" target="chr1-37300000" weight="0.02548518896833504">
+        <attvalues>
+          <attvalue for="0" value="chr1-37400000" />
+          <attvalue for="1" value="chr1-37300000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="10" source="chr1-37400000" target="chr1-37500000" weight="0.03094994892747702">
+        <attvalues>
+          <attvalue for="0" value="chr1-37400000" />
+          <attvalue for="1" value="chr1-37500000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="11" source="chr1-37400000" target="chr1-37600000" weight="0.030337078651685393">
+        <attvalues>
+          <attvalue for="0" value="chr1-37400000" />
+          <attvalue for="1" value="chr1-37600000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="12" source="chr1-37500000" target="chr1-37600000" weight="0.03605333333333333">
+        <attvalues>
+          <attvalue for="0" value="chr1-37500000" />
+          <attvalue for="1" value="chr1-37600000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="13" source="chr1-38700000" target="chr1-38600000" weight="0.02634219769192173">
+        <attvalues>
+          <attvalue for="0" value="chr1-38600000" />
+          <attvalue for="1" value="chr1-38700000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="14" source="chr1-40100000" target="chr1-40000000" weight="0.026735688185140074">
+        <attvalues>
+          <attvalue for="0" value="chr1-40100000" />
+          <attvalue for="1" value="chr1-40000000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="15" source="chr1-43900000" target="chr1-44000000" weight="0.02563667232597623">
+        <attvalues>
+          <attvalue for="0" value="chr1-43900000" />
+          <attvalue for="1" value="chr1-44000000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="16" source="chr1-51500000" target="chr1-51400000" weight="0.03812375249500998">
+        <attvalues>
+          <attvalue for="0" value="chr1-51400000" />
+          <attvalue for="1" value="chr1-51500000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="17" source="chr1-52200000" target="chr1-52100000" weight="0.02883720930232558">
+        <attvalues>
+          <attvalue for="0" value="chr1-52200000" />
+          <attvalue for="1" value="chr1-52100000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="18" source="chr1-52700000" target="chr1-52800000" weight="0.02633033863165169">
+        <attvalues>
+          <attvalue for="0" value="chr1-52700000" />
+          <attvalue for="1" value="chr1-52800000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="19" source="chr1-53800000" target="chr1-53700000" weight="0.039578454332552686">
+        <attvalues>
+          <attvalue for="0" value="chr1-53700000" />
+          <attvalue for="1" value="chr1-53800000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="20" source="chr1-54900000" target="chr1-54800000" weight="0.025113378684807255">
+        <attvalues>
+          <attvalue for="0" value="chr1-54800000" />
+          <attvalue for="1" value="chr1-54900000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="21" source="chr1-55100000" target="chr1-55000000" weight="0.027042915931804818">
+        <attvalues>
+          <attvalue for="0" value="chr1-55000000" />
+          <attvalue for="1" value="chr1-55100000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="22" source="chr1-55300000" target="chr1-55200000" weight="0.02626429086414667">
+        <attvalues>
+          <attvalue for="0" value="chr1-55300000" />
+          <attvalue for="1" value="chr1-55200000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="23" source="chr1-58300000" target="chr1-58400000" weight="0.02683109118086697">
+        <attvalues>
+          <attvalue for="0" value="chr1-58300000" />
+          <attvalue for="1" value="chr1-58400000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="24" source="chr1-58800000" target="chr1-58700000" weight="0.02608225108225108">
+        <attvalues>
+          <attvalue for="0" value="chr1-58800000" />
+          <attvalue for="1" value="chr1-58700000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="25" source="chr1-58800000" target="chr1-58900000" weight="0.03192640692640693">
+        <attvalues>
+          <attvalue for="0" value="chr1-58800000" />
+          <attvalue for="1" value="chr1-58900000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="26" source="chr1-60900000" target="chr1-60800000" weight="0.025917808219178082">
+        <attvalues>
+          <attvalue for="0" value="chr1-60800000" />
+          <attvalue for="1" value="chr1-60900000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="27" source="chr1-64500000" target="chr1-64600000" weight="0.02546972860125261">
+        <attvalues>
+          <attvalue for="0" value="chr1-64500000" />
+          <attvalue for="1" value="chr1-64600000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="28" source="chr1-66800000" target="chr1-66700000" weight="0.030693069306930693">
+        <attvalues>
+          <attvalue for="0" value="chr1-66700000" />
+          <attvalue for="1" value="chr1-66800000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="29" source="chr1-74300000" target="chr1-74200000" weight="0.034569809376609986">
+        <attvalues>
+          <attvalue for="0" value="chr1-74200000" />
+          <attvalue for="1" value="chr1-74300000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="30" source="chr1-74800000" target="chr1-74700000" weight="0.028741800834824086">
+        <attvalues>
+          <attvalue for="0" value="chr1-74700000" />
+          <attvalue for="1" value="chr1-74800000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="31" source="chr1-75200000" target="chr1-75100000" weight="0.034052388289676425">
+        <attvalues>
+          <attvalue for="0" value="chr1-75100000" />
+          <attvalue for="1" value="chr1-75200000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="32" source="chr1-75500000" target="chr1-75400000" weight="0.02733333333333333">
+        <attvalues>
+          <attvalue for="0" value="chr1-75400000" />
+          <attvalue for="1" value="chr1-75500000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="33" source="chr1-80300000" target="chr1-80200000" weight="0.026407284768211917">
+        <attvalues>
+          <attvalue for="0" value="chr1-80300000" />
+          <attvalue for="1" value="chr1-80200000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="34" source="chr1-80600000" target="chr1-80700000" weight="0.02678832116788321">
+        <attvalues>
+          <attvalue for="0" value="chr1-80600000" />
+          <attvalue for="1" value="chr1-80700000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="35" source="chr1-85400000" target="chr1-83600000" weight="0.0313588850174216">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-83600000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="36" source="chr1-85400000" target="chr1-84900000" weight="0.05923344947735192">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-84900000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="37" source="chr1-85400000" target="chr1-85000000" weight="0.033832769453842435">
+        <attvalues>
+          <attvalue for="0" value="chr1-85000000" />
+          <attvalue for="1" value="chr1-85400000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="38" source="chr1-85400000" target="chr1-85100000" weight="0.0311284046692607">
+        <attvalues>
+          <attvalue for="0" value="chr1-85100000" />
+          <attvalue for="1" value="chr1-85400000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="39" source="chr1-85400000" target="chr1-85200000" weight="0.2369337979094077">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-85200000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="40" source="chr1-85400000" target="chr1-85500000" weight="0.12195121951219512">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-85500000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="41" source="chr1-85400000" target="chr1-85600000" weight="0.11149825783972124">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-85600000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="42" source="chr1-85400000" target="chr1-85700000" weight="0.08710801393728224">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-85700000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="43" source="chr1-85400000" target="chr1-85800000" weight="0.07317073170731707">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-85800000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="44" source="chr1-85400000" target="chr1-86000000" weight="0.03484320557491289">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-86000000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="45" source="chr1-85400000" target="chr1-86300000" weight="0.03484320557491289">
+        <attvalues>
+          <attvalue for="0" value="chr1-85400000" />
+          <attvalue for="1" value="chr1-86300000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="46" source="chr1-85100000" target="chr1-84900000" weight="0.03631647211413748">
+        <attvalues>
+          <attvalue for="0" value="chr1-85100000" />
+          <attvalue for="1" value="chr1-84900000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="47" source="chr1-85100000" target="chr1-85000000" weight="0.04543257612373127">
+        <attvalues>
+          <attvalue for="0" value="chr1-85000000" />
+          <attvalue for="1" value="chr1-85100000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="48" source="chr1-85100000" target="chr1-85200000" weight="0.29571984435797666">
+        <attvalues>
+          <attvalue for="0" value="chr1-85100000" />
+          <attvalue for="1" value="chr1-85200000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="49" source="chr1-85100000" target="chr1-85300000" weight="0.04539559014267185">
+        <attvalues>
+          <attvalue for="0" value="chr1-85100000" />
+          <attvalue for="1" value="chr1-85300000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="50" source="chr1-85100000" target="chr1-85500000" weight="0.0946822308690013">
+        <attvalues>
+          <attvalue for="0" value="chr1-85100000" />
+          <attvalue for="1" value="chr1-85500000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="51" source="chr1-85100000" target="chr1-85600000" weight="0.20622568093385213">
+        <attvalues>
+          <attvalue for="0" value="chr1-85100000" />
+          <attvalue for="1" value="chr1-85600000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="52" source="chr1-85000000" target="chr1-85200000" weight="0.09231512808119864">
+        <attvalues>
+          <attvalue for="0" value="chr1-85000000" />
+          <attvalue for="1" value="chr1-85200000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="53" source="chr1-85000000" target="chr1-85300000" weight="0.031451036454610434">
+        <attvalues>
+          <attvalue for="0" value="chr1-85300000" />
+          <attvalue for="1" value="chr1-85000000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="54" source="chr1-85000000" target="chr1-85600000" weight="0.2812953117448043">
+        <attvalues>
+          <attvalue for="0" value="chr1-85000000" />
+          <attvalue for="1" value="chr1-85600000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="55" source="chr1-85000000" target="chr1-85500000" weight="0.03866602223296278">
+        <attvalues>
+          <attvalue for="0" value="chr1-85000000" />
+          <attvalue for="1" value="chr1-85500000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="56" source="chr1-85200000" target="chr1-85300000" weight="0.06075768406004289">
+        <attvalues>
+          <attvalue for="0" value="chr1-85300000" />
+          <attvalue for="1" value="chr1-85200000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="57" source="chr1-85200000" target="chr1-85500000" weight="0.17246985503319334">
+        <attvalues>
+          <attvalue for="0" value="chr1-85200000" />
+          <attvalue for="1" value="chr1-85500000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="58" source="chr1-85200000" target="chr1-85600000" weight="0.03996748408074787">
+        <attvalues>
+          <attvalue for="0" value="chr1-85200000" />
+          <attvalue for="1" value="chr1-85600000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="59" source="chr1-85300000" target="chr1-85500000" weight="0.055754110078627586">
+        <attvalues>
+          <attvalue for="0" value="chr1-85300000" />
+          <attvalue for="1" value="chr1-85500000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="60" source="chr1-85300000" target="chr1-85600000" weight="0.040743388134381706">
+        <attvalues>
+          <attvalue for="0" value="chr1-85300000" />
+          <attvalue for="1" value="chr1-85600000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="61" source="chr1-85600000" target="chr1-85700000" weight="0.03159922928709056">
+        <attvalues>
+          <attvalue for="0" value="chr1-85600000" />
+          <attvalue for="1" value="chr1-85700000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="62" source="chr1-86300000" target="chr1-86100000" weight="0.02548156301596037">
+        <attvalues>
+          <attvalue for="0" value="chr1-86100000" />
+          <attvalue for="1" value="chr1-86300000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="63" source="chr1-86300000" target="chr1-86200000" weight="0.02821497120921305">
+        <attvalues>
+          <attvalue for="0" value="chr1-86200000" />
+          <attvalue for="1" value="chr1-86300000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="64" source="chr1-86300000" target="chr1-86400000" weight="0.03436988543371522">
+        <attvalues>
+          <attvalue for="0" value="chr1-86300000" />
+          <attvalue for="1" value="chr1-86400000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="65" source="chr1-86100000" target="chr1-86200000" weight="0.026527242707760045">
+        <attvalues>
+          <attvalue for="0" value="chr1-86100000" />
+          <attvalue for="1" value="chr1-86200000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="66" source="chr1-86400000" target="chr1-86500000" weight="0.055721393034825865">
+        <attvalues>
+          <attvalue for="0" value="chr1-86400000" />
+          <attvalue for="1" value="chr1-86500000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="67" source="chr1-87600000" target="chr1-87500000" weight="0.030312339989759345">
+        <attvalues>
+          <attvalue for="0" value="chr1-87500000" />
+          <attvalue for="1" value="chr1-87600000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="68" source="chr1-87800000" target="chr1-87700000" weight="0.029466119096509237">
+        <attvalues>
+          <attvalue for="0" value="chr1-87700000" />
+          <attvalue for="1" value="chr1-87800000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="69" source="chr1-87800000" target="chr1-87900000" weight="0.036036519871106336">
+        <attvalues>
+          <attvalue for="0" value="chr1-87800000" />
+          <attvalue for="1" value="chr1-87900000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="70" source="chr1-87700000" target="chr1-87900000" weight="0.03254620123203285">
+        <attvalues>
+          <attvalue for="0" value="chr1-87700000" />
+          <attvalue for="1" value="chr1-87900000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="71" source="chr1-87900000" target="chr1-88000000" weight="0.033528836754643215">
+        <attvalues>
+          <attvalue for="0" value="chr1-88000000" />
+          <attvalue for="1" value="chr1-87900000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="72" source="chr1-88100000" target="chr1-88200000" weight="0.03468780971258672">
+        <attvalues>
+          <attvalue for="0" value="chr1-88100000" />
+          <attvalue for="1" value="chr1-88200000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="73" source="chr1-91100000" target="chr1-91000000" weight="0.027065527065527062">
+        <attvalues>
+          <attvalue for="0" value="chr1-91100000" />
+          <attvalue for="1" value="chr1-91000000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="74" source="chr1-91100000" target="chr1-91200000" weight="0.0317948717948718">
+        <attvalues>
+          <attvalue for="0" value="chr1-91100000" />
+          <attvalue for="1" value="chr1-91200000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="75" source="chr1-91000000" target="chr1-91200000" weight="0.02772633744855967">
+        <attvalues>
+          <attvalue for="0" value="chr1-91200000" />
+          <attvalue for="1" value="chr1-91000000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="76" source="chr1-91200000" target="chr1-91300000" weight="0.026491769547325104">
+        <attvalues>
+          <attvalue for="0" value="chr1-91200000" />
+          <attvalue for="1" value="chr1-91300000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="77" source="chr1-93900000" target="chr1-94000000" weight="0.04300291545189505">
+        <attvalues>
+          <attvalue for="0" value="chr1-93900000" />
+          <attvalue for="1" value="chr1-94000000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="78" source="chr1-95900000" target="chr1-96000000" weight="0.02584876543209877">
+        <attvalues>
+          <attvalue for="0" value="chr1-95900000" />
+          <attvalue for="1" value="chr1-96000000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="79" source="chr1-106000000" target="chr1-105900000" weight="0.028132250580046404">
+        <attvalues>
+          <attvalue for="0" value="chr1-105900000" />
+          <attvalue for="1" value="chr1-106000000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="80" source="chr1-106000000" target="chr1-106100000" weight="0.027234553089382125">
+        <attvalues>
+          <attvalue for="0" value="chr1-106100000" />
+          <attvalue for="1" value="chr1-106000000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="81" source="chr1-106600000" target="chr1-106500000" weight="0.025477707006369428">
+        <attvalues>
+          <attvalue for="0" value="chr1-106600000" />
+          <attvalue for="1" value="chr1-106500000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="82" source="chr1-106500000" target="chr1-106700000" weight="0.027359550561797757">
+        <attvalues>
+          <attvalue for="0" value="chr1-106700000" />
+          <attvalue for="1" value="chr1-106500000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="83" source="chr1-118400000" target="chr1-118300000" weight="0.03838951310861423">
+        <attvalues>
+          <attvalue for="0" value="chr1-118300000" />
+          <attvalue for="1" value="chr1-118400000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="84" source="chr1-127200000" target="chr1-127300000" weight="0.028360748723766312">
+        <attvalues>
+          <attvalue for="0" value="chr1-127200000" />
+          <attvalue for="1" value="chr1-127300000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="85" source="chr1-127600000" target="chr1-127500000" weight="0.030854605993340733">
+        <attvalues>
+          <attvalue for="0" value="chr1-127500000" />
+          <attvalue for="1" value="chr1-127600000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="86" source="chr1-128600000" target="chr1-128500000" weight="0.02961941533370105">
+        <attvalues>
+          <attvalue for="0" value="chr1-128500000" />
+          <attvalue for="1" value="chr1-128600000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="87" source="chr1-128600000" target="chr1-128700000" weight="0.03233046800382044">
+        <attvalues>
+          <attvalue for="0" value="chr1-128600000" />
+          <attvalue for="1" value="chr1-128700000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="88" source="chr1-128300000" target="chr1-128800000" weight="0.025028058361391697">
+        <attvalues>
+          <attvalue for="0" value="chr1-128300000" />
+          <attvalue for="1" value="chr1-128800000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="89" source="chr1-130900000" target="chr1-131000000" weight="0.029038854805725975">
+        <attvalues>
+          <attvalue for="0" value="chr1-130900000" />
+          <attvalue for="1" value="chr1-131000000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="90" source="chr1-131000000" target="chr1-131100000" weight="0.028029322984044848">
+        <attvalues>
+          <attvalue for="0" value="chr1-131000000" />
+          <attvalue for="1" value="chr1-131100000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="91" source="chr1-131100000" target="chr1-131200000" weight="0.046611909650924016">
+        <attvalues>
+          <attvalue for="0" value="chr1-131100000" />
+          <attvalue for="1" value="chr1-131200000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="92" source="chr1-131300000" target="chr1-131400000" weight="0.02779204107830552">
+        <attvalues>
+          <attvalue for="0" value="chr1-131300000" />
+          <attvalue for="1" value="chr1-131400000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="93" source="chr1-131300000" target="chr1-131500000" weight="0.02541720154043646">
+        <attvalues>
+          <attvalue for="0" value="chr1-131300000" />
+          <attvalue for="1" value="chr1-131500000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="94" source="chr1-131700000" target="chr1-131600000" weight="0.03919270833333333">
+        <attvalues>
+          <attvalue for="0" value="chr1-131600000" />
+          <attvalue for="1" value="chr1-131700000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="95" source="chr1-131700000" target="chr1-131800000" weight="0.028558310376492195">
+        <attvalues>
+          <attvalue for="0" value="chr1-131700000" />
+          <attvalue for="1" value="chr1-131800000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="96" source="chr1-132000000" target="chr1-131900000" weight="0.03935721812434141">
+        <attvalues>
+          <attvalue for="0" value="chr1-131900000" />
+          <attvalue for="1" value="chr1-132000000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="97" source="chr1-132000000" target="chr1-132100000" weight="0.025187265917603">
+        <attvalues>
+          <attvalue for="0" value="chr1-132000000" />
+          <attvalue for="1" value="chr1-132100000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="98" source="chr1-131900000" target="chr1-132100000" weight="0.02613009922822492">
+        <attvalues>
+          <attvalue for="0" value="chr1-132100000" />
+          <attvalue for="1" value="chr1-131900000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="99" source="chr1-132100000" target="chr1-132200000" weight="0.02894156560088203">
+        <attvalues>
+          <attvalue for="0" value="chr1-132100000" />
+          <attvalue for="1" value="chr1-132200000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="100" source="chr1-132100000" target="chr1-132300000" weight="0.03197353914002205">
+        <attvalues>
+          <attvalue for="0" value="chr1-132100000" />
+          <attvalue for="1" value="chr1-132300000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="101" source="chr1-132200000" target="chr1-132300000" weight="0.034780249593054806">
+        <attvalues>
+          <attvalue for="0" value="chr1-132200000" />
+          <attvalue for="1" value="chr1-132300000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="102" source="chr1-132300000" target="chr1-132400000" weight="0.030727272727272725">
+        <attvalues>
+          <attvalue for="0" value="chr1-132300000" />
+          <attvalue for="1" value="chr1-132400000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="103" source="chr1-133100000" target="chr1-133000000" weight="0.03794964028776979">
+        <attvalues>
+          <attvalue for="0" value="chr1-133000000" />
+          <attvalue for="1" value="chr1-133100000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="104" source="chr1-133500000" target="chr1-133400000" weight="0.02867602196461257">
+        <attvalues>
+          <attvalue for="0" value="chr1-133500000" />
+          <attvalue for="1" value="chr1-133400000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="105" source="chr1-133600000" target="chr1-133700000" weight="0.027020648967551623">
+        <attvalues>
+          <attvalue for="0" value="chr1-133600000" />
+          <attvalue for="1" value="chr1-133700000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="106" source="chr1-133700000" target="chr1-133800000" weight="0.025186766275346845">
+        <attvalues>
+          <attvalue for="0" value="chr1-133800000" />
+          <attvalue for="1" value="chr1-133700000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="107" source="chr1-134100000" target="chr1-134000000" weight="0.0280747275557862">
+        <attvalues>
+          <attvalue for="0" value="chr1-134000000" />
+          <attvalue for="1" value="chr1-134100000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="108" source="chr1-134100000" target="chr1-134200000" weight="0.02516778523489933">
+        <attvalues>
+          <attvalue for="0" value="chr1-134200000" />
+          <attvalue for="1" value="chr1-134100000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="109" source="chr1-134900000" target="chr1-135000000" weight="0.029411764705882356">
+        <attvalues>
+          <attvalue for="0" value="chr1-134900000" />
+          <attvalue for="1" value="chr1-135000000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="110" source="chr1-136200000" target="chr1-136100000" weight="0.02963917525773196">
+        <attvalues>
+          <attvalue for="0" value="chr1-136100000" />
+          <attvalue for="1" value="chr1-136200000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="111" source="chr1-138200000" target="chr1-138100000" weight="0.02633269107257546">
+        <attvalues>
+          <attvalue for="0" value="chr1-138100000" />
+          <attvalue for="1" value="chr1-138200000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="112" source="chr1-152600000" target="chr1-152500000" weight="0.034070608251807744">
+        <attvalues>
+          <attvalue for="0" value="chr1-152500000" />
+          <attvalue for="1" value="chr1-152600000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="113" source="chr1-152600000" target="chr1-152700000" weight="0.028185554903112163">
+        <attvalues>
+          <attvalue for="0" value="chr1-152700000" />
+          <attvalue for="1" value="chr1-152600000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="114" source="chr1-152500000" target="chr1-152700000" weight="0.03305930710510863">
+        <attvalues>
+          <attvalue for="0" value="chr1-152700000" />
+          <attvalue for="1" value="chr1-152500000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="115" source="chr1-152700000" target="chr1-152800000" weight="0.030123311802701117">
+        <attvalues>
+          <attvalue for="0" value="chr1-152700000" />
+          <attvalue for="1" value="chr1-152800000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="116" source="chr1-153500000" target="chr1-153600000" weight="0.02838905775075988">
+        <attvalues>
+          <attvalue for="0" value="chr1-153500000" />
+          <attvalue for="1" value="chr1-153600000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="117" source="chr1-153600000" target="chr1-153700000" weight="0.0281404549950544">
+        <attvalues>
+          <attvalue for="0" value="chr1-153600000" />
+          <attvalue for="1" value="chr1-153700000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="118" source="chr1-155100000" target="chr1-155000000" weight="0.0371598218703612">
+        <attvalues>
+          <attvalue for="0" value="chr1-155000000" />
+          <attvalue for="1" value="chr1-155100000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="119" source="chr1-155100000" target="chr1-155200000" weight="0.02676328502415459">
+        <attvalues>
+          <attvalue for="0" value="chr1-155100000" />
+          <attvalue for="1" value="chr1-155200000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="120" source="chr1-155000000" target="chr1-155200000" weight="0.035526966848095004">
+        <attvalues>
+          <attvalue for="0" value="chr1-155000000" />
+          <attvalue for="1" value="chr1-155200000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="121" source="chr1-157000000" target="chr1-156900000" weight="0.04335260115606936">
+        <attvalues>
+          <attvalue for="0" value="chr1-156900000" />
+          <attvalue for="1" value="chr1-157000000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="122" source="chr1-160000000" target="chr1-159900000" weight="0.03636363636363636">
+        <attvalues>
+          <attvalue for="0" value="chr1-159900000" />
+          <attvalue for="1" value="chr1-160000000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="123" source="chr1-160900000" target="chr1-161000000" weight="0.02533521524347213">
+        <attvalues>
+          <attvalue for="0" value="chr1-160900000" />
+          <attvalue for="1" value="chr1-161000000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="124" source="chr1-161000000" target="chr1-161100000" weight="0.025456760048721074">
+        <attvalues>
+          <attvalue for="0" value="chr1-161000000" />
+          <attvalue for="1" value="chr1-161100000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="125" source="chr1-161800000" target="chr1-161700000" weight="0.028449744463373082">
+        <attvalues>
+          <attvalue for="0" value="chr1-161700000" />
+          <attvalue for="1" value="chr1-161800000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="126" source="chr1-161800000" target="chr1-161900000" weight="0.031083991385498926">
+        <attvalues>
+          <attvalue for="0" value="chr1-161800000" />
+          <attvalue for="1" value="chr1-161900000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="127" source="chr1-164100000" target="chr1-164000000" weight="0.028562945368171017">
+        <attvalues>
+          <attvalue for="0" value="chr1-164000000" />
+          <attvalue for="1" value="chr1-164100000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="128" source="chr1-164400000" target="chr1-164500000" weight="0.02529100529100529">
+        <attvalues>
+          <attvalue for="0" value="chr1-164400000" />
+          <attvalue for="1" value="chr1-164500000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="129" source="chr1-164500000" target="chr1-164600000" weight="0.025763358778625955">
+        <attvalues>
+          <attvalue for="0" value="chr1-164600000" />
+          <attvalue for="1" value="chr1-164500000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="130" source="chr1-164700000" target="chr1-164800000" weight="0.026332487309644676">
+        <attvalues>
+          <attvalue for="0" value="chr1-164700000" />
+          <attvalue for="1" value="chr1-164800000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="131" source="chr1-165700000" target="chr1-165600000" weight="0.036789994788952576">
+        <attvalues>
+          <attvalue for="0" value="chr1-165600000" />
+          <attvalue for="1" value="chr1-165700000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="132" source="chr1-165700000" target="chr1-165800000" weight="0.027841218053289832">
+        <attvalues>
+          <attvalue for="0" value="chr1-165700000" />
+          <attvalue for="1" value="chr1-165800000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="133" source="chr1-165800000" target="chr1-165900000" weight="0.027115384615384614">
+        <attvalues>
+          <attvalue for="0" value="chr1-165800000" />
+          <attvalue for="1" value="chr1-165900000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="134" source="chr1-166500000" target="chr1-166600000" weight="0.028128031037827357">
+        <attvalues>
+          <attvalue for="0" value="chr1-166500000" />
+          <attvalue for="1" value="chr1-166600000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="135" source="chr1-166700000" target="chr1-166800000" weight="0.02618607516943931">
+        <attvalues>
+          <attvalue for="0" value="chr1-166700000" />
+          <attvalue for="1" value="chr1-166800000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="136" source="chr1-166800000" target="chr1-166900000" weight="0.025524296675191814">
+        <attvalues>
+          <attvalue for="0" value="chr1-166800000" />
+          <attvalue for="1" value="chr1-166900000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="137" source="chr1-167300000" target="chr1-167200000" weight="0.03552295918367347">
+        <attvalues>
+          <attvalue for="0" value="chr1-167200000" />
+          <attvalue for="1" value="chr1-167300000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="138" source="chr1-171000000" target="chr1-170900000" weight="0.029827915869980882">
+        <attvalues>
+          <attvalue for="0" value="chr1-170900000" />
+          <attvalue for="1" value="chr1-171000000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="139" source="chr1-171000000" target="chr1-171100000" weight="0.03430099312452253">
+        <attvalues>
+          <attvalue for="0" value="chr1-171000000" />
+          <attvalue for="1" value="chr1-171100000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="140" source="chr1-171000000" target="chr1-171200000" weight="0.0252864782276547">
+        <attvalues>
+          <attvalue for="0" value="chr1-171000000" />
+          <attvalue for="1" value="chr1-171200000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="141" source="chr1-171100000" target="chr1-171200000" weight="0.04296703296703297">
+        <attvalues>
+          <attvalue for="0" value="chr1-171100000" />
+          <attvalue for="1" value="chr1-171200000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="142" source="chr1-171200000" target="chr1-171300000" weight="0.028460686600221486">
+        <attvalues>
+          <attvalue for="0" value="chr1-171200000" />
+          <attvalue for="1" value="chr1-171300000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="143" source="chr1-171300000" target="chr1-171400000" weight="0.027435744172145844">
+        <attvalues>
+          <attvalue for="0" value="chr1-171300000" />
+          <attvalue for="1" value="chr1-171400000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="144" source="chr1-171600000" target="chr1-171500000" weight="0.029706152433425163">
+        <attvalues>
+          <attvalue for="0" value="chr1-171500000" />
+          <attvalue for="1" value="chr1-171600000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="145" source="chr1-171600000" target="chr1-171700000" weight="0.0266712141882674">
+        <attvalues>
+          <attvalue for="0" value="chr1-171700000" />
+          <attvalue for="1" value="chr1-171600000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="146" source="chr1-171800000" target="chr1-171900000" weight="0.034157105030891435">
+        <attvalues>
+          <attvalue for="0" value="chr1-171800000" />
+          <attvalue for="1" value="chr1-171900000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="147" source="chr1-171900000" target="chr1-172000000" weight="0.025255102040816328">
+        <attvalues>
+          <attvalue for="0" value="chr1-171900000" />
+          <attvalue for="1" value="chr1-172000000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="148" source="chr1-172000000" target="chr1-172100000" weight="0.026374859708193043">
+        <attvalues>
+          <attvalue for="0" value="chr1-172000000" />
+          <attvalue for="1" value="chr1-172100000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="149" source="chr1-172100000" target="chr1-172200000" weight="0.030786267995570327">
+        <attvalues>
+          <attvalue for="0" value="chr1-172100000" />
+          <attvalue for="1" value="chr1-172200000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="150" source="chr1-172100000" target="chr1-172300000" weight="0.029125138427464014">
+        <attvalues>
+          <attvalue for="0" value="chr1-172100000" />
+          <attvalue for="1" value="chr1-172300000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="151" source="chr1-172500000" target="chr1-172400000" weight="0.0352233676975945">
+        <attvalues>
+          <attvalue for="0" value="chr1-172400000" />
+          <attvalue for="1" value="chr1-172500000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="152" source="chr1-172500000" target="chr1-172600000" weight="0.027060439560439558">
+        <attvalues>
+          <attvalue for="0" value="chr1-172600000" />
+          <attvalue for="1" value="chr1-172500000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="153" source="chr1-174300000" target="chr1-173200000" weight="0.03057915057915058">
+        <attvalues>
+          <attvalue for="0" value="chr1-174300000" />
+          <attvalue for="1" value="chr1-173200000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="154" source="chr1-173600000" target="chr1-173400000" weight="0.029110216038081286">
+        <attvalues>
+          <attvalue for="0" value="chr1-173600000" />
+          <attvalue for="1" value="chr1-173400000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="155" source="chr1-173600000" target="chr1-173500000" weight="0.04628330995792426">
+        <attvalues>
+          <attvalue for="0" value="chr1-173500000" />
+          <attvalue for="1" value="chr1-173600000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="156" source="chr1-173900000" target="chr1-173700000" weight="0.030138964085905075">
+        <attvalues>
+          <attvalue for="0" value="chr1-173900000" />
+          <attvalue for="1" value="chr1-173700000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="157" source="chr1-173900000" target="chr1-173800000" weight="0.04838317529783613">
+        <attvalues>
+          <attvalue for="0" value="chr1-173800000" />
+          <attvalue for="1" value="chr1-173900000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="158" source="chr1-176800000" target="chr1-176700000" weight="0.02830609212481426">
+        <attvalues>
+          <attvalue for="0" value="chr1-176700000" />
+          <attvalue for="1" value="chr1-176800000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="159" source="chr1-177200000" target="chr1-177300000" weight="0.035664873174481165">
+        <attvalues>
+          <attvalue for="0" value="chr1-177200000" />
+          <attvalue for="1" value="chr1-177300000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="160" source="chr1-177200000" target="chr1-177400000" weight="0.02521137586471945">
+        <attvalues>
+          <attvalue for="0" value="chr1-177200000" />
+          <attvalue for="1" value="chr1-177400000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="161" source="chr1-177300000" target="chr1-177400000" weight="0.026375245579567774">
+        <attvalues>
+          <attvalue for="0" value="chr1-177300000" />
+          <attvalue for="1" value="chr1-177400000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="162" source="chr1-177400000" target="chr1-177500000" weight="0.030257731958762888">
+        <attvalues>
+          <attvalue for="0" value="chr1-177400000" />
+          <attvalue for="1" value="chr1-177500000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="163" source="chr1-178000000" target="chr1-177900000" weight="0.02512424075096632">
+        <attvalues>
+          <attvalue for="0" value="chr1-178000000" />
+          <attvalue for="1" value="chr1-177900000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="164" source="chr1-177900000" target="chr1-178100000" weight="0.031405724881214514">
+        <attvalues>
+          <attvalue for="0" value="chr1-177900000" />
+          <attvalue for="1" value="chr1-178100000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="165" source="chr1-178400000" target="chr1-178300000" weight="0.025657894736842102">
+        <attvalues>
+          <attvalue for="0" value="chr1-178300000" />
+          <attvalue for="1" value="chr1-178400000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="166" source="chr1-180200000" target="chr1-180100000" weight="0.027962085308056876">
+        <attvalues>
+          <attvalue for="0" value="chr1-180100000" />
+          <attvalue for="1" value="chr1-180200000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="167" source="chr1-180200000" target="chr1-180300000" weight="0.03713703515028018">
+        <attvalues>
+          <attvalue for="0" value="chr1-180200000" />
+          <attvalue for="1" value="chr1-180300000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="168" source="chr1-180200000" target="chr1-180400000" weight="0.037952114111054515">
+        <attvalues>
+          <attvalue for="0" value="chr1-180200000" />
+          <attvalue for="1" value="chr1-180400000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="169" source="chr1-180300000" target="chr1-180400000" weight="0.028816199376947037">
+        <attvalues>
+          <attvalue for="0" value="chr1-180300000" />
+          <attvalue for="1" value="chr1-180400000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="170" source="chr1-180400000" target="chr1-180500000" weight="0.0356479217603912">
+        <attvalues>
+          <attvalue for="0" value="chr1-180400000" />
+          <attvalue for="1" value="chr1-180500000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="171" source="chr1-180400000" target="chr1-180700000" weight="0.027188689505165845">
+        <attvalues>
+          <attvalue for="0" value="chr1-180700000" />
+          <attvalue for="1" value="chr1-180400000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="172" source="chr1-180500000" target="chr1-180600000" weight="0.026376677464136973">
+        <attvalues>
+          <attvalue for="0" value="chr1-180500000" />
+          <attvalue for="1" value="chr1-180600000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="173" source="chr1-180500000" target="chr1-180700000" weight="0.025358630263766776">
+        <attvalues>
+          <attvalue for="0" value="chr1-180500000" />
+          <attvalue for="1" value="chr1-180700000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="174" source="chr1-180700000" target="chr1-180600000" weight="0.030125">
+        <attvalues>
+          <attvalue for="0" value="chr1-180600000" />
+          <attvalue for="1" value="chr1-180700000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="175" source="chr1-180700000" target="chr1-180800000" weight="0.034747145187601955">
+        <attvalues>
+          <attvalue for="0" value="chr1-180700000" />
+          <attvalue for="1" value="chr1-180800000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="176" source="chr1-180800000" target="chr1-180900000" weight="0.043852908891328216">
+        <attvalues>
+          <attvalue for="0" value="chr1-180800000" />
+          <attvalue for="1" value="chr1-180900000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="177" source="chr1-180900000" target="chr1-181000000" weight="0.029583124058262182">
+        <attvalues>
+          <attvalue for="0" value="chr1-180900000" />
+          <attvalue for="1" value="chr1-181000000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="178" source="chr1-180900000" target="chr1-181100000" weight="0.02606199770378875">
+        <attvalues>
+          <attvalue for="0" value="chr1-181100000" />
+          <attvalue for="1" value="chr1-180900000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="179" source="chr1-181000000" target="chr1-181100000" weight="0.0260989010989011">
+        <attvalues>
+          <attvalue for="0" value="chr1-181000000" />
+          <attvalue for="1" value="chr1-181100000" />
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="180" source="chr1-181100000" target="chr1-181200000" weight="0.03823191733639495">
+        <attvalues>
+          <attvalue for="0" value="chr1-181100000" />
+          <attvalue for="1" value="chr1-181200000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="181" source="chr1-181900000" target="chr1-182000000" weight="0.025128865979381444">
+        <attvalues>
+          <attvalue for="0" value="chr1-181900000" />
+          <attvalue for="1" value="chr1-182000000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="182" source="chr1-182300000" target="chr1-182400000" weight="0.025094850948509485">
+        <attvalues>
+          <attvalue for="0" value="chr1-182300000" />
+          <attvalue for="1" value="chr1-182400000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="183" source="chr1-183400000" target="chr1-183300000" weight="0.025748502994011973">
+        <attvalues>
+          <attvalue for="0" value="chr1-183400000" />
+          <attvalue for="1" value="chr1-183300000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="184" source="chr1-184000000" target="chr1-183900000" weight="0.027707959305804903">
+        <attvalues>
+          <attvalue for="0" value="chr1-184000000" />
+          <attvalue for="1" value="chr1-183900000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="185" source="chr1-189800000" target="chr1-189700000" weight="0.03797729618163055">
+        <attvalues>
+          <attvalue for="0" value="chr1-189700000" />
+          <attvalue for="1" value="chr1-189800000" />
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="186" source="chr1-191000000" target="chr1-190900000" weight="0.030306230200633583">
+        <attvalues>
+          <attvalue for="0" value="chr1-190900000" />
+          <attvalue for="1" value="chr1-191000000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="187" source="chr1-191000000" target="chr1-191200000" weight="0.02971246006389776">
+        <attvalues>
+          <attvalue for="0" value="chr1-191000000" />
+          <attvalue for="1" value="chr1-191200000" />
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="188" source="chr1-191200000" target="chr1-191100000" weight="0.04117324561403509">
+        <attvalues>
+          <attvalue for="0" value="chr1-191100000" />
+          <attvalue for="1" value="chr1-191200000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="189" source="chr1-191400000" target="chr1-191300000" weight="0.03925883034163289">
+        <attvalues>
+          <attvalue for="0" value="chr1-191300000" />
+          <attvalue for="1" value="chr1-191400000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="190" source="chr1-191400000" target="chr1-191500000" weight="0.03507827788649707">
+        <attvalues>
+          <attvalue for="0" value="chr1-191400000" />
+          <attvalue for="1" value="chr1-191500000" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="191" source="chr1-191300000" target="chr1-191500000" weight="0.04470179502026636">
+        <attvalues>
+          <attvalue for="0" value="chr1-191300000" />
+          <attvalue for="1" value="chr1-191500000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="192" source="chr1-191600000" target="chr1-191700000" weight="0.025459940652818997">
+        <attvalues>
+          <attvalue for="0" value="chr1-191600000" />
+          <attvalue for="1" value="chr1-191700000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="193" source="chr1-192000000" target="chr1-191900000" weight="0.026711560044893383">
+        <attvalues>
+          <attvalue for="0" value="chr1-192000000" />
+          <attvalue for="1" value="chr1-191900000" />
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="194" source="chr1-192700000" target="chr1-192800000" weight="0.026131465517241374">
+        <attvalues>
+          <attvalue for="0" value="chr1-192700000" />
+          <attvalue for="1" value="chr1-192800000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="195" source="chr1-192800000" target="chr1-192900000" weight="0.02639087018544936">
+        <attvalues>
+          <attvalue for="0" value="chr1-192900000" />
+          <attvalue for="1" value="chr1-192800000" />
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="196" source="chr1-193200000" target="chr1-193100000" weight="0.0254014598540146">
+        <attvalues>
+          <attvalue for="0" value="chr1-193100000" />
+          <attvalue for="1" value="chr1-193200000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="197" source="chr1-193200000" target="chr1-193300000" weight="0.049024918743228604">
+        <attvalues>
+          <attvalue for="0" value="chr1-193200000" />
+          <attvalue for="1" value="chr1-193300000" />
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="198" source="chr1-193100000" target="chr1-193300000" weight="0.028369829683698295">
+        <attvalues>
+          <attvalue for="0" value="chr1-193100000" />
+          <attvalue for="1" value="chr1-193300000" />
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="199" source="chr1-195200000" target="chr1-195100000" weight="0.028771615980918305">
+        <attvalues>
+          <attvalue for="0" value="chr1-195200000" />
+          <attvalue for="1" value="chr1-195100000" />
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
     </edges>
   </graph>
 </gexf>

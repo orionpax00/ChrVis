@@ -17,8 +17,13 @@
   sigma.parsers.gexf('test.gexf', {
     container: 'container',
     settings: {
-      defaultNodeColor: '#ec5148'
-    }
+      defaultNodeColor: '#ec5148',
+      maxNodeSize: 1,
+      minNodeSize: 10,
+      minEdgeSize: 0,
+      maxEdgeSize: 9,
+      minArrowSize: 25
+    },
   });
 </script>
 </body>
