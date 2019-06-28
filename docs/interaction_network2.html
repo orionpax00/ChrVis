@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <TITLE>Dummy Network</TITLE>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
 
   <style type="text/css">
@@ -180,7 +180,7 @@
     },
   };
 
-var json = $.getJSON("test_visjs.json")
+var json = $.getJSON("./test_visjs.json")
   .done(function(data){
     var data = {
       nodes: data.nodes,
