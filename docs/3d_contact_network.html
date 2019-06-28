@@ -38,6 +38,45 @@
 	  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
 
+
+		<script type="x-shader/x-vertex" id="vertexshader">
+
+			attribute float size;
+			attribute vec3 customColor;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				vColor = customColor;
+
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+				gl_PointSize = size;
+
+				gl_Position = projectionMatrix * mvPosition;
+
+			}
+
+		</script>
+
+		<script type="x-shader/x-fragment" id="fragmentshader">
+
+			uniform vec3 color;
+			uniform sampler2D texture;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				gl_FragColor = vec4( color * vColor, 1.0 );
+				gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+
+			}
+
+		</script>
+
+
 		<script>
 
 			var group;
@@ -47,8 +86,9 @@
 			var pointCloud;
 			var particlePositions;
 			var linesMesh;
+			var sizes;
 
-			var r = 800;
+			var r = 0;
 			var rHalf = r / 2;
 
 			var effectController = {
@@ -66,12 +106,14 @@
 					var data_={
 						chr_position:[],
 						link:[],
-						colors:[]
+						colors:[],
+						size:[],
 					}
 					for (var i=0; i < data.data.length; ++i){
 							data_.chr_position.push(parseFloat(data.data[i].position[0]))
 							data_.chr_position.push(parseFloat(data.data[i].position[1]))
 							data_.chr_position.push(parseFloat(data.data[i].position[2]))
+							data_.size.push(Math.random() * 100)
 
 							var color_ = new THREE.Color(colors_[parseInt(data.data[i].chr)+1]);
 
@@ -126,31 +168,46 @@
 				group = new THREE.Group();
 				scene.add( group );
 
-				var helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxBufferGeometry( r, r, r ) ) );
-				helper.material.color.setHex( 0x080808 );
-				helper.material.blending = THREE.AdditiveBlending;
-				helper.material.transparent = true;
-				group.add( helper );
-
-
 				positions = new Float32Array( data_.link.length );
 				colors = new Float32Array( data_.link.length );
+
 
 				var pMaterial = new THREE.PointsMaterial( {
 					vertexColors: THREE.VertexColors,
 					size: 4,
 					blending: THREE.AdditiveBlending,
 					transparent: true,
-					sizeAttenuation: false
+					sizeAttenuation: true
 				} );
+
+				var pShaderMaterial = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) },
+						texture: { value: new THREE.TextureLoader().load( "img/ball.png" )  }
+					},
+					vertexShader: document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
+
+					blending: THREE.AdditiveBlending,
+					depthTest: false,
+					transparent: true,
+					sizeAttenuation: true,
+				} );
+
 
 				particles = new THREE.BufferGeometry();
 				particlePositions = new Float32Array( data_.chr_position.length );
 				particleColors = new Float32Array( data_.chr_position.length);
+				sizes = new Float32Array( data_.size.length  );
 
 				for ( var i = 0; i < data_.chr_position.length; i ++ ) {
 						particlePositions[ i ] = data_.chr_position[i];
 						particleColors[ i ] = data_.colors[i];
+					}
+
+				for ( var i = 0; i < data_.size.length; i ++ ) {
+						sizes[ i ] = data_.size[i];
 					}
 
 					for ( var i = 0; i < data_.link.length; i ++ ) {
@@ -159,9 +216,13 @@
 
 				particles.setDrawRange( 0, data_.chr_position.length );
 				particles.addAttribute( 'position', new THREE.BufferAttribute( particlePositions, 3,  true ));
-				particles.addAttribute( 'color', new THREE.BufferAttribute( particleColors, 3 , true ) );
+				particles.addAttribute( 'customColor', new THREE.BufferAttribute( particleColors, 3 , true ) );
+				particles.addAttribute( 'size', new THREE.BufferAttribute( sizes, 1 ) );
 
 				particles.computeBoundingSphere();
+
+				console.log(particles);
+				console.log(pMaterial);
 
 				centerx = -particles.boundingSphere.center.x;
 				centery = -particles.boundingSphere.center.y;
@@ -169,7 +230,8 @@
 				particles.applyMatrix( new THREE.Matrix4().makeTranslation( centerx, centery, centerz ) );
 
 				// create the particle system
-				pointCloud = new THREE.Points( particles, pMaterial );
+				// pointCloud = new THREE.Points( particles, pMaterial );
+				pointCloud = new THREE.Points( particles, pShaderMaterial );
 				group.add( pointCloud );
 
 				var geometry = new THREE.BufferGeometry();
@@ -182,6 +244,7 @@
 				centerx = -geometry.boundingSphere.center.x;
 				centery = -geometry.boundingSphere.center.y;
 				centerz = -geometry.boundingSphere.center.z;
+				r = geometry.boundingSphere.radius * 2;
 				geometry.applyMatrix( new THREE.Matrix4().makeTranslation( centerx, centery, centerz ) );
 
 				var material = new THREE.LineBasicMaterial( {
@@ -194,6 +257,12 @@
 				linesMesh = new THREE.LineSegments( geometry, material );
 				linesMesh.geometry.setDrawRange( 0, data_.link.length);
 				group.add( linesMesh );
+
+				var helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxBufferGeometry( r, r, r ) ) );
+				helper.material.color.setHex( 0x080808 );
+				helper.material.blending = THREE.AdditiveBlending;
+				helper.material.transparent = true;
+				group.add( helper );
 
 				//
 

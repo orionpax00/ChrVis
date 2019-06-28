@@ -85,6 +85,50 @@
 
     },
 
+    nodes: {
+        shape: "circle",
+        size:0.5,
+        font: {
+          color: '#343434',
+          size: 5, // px
+          face: 'arial',
+          background: 'none',
+          strokeWidth: 0, // px
+          strokeColor: '#ffffff',
+          align: 'center',
+          multi: false,
+          vadjust: 0,
+          bold: {
+            color: '#343434',
+            size: 14, // px
+            face: 'arial',
+            vadjust: 0,
+            mod: 'bold'
+          },
+          ital: {
+            color: '#343434',
+            size: 14, // px
+            face: 'arial',
+            vadjust: 0,
+            mod: 'italic',
+          },
+          boldital: {
+            color: '#343434',
+            size: 14, // px
+            face: 'arial',
+            vadjust: 0,
+            mod: 'bold italic'
+          },
+          mono: {
+            color: '#343434',
+            size: 15, // px
+            face: 'courier new',
+            vadjust: 2,
+            mod: ''
+          }
+        },
+      },
+
     layout: {
         improvedLayout: false,
       },
@@ -123,10 +167,10 @@
       },
       maxVelocity: 50,
       minVelocity: 0.1,
-      solver: 'forceAtlas2Based',
+      solver: 'barnesHut',
       stabilization: {
         enabled: true,
-        iterations: 1000,
+        iterations: 100,
         updateInterval: 100,
         onlyDynamicEdges: false,
         fit: true
