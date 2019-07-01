@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>ChrVis</title>
+		<link rel="stylesheet" href="./css/color-picker.css">
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+      #controls{
+        position:absolute;
+      }
+			#tooltip_id{
+				position: fixed;
+				right: 100px
+			}
+			#tooltip_id span{
+				color:#fff
+			}
+			label span { color: white; }
+			.nav_btn {
+				position: absolute;
+				right:20px;
+				bottom:20px
+			}
+			/* label i { background: white; color: white; margin-left:10px} */
+		</style>
+		<script
+	  src="https://code.jquery.com/jquery-3.4.1.js"
+	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	  crossorigin="anonymous"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/WebGL.js"></script>
+    <script src="js/OrbitControls.js"></script>
+		<script src="js/Raycaster.js"></script>
+		<script src="js/color-picker.min.js"></script>
+		<script src="js/theme.js"></script>
+		<script>
+			console.log(months)
+		</script>
+	</head>
+	<body>
+		<div id=tooltip_id>
+			<div id="tooltip-div">
+				<span>Name:</span>
+				<span id="tooltip-name"></span>
+			</div>
+		</div>
+    <div id="controls">
+
+
+			<button type="button" name="Rotate" onclick="try_()">
+        Try
+      </button>
+
+
+      <button type="button" name="Rotate" onclick="rotate()">
+        Rotate on
+      </button>
+      <br>
+      <button type="button" name="Rotate" onclick="rotateoff()">
+        Rotate off
+      </button>
+			<br>
+      <button type="button" name="Rotate" onclick="removelinetype()">
+        remove line type
+      </button>
+			<br>
+      <button type="button" name="Rotate" onclick="removeatomtype()">
+        off atom one by one
+      </button>
+
+			<br>
+      <button type="button" name="Rotate" onclick="removeatomtypeall()">
+        off atom all
+      </button>
+
+			<br>
+      <button type="button" name="Rotate" onclick="changelinetype()">
+        change line type
+      </button>
+				<br>
+			<button type="button" name="Rotate">
+        change background color <input type="text">
+      </button>
+
+			<div>
+			  <label for="chr1"><span>chr1</span><i style="background: #99EBEE; color: #99EBEE; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr1" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr2"><span>chr2</span><i style="background: #C0392B; color: #C0392B; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr2" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr3"><span>chr3</span><i style="background: #9B59B6; color: #9B59B6; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr3" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr4"><span>chr4</span><i style="background: #2980B9; color: #2980B9; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr4" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr5"><span>chr5</span><i style="background: #1ABC9C; color: #1ABC9C; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr5" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr6"><span>chr6</span><i style="background: #F1C40F; color: #F1C40F; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr6" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr7"><span>chr7</span><i style="background: #D35400; color: #D35400; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr7" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr8"><span>chr8</span><i style="background: #FF00FF; color: #FF00FF; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr8" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr9"><span>chr9</span><i style="background: #7CFC00; color: #7CFC00; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr9" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr10"><span>chr10</span><i style="background: #00FFFF; color: #00FFFF; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr10" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr11"><span>chr11</span><i style="background: #FFC0CB; color: #FFC0CB; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr11" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr12"><span>chr12</span><i style="background: #FFDEAD; color: #FFDEAD; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr12" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr13"><span>chr13</span><i style="background: #DAA520; color: #DAA520; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr13" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr14"><span>chr14</span><i style="background: #CCCCFF; color: #CCCCFF; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr14" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr15"><span>chr15</span><i style="background: #7A5180; color: #7A5180; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr15" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr16"><span>chr16</span><i style="background: #8BBCD1; color: #8BBCD1; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr16" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr17"><span>chr17</span><i style="background: #D8F6A5 ;color: #D8F6A5; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr17" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr18"><span>chr18</span><i style="background: #C49474; color: #C49474; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr18" name="chr"
+				checked>
+			</div>
+
+			<div>
+			  <label for="chr19"><span>chr19</span><i style="background: #ff0000; color: #ff0000; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr19" name="chr"
+			         checked>
+			</div>
+
+			<div>
+			  <label for="chr20"><span>chr20</span><i style="background: #9C5C98; color: #9C5C98; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr20" name="chr"
+				checked>
+			</div>
+
+			<div>
+				<label for="chr21"><span>chr21</span><i style="background: #57FF57; color: #57FF57; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr21" name="chr"
+							 checked>
+			</div>
+
+			<div>
+				<label for="chr22"><span>chr22</span><i style="background: #E1F799; color: #E1F799; margin-left:10px">chr1</i></label>
+				<input type="checkbox" id="chr22" name="chr"
+				checked>
+			</div>
+
+    </div>
+		<div class="nav_btn">
+			<a href="analysis.html"><button>Analysis</button></a>
+		</div>
+		<script>
+
+      if( WEBGL.isWebGLAvailable()) {
+
+				//color picker instance
+				var picker = new CP(document.querySelector('input[type="text"]'));
+
+
+
+        var renderer = new THREE.WebGLRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+				var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.001, 1000 );
+				// var camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 0.001, 10000 );
+        var controls = new THREE.OrbitControls( camera,renderer.domElement );
+				controls.zoomSpeed = 0.5;
+
+				var sphereGeometry = new THREE.SphereGeometry(0.1,5,5);
+				var setsphereMaterial = new THREE.MeshPhongMaterial( { color: 0x00d9ff } );
+
+				var sphere_materials = new Array();
+				var allspheres = new Array();
+				var all_geometry = new Array()
+				var geometry_chr1 = new THREE.Geometry()
+				geometry_chr1.vertices = [];
+				var geometry_chr2 = new THREE.Geometry()
+				geometry_chr2.vertices = [];
+				var geometry_chr3 = new THREE.Geometry()
+				geometry_chr3.vertices = [];
+				var geometry_chr4 = new THREE.Geometry()
+				geometry_chr4.vertices = [];
+				var geometry_chr5 = new THREE.Geometry()
+				geometry_chr5.vertices = [];
+				var geometry_chr6 = new THREE.Geometry()
+				geometry_chr6.vertices = [];
+				var geometry_chr7 = new THREE.Geometry()
+				geometry_chr7.vertices = [];
+				var geometry_chr8 = new THREE.Geometry()
+				geometry_chr8.vertices = [];
+				var geometry_chr9 = new THREE.Geometry()
+				geometry_chr9.vertices = [];
+				var geometry_chr10 = new THREE.Geometry()
+				geometry_chr10.vertices = [];
+				var geometry_chr11 = new THREE.Geometry()
+				geometry_chr11.vertices = [];
+				var geometry_chr12 = new THREE.Geometry()
+				geometry_chr12.vertices = [];
+				var geometry_chr13 = new THREE.Geometry()
+				geometry_chr13.vertices = [];
+				var geometry_chr14 = new THREE.Geometry()
+				geometry_chr14.vertices = [];
+				var geometry_chr15 = new THREE.Geometry()
+				geometry_chr15.vertices = [];
+				var geometry_chr16 = new THREE.Geometry()
+				geometry_chr16.vertices = [];
+				var geometry_chr17 = new THREE.Geometry()
+				geometry_chr17.vertices = [];
+				var geometry_chr18 = new THREE.Geometry()
+				geometry_chr18.vertices = [];
+				var geometry_chr19 = new THREE.Geometry()
+				geometry_chr19.vertices = [];
+				var geometry_chr20 = new THREE.Geometry()
+				geometry_chr20.vertices = [];
+				var geometry_chr21 = new THREE.Geometry()
+				geometry_chr21.vertices = [];
+				var geometry_chr22 = new THREE.Geometry()
+				geometry_chr22.vertices = [];
+
+
+				var data_loc = 'https://raw.githubusercontent.com/primus00/jsonhost/master/dummy_chromatin_str.txt';
+				var data_small = 'https://raw.githubusercontent.com/primus00/jsonhost/master/model.136.xyz';
+				var fixed_data = 'https://raw.githubusercontent.com/primus00/jsonhost/master/dummy_chromatin_str_fixed.txt';
+
+				jQuery.get(fixed_data, function(data) {
+								var chrdata = data;
+								// console.log(chrdata)
+								var lines = chrdata.split("\n")
+								// console.log(lines)
+								lines = lines.filter(function(line){return line})
+								// console.log(lines)
+
+								for (var i=1; i < lines.length - 1; ++i){
+									// console.log(lines[i].split(/\s/))
+
+									if (lines[i].split(/\s/)[0] !== '#'){
+										list_ = lines[i].split(/\s/);
+										if (parseInt(list_[0]) === 1){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr1.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 2){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr2.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 3){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr3.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 4){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr4.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 5){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr5.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 6){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr6.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 7){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr7.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 8){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr8.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 9){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr9.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 10){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr10.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 11){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr11.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 12){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr12.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 13){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr13.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 14){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr14.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 15){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr15.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 16){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr16.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 17){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr17.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 18){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr18.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 19){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr19.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 20){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr20.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 21){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr21.vertices.push(chr_center)
+											}
+										if (parseInt(list_[0]) === 22){
+												var chr_center = new THREE.Vector3(parseFloat(list_[2]), parseFloat(list_[3]), parseFloat(list_[4]))
+												geometry_chr22.vertices.push(chr_center)
+											}
+										// console.log("dbhsdbhj")
+
+										}
+									};
+				all_geometry.push([
+					geometry_chr1,
+					geometry_chr2,
+					geometry_chr3,
+					geometry_chr4,
+					geometry_chr5,
+					geometry_chr6,
+					geometry_chr7,
+					geometry_chr8,
+					geometry_chr9,
+					geometry_chr10,
+					geometry_chr11,
+					geometry_chr12,
+					geometry_chr13,
+					geometry_chr14,
+					geometry_chr15,
+					geometry_chr16,
+					geometry_chr17,
+					geometry_chr18,
+					geometry_chr19,
+					geometry_chr20,
+					geometry_chr21,
+					geometry_chr22,
+				]);
+
+
+
+
+
+
+
+        var sphereMaterial_chr1 = new THREE.MeshBasicMaterial({color: 0x99EBEE,opacity:1});
+				var sphereMaterial_chr2 = new THREE.MeshBasicMaterial({color: 0xC0392B,opacity:1});
+				var sphereMaterial_chr3 = new THREE.MeshBasicMaterial({color: 0x9B59B6,opacity:1});
+				var sphereMaterial_chr4 = new THREE.MeshBasicMaterial({color: 0x2980B9,opacity:1});
+				var sphereMaterial_chr5 = new THREE.MeshBasicMaterial({color: 0x1ABC9C,opacity:1});
+				var sphereMaterial_chr6 = new THREE.MeshBasicMaterial({color: 0xF1C40F,opacity:1});
+				var sphereMaterial_chr7 = new THREE.MeshBasicMaterial({color: 0xD35400,opacity:1});
+				var sphereMaterial_chr8 = new THREE.MeshBasicMaterial({color: 0xFF00FF,opacity:1});
+				var sphereMaterial_chr9 = new THREE.MeshBasicMaterial({color: 0x7CFC00,opacity:1});
+				var sphereMaterial_chr10 = new THREE.MeshBasicMaterial({color: 0x00FFFF,opacity:1});
+				var sphereMaterial_chr11 = new THREE.MeshBasicMaterial({color: 0xFFC0CB,opacity:1});
+				var sphereMaterial_chr12 = new THREE.MeshBasicMaterial({color: 0xFFDEAD,opacity:1});
+				var sphereMaterial_chr13 = new THREE.MeshBasicMaterial({color: 0xDAA520,opacity:1});
+				var sphereMaterial_chr14 = new THREE.MeshBasicMaterial({color: 0xCCCCFF,opacity:1});
+				var sphereMaterial_chr15 = new THREE.MeshBasicMaterial({color: 0x7A5180,opacity:1});
+				var sphereMaterial_chr16 = new THREE.MeshBasicMaterial({color: 0x8BBCD1,opacity:1});
+				var sphereMaterial_chr17 = new THREE.MeshBasicMaterial({color: 0xD8F6A5,opacity:1});
+				var sphereMaterial_chr18 = new THREE.MeshBasicMaterial({color: 0xC49474,opacity:1});
+				var sphereMaterial_chr19 = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
+				var sphereMaterial_chr20 = new THREE.MeshBasicMaterial({color: 0x9C5C98,opacity:1});
+				var sphereMaterial_chr21 = new THREE.MeshBasicMaterial({color: 0x57FF57,opacity:1});
+				var sphereMaterial_chr22 = new THREE.MeshBasicMaterial({color: 0xE1F799,opacity:1});
+
+				sphere_materials.push([
+					sphereMaterial_chr1,
+					sphereMaterial_chr2,
+					sphereMaterial_chr3,
+					sphereMaterial_chr4,
+					sphereMaterial_chr5,
+					sphereMaterial_chr6,
+					sphereMaterial_chr7,
+					sphereMaterial_chr8,
+					sphereMaterial_chr9,
+					sphereMaterial_chr10,
+					sphereMaterial_chr11,
+					sphereMaterial_chr12,
+					sphereMaterial_chr13,
+					sphereMaterial_chr14,
+					sphereMaterial_chr15,
+					sphereMaterial_chr16,
+					sphereMaterial_chr17,
+					sphereMaterial_chr18,
+					sphereMaterial_chr19,
+					sphereMaterial_chr20,
+					sphereMaterial_chr21,
+					sphereMaterial_chr22,
+				])
+
+				var setsphereMaterial = new THREE.MeshPhongMaterial( { color: 0x00d9ff } );
+				var material = new THREE.LineBasicMaterial( { color: 0x0000ff,
+                                                      linewidth: 5,
+                                                      linecap:'round',
+                                                      linejoin:'round'} );
+
+        var line_chr1 = new THREE.Line( geometry_chr1, sphereMaterial_chr1 );
+				line_chr1.name = "Chromosome 1";
+        scene.add(line_chr1);
+
+				var line_chr2 = new THREE.Line( geometry_chr2, sphereMaterial_chr2 );
+				line_chr2.name = "Chromosome 2";
+        scene.add(line_chr2);
+
+				var line_chr3 = new THREE.Line( geometry_chr3, sphereMaterial_chr3 );
+				line_chr3.name = "Chromosome 3";
+        scene.add(line_chr3);
+
+
+				var line_chr4 = new THREE.Line( geometry_chr4, sphereMaterial_chr4 );
+				line_chr4.name = "Chromosome 4";
+        scene.add(line_chr4);
+
+
+				var line_chr5 = new THREE.Line( geometry_chr5, sphereMaterial_chr5 );
+				line_chr5.name = "Chromosome 5";
+        scene.add(line_chr5);
+
+
+				var line_chr6 = new THREE.Line( geometry_chr6, sphereMaterial_chr6 );
+				line_chr6.name = "Chromosome 6";
+        scene.add(line_chr6);
+
+				var line_chr7 = new THREE.Line( geometry_chr7, sphereMaterial_chr7 );
+				line_chr7.name = "Chromosome 7";
+        scene.add(line_chr7);
+
+				var line_chr8 = new THREE.Line( geometry_chr8, sphereMaterial_chr8 );
+				line_chr8.name = "Chromosome 8";
+        scene.add(line_chr8);
+
+				var line_chr9 = new THREE.Line( geometry_chr9, sphereMaterial_chr9 );
+				line_chr9.name = "Chromosome 9";
+        scene.add(line_chr9);
+
+				var line_chr10 = new THREE.Line( geometry_chr10, sphereMaterial_chr10 );
+				line_chr10.name = "Chromosome 10";
+        scene.add(line_chr10);
+
+				var line_chr11 = new THREE.Line( geometry_chr11, sphereMaterial_chr11 );
+				line_chr11.name = "Chromosome 11";
+        scene.add(line_chr11);
+
+				var line_chr12 = new THREE.Line( geometry_chr12, sphereMaterial_chr12 );
+				line_chr12.name = "Chromosome 12";
+        scene.add(line_chr12);
+
+				var line_chr13 = new THREE.Line( geometry_chr13, sphereMaterial_chr13 );
+				line_chr13.name = "Chromosome 13";
+        scene.add(line_chr13);
+
+				var line_chr14 = new THREE.Line( geometry_chr14, sphereMaterial_chr14 );
+				line_chr14.name = "Chromosome 14";
+        scene.add(line_chr14);
+
+				var line_chr15 = new THREE.Line( geometry_chr15, sphereMaterial_chr15 );
+				line_chr15.name = "Chromosome 15";
+        scene.add(line_chr15);
+
+				var line_chr16 = new THREE.Line( geometry_chr16, sphereMaterial_chr16 );
+				line_chr16.name = "Chromosome 16";
+        scene.add(line_chr16);
+
+				var line_chr17 = new THREE.Line( geometry_chr17, sphereMaterial_chr17 );
+				line_chr17.name = "Chromosome 17";
+        scene.add(line_chr17);
+
+				var line_chr18 = new THREE.Line( geometry_chr18, sphereMaterial_chr18 );
+				line_chr18.name = "Chromosome 18";
+        scene.add(line_chr18);
+
+				var line_chr19 = new THREE.Line( geometry_chr19, sphereMaterial_chr19 );
+				line_chr19.name = "Chromosome 19";
+        scene.add(line_chr19);
+
+				var line_chr20 = new THREE.Line( geometry_chr20, sphereMaterial_chr20 );
+				line_chr20.name = "Chromosome 20";
+        scene.add(line_chr20);
+
+				var line_chr21 = new THREE.Line( geometry_chr21, sphereMaterial_chr21 );
+				line_chr21.name = "Chromosome 21";
+        scene.add(line_chr21);
+
+				var line_chr22 = new THREE.Line( geometry_chr22, sphereMaterial_chr22 );
+				line_chr22.name = "Chromosome 22";
+        scene.add(line_chr22);
+
+				for (var j = 0; j <geometry_chr1.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr1);
+	        allspheres_.position.x = geometry_chr1.vertices[j].x;
+					allspheres_.position.y = geometry_chr1.vertices[j].y;
+					allspheres_.position.z = geometry_chr1.vertices[j].z;
+					allspheres_.name = "Chromosome 1 Atom no."+j;
+					allspheres_.userData = {annotation : "Chromosome 1 Atom no."+j, chrnum : 1};
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr2.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr2);
+	        allspheres_.position.x = geometry_chr2.vertices[j].x;
+					allspheres_.position.y = geometry_chr2.vertices[j].y;
+					allspheres_.position.z = geometry_chr2.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 2 Atom no."+j, chrnum : 2}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr3.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr3);
+	        allspheres_.position.x = geometry_chr3.vertices[j].x;
+					allspheres_.position.y = geometry_chr3.vertices[j].y;
+					allspheres_.position.z = geometry_chr3.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 3 Atom no."+j, chrnum : 3}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr4.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr4);
+	        allspheres_.position.x = geometry_chr4.vertices[j].x;
+					allspheres_.position.y = geometry_chr4.vertices[j].y;
+					allspheres_.position.z = geometry_chr4.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 4 Atom no."+j, chrnum : 4};
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr5.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr5);
+	        allspheres_.position.x = geometry_chr5.vertices[j].x;
+					allspheres_.position.y = geometry_chr5.vertices[j].y;
+					allspheres_.position.z = geometry_chr5.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 5 Atom no."+j, chrnum : 5}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr6.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr6);
+	        allspheres_.position.x = geometry_chr6.vertices[j].x;
+					allspheres_.position.y = geometry_chr6.vertices[j].y;
+					allspheres_.position.z = geometry_chr6.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 6 Atom no."+j, chrnum : 6}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+				for (var j = 0; j <geometry_chr7.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr7);
+	        allspheres_.position.x = geometry_chr7.vertices[j].x;
+					allspheres_.position.y = geometry_chr7.vertices[j].y;
+					allspheres_.position.z = geometry_chr7.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 7 Atom no."+j, chrnum : 7};
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr8.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr8);
+	        allspheres_.position.x = geometry_chr8.vertices[j].x;
+					allspheres_.position.y = geometry_chr8.vertices[j].y;
+					allspheres_.position.z = geometry_chr8.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 8 Atom no."+j, chrnum : 8}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr9.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr9);
+	        allspheres_.position.x = geometry_chr9.vertices[j].x;
+					allspheres_.position.y = geometry_chr9.vertices[j].y;
+					allspheres_.position.z = geometry_chr9.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 9 Atom no."+j, chrnum : 9}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr10.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr10);
+	        allspheres_.position.x = geometry_chr10.vertices[j].x;
+					allspheres_.position.y = geometry_chr10.vertices[j].y;
+					allspheres_.position.z = geometry_chr10.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 10 Atom no."+j, chrnum : 10};
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr11.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr11);
+	        allspheres_.position.x = geometry_chr11.vertices[j].x;
+					allspheres_.position.y = geometry_chr11.vertices[j].y;
+					allspheres_.position.z = geometry_chr11.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 11 Atom no."+j, chrnum : 11}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr12.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr12);
+	        allspheres_.position.x = geometry_chr12.vertices[j].x;
+					allspheres_.position.y = geometry_chr12.vertices[j].y;
+					allspheres_.position.z = geometry_chr12.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 12 Atom no."+j, chrnum : 12}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr13.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr13);
+	        allspheres_.position.x = geometry_chr13.vertices[j].x;
+					allspheres_.position.y = geometry_chr13.vertices[j].y;
+					allspheres_.position.z = geometry_chr13.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 13 Atom no."+j, chrnum : 13};
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr14.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr14);
+	        allspheres_.position.x = geometry_chr14.vertices[j].x;
+					allspheres_.position.y = geometry_chr14.vertices[j].y;
+					allspheres_.position.z = geometry_chr14.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 14 Atom no."+j, chrnum : 14}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr15.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr15);
+	        allspheres_.position.x = geometry_chr15.vertices[j].x;
+					allspheres_.position.y = geometry_chr15.vertices[j].y;
+					allspheres_.position.z = geometry_chr15.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 15 Atom no."+j, chrnum : 15}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr16.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr16);
+	        allspheres_.position.x = geometry_chr16.vertices[j].x;
+					allspheres_.position.y = geometry_chr16.vertices[j].y;
+					allspheres_.position.z = geometry_chr16.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 16 Atom no."+j, chrnum : 16};
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr17.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr17);
+	        allspheres_.position.x = geometry_chr17.vertices[j].x;
+					allspheres_.position.y = geometry_chr17.vertices[j].y;
+					allspheres_.position.z = geometry_chr17.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 17 Atom no."+j, chrnum : 17}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr18.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr18);
+	        allspheres_.position.x = geometry_chr18.vertices[j].x;
+					allspheres_.position.y = geometry_chr18.vertices[j].y;
+					allspheres_.position.z = geometry_chr18.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 18 Atom no."+j, chrnum : 18}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr19.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr19);
+	        allspheres_.position.x = geometry_chr19.vertices[j].x;
+					allspheres_.position.y = geometry_chr19.vertices[j].y;
+					allspheres_.position.z = geometry_chr19.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 19 Atom no."+j, chrnum : 19};
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr20.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr20);
+	        allspheres_.position.x = geometry_chr20.vertices[j].x;
+					allspheres_.position.y = geometry_chr20.vertices[j].y;
+					allspheres_.position.z = geometry_chr20.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 20 Atom no."+j, chrnum : 20}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr21.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr21);
+	        allspheres_.position.x = geometry_chr21.vertices[j].x;
+					allspheres_.position.y = geometry_chr21.vertices[j].y;
+					allspheres_.position.z = geometry_chr21.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 21 Atom no."+j, chrnum : 21}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+				for (var j = 0; j <geometry_chr22.vertices.length -1; ++j){
+					var allspheres_ = new THREE.Mesh(sphereGeometry,sphereMaterial_chr22);
+	        allspheres_.position.x = geometry_chr22.vertices[j].x;
+					allspheres_.position.y = geometry_chr22.vertices[j].y;
+					allspheres_.position.z = geometry_chr22.vertices[j].z;
+					allspheres_.name = "#Chr";
+					allspheres_.userData = {annotation : "Chromosome 22 Atom no."+j, chrnum : 22}
+					allspheres.push(allspheres_)
+					scene.add(allspheres_);
+					allspheres[j].updateMatrix();
+ 				  allspheres[j].matrixAutoUpdate=false;
+
+				}
+
+        var gridXZ = new THREE.GridHelper(10, 1);
+        var axes = new THREE.AxesHelper(2);
+        // scene.add(axes);
+        // scene.add(gridXZ);
+
+        // scene.add(sphere);
+        // scene.add(sphere2);
+
+				document.addEventListener('mousedown', onDocumentMouseDown, false);
+				document.addEventListener('mousemove', onDocumentMouseMove, false);
+
+
+        //controls.update() must be called after any manual changes to the camera's transform
+        camera.position.set( 0, 120, 0 );
+        controls.update();
+
+
+  			var render = function () {
+          requestAnimationFrame( render );
+          // controls.autoRotate(true);
+          controls.update();
+          renderer.render( scene, camera );
+  			};
+				//uncoment thisline to for visulisation
+				render()
+
+				});
+
+				function removelinetype(){
+					var selectedObject1 = scene.getObjectByName("Chromosome 1");
+					scene.remove( selectedObject1 );
+					var selectedObject2 = scene.getObjectByName("Chromosome 2");
+					scene.remove( selectedObject2 );
+					var selectedObject3 = scene.getObjectByName("Chromosome 3");
+					scene.remove( selectedObject3 );
+					var selectedObject4 = scene.getObjectByName("Chromosome 4");
+					scene.remove( selectedObject4 );
+					var selectedObject5 = scene.getObjectByName("Chromosome 5");
+					scene.remove( selectedObject5 );
+					var selectedObject6 = scene.getObjectByName("Chromosome 6");
+					scene.remove( selectedObject6 );
+					var selectedObject7 = scene.getObjectByName("Chromosome 7");
+					scene.remove( selectedObject7 );
+					var selectedObject8 = scene.getObjectByName("Chromosome 8");
+					scene.remove( selectedObject8 );
+					var selectedObject9 = scene.getObjectByName("Chromosome 9");
+					scene.remove( selectedObject9 );
+					var selectedObject10 = scene.getObjectByName("Chromosome 10");
+					scene.remove( selectedObject10 );
+					var selectedObject11 = scene.getObjectByName("Chromosome 11");
+					scene.remove( selectedObject11 );
+					var selectedObject12 = scene.getObjectByName("Chromosome 12");
+					scene.remove( selectedObject12 );
+					var selectedObject13 = scene.getObjectByName("Chromosome 13");
+					scene.remove( selectedObject13 );
+					var selectedObject14 = scene.getObjectByName("Chromosome 14");
+					scene.remove( selectedObject14 );
+					var selectedObject15 = scene.getObjectByName("Chromosome 15");
+					scene.remove( selectedObject15 );
+					var selectedObject16 = scene.getObjectByName("Chromosome 16");
+					scene.remove( selectedObject16 );
+					var selectedObject17 = scene.getObjectByName("Chromosome 17");
+					scene.remove( selectedObject17 );
+					var selectedObject18 = scene.getObjectByName("Chromosome 18");
+					scene.remove( selectedObject18 );
+					var selectedObject19 = scene.getObjectByName("Chromosome 19");
+					scene.remove( selectedObject19 );
+					var selectedObject20 = scene.getObjectByName("Chromosome 20");
+					scene.remove( selectedObject20 );
+					var selectedObject21 = scene.getObjectByName("Chromosome 21");
+					scene.remove( selectedObject21 );
+					var selectedObject22 = scene.getObjectByName("Chromosome 22");
+					scene.remove( selectedObject22 );
+				};
+				function removeatomtype(){
+					var selectedObject = scene.getObjectByName("chr1");
+					scene.remove( selectedObject )
+				}
+				function removeatomtypeall(){
+					while(scene.getObjectByName("#Chr", 'true')){
+						var selectedObject = scene.getObjectByName("#Chr");
+						scene.remove( selectedObject )
+					}
+				}
+				function changelinetype(){
+					removelinetype();
+				var numpoints =100000,
+				spline = new THREE.CatmullRomCurve3(geometry_chr1.vertices)
+
+				var material = new THREE.LineBasicMaterial({
+				    color: 0xff00f0,
+				});
+
+				var geometry_ = new THREE.Geometry();
+				var splinePoints = spline.getPoints(numpoints);
+
+				for(var i = 0; i < splinePoints.length; i++){
+				    geometry_.vertices.push(splinePoints[i]);
+				}
+
+				var line = new THREE.Line(geometry_, material);
+				scene.add(line);
+
+				};
+				var intersected = [];
+				function onDocumentMouseMove(event) {
+
+				    event.preventDefault();
+
+						mouseYOnMouseDown = - ( event.clientY / window.innerHeight ) * 2 + 1
+				    mouseXOnMouseDown = ( event.clientX / window.innerWidth ) * 2 - 1;
+
+				    var vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
+				    vector = vector.unproject(camera);
+
+				    var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+				    var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
+
+						// console.log(intersects);
+						var setsphereGeometry = new THREE.SphereGeometry(2,50,50);
+						var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
+		        var setsphereMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00,opacity:1});
+
+						var istooltipexist = document.getElementById('tooltip-name');
+
+						if(intersects.length>0){
+							console.log(intersects[0].object.name.slice(0,11));
+							if (intersects[0].object.name === '#Chr'){
+								if (intersected.length > 0) {
+									console.log(intersects[0]);
+									intersected[0].object.material = sphere_materials[0][parseInt(intersects[0].object.userData.chrnum)-1];
+									// console.log(mouseYOnMouseDown, mouseXOnMouseDown)
+								}
+								istooltipexist.innerHTML = intersects[0].object.userData.annotation;
+								intersects[0].object.material = setsphereMaterial;
+								intersected[0] = intersects[0];
+							}
+						}
+						else{
+							istooltipexist.innerHTML = "";
+						}
+
+				}
+
+
+				function onDocumentMouseDown(event) {
+
+				    event.preventDefault();
+
+				    mouseYOnMouseDown = - ( event.clientY / window.innerHeight ) * 2 + 1
+				    mouseXOnMouseDown = ( event.clientX / window.innerWidth ) * 2 - 1;
+
+				    var vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
+				    vector = vector.unproject(camera);
+
+				    var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+				    var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
+
+				    // console.log(intersects)
+
+				}
+
+				function rotate() {
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 5;
+            controls.update()
+        }
+				function rotateoff() {
+            controls.autoRotate = false;
+            controls.update()
+        }
+
+				function rotateoff() {
+            controls.autoRotate = false;
+            controls.update()
+        }
+
+				function try_() {
+					var selectedObject = scene.getObjectByName("Chromosome 1 Atom no.1",true);
+					// scene.remove( selectedObject )
+					console.log(selectedObject)
+					camera.position.sub(selectedObject.position).setLength(10).add(selectedObject.position);
+					selectedObject.geometry.boundingSphere.radius = 5;
+        }
+
+				picker.set('rgb(0, 0, 0)');
+				picker.on("change", function(color_) {
+							scene.background = new THREE.Color("#"+ color_ );
+					});
+				// scene.background = new THREE.Color( 0x000000 );
+
+				var checkbox = document.getElementsByName("chr");
+
+				checkboxArray = Array.from( checkbox );
+
+				function confirmunCheck(checkbox) {
+					  if (this.checked === false) {
+							chrnum = checkbox.target.id.slice(3,);
+							var selectedObject = scene.getObjectByName("Chromosome "+chrnum);
+							scene.remove( selectedObject );
+							removeatomtypeall();
+							// console.log(chrnum);
+					  }
+						else if (this.checked) {
+							console.log("jdnjfnvjdsn")
+							chrnum = checkbox.target.id.slice(3,);
+							var selectedObject = scene.getObjectByName("Chromosome "+chrnum);
+							var line_chr = new THREE.Line( all_geometry[0][parseInt(chrnum)-1], sphere_materials[0][parseInt(chrnum)-1] );
+							line_chr.name = "Chromosome "+chrnum;
+			        scene.add(line_chr);
+
+							for (var j = 0; j <all_geometry[0][parseInt(chrnum)-1].vertices.length -1; ++j){
+								var allspheres_ = new THREE.Mesh(sphereGeometry,sphere_materials[0][parseInt(chrnum)-1], sphere_materials[0][parseInt(chrnum)-1]);
+				        allspheres_.position.x =all_geometry[0][parseInt(chrnum)-1].vertices[j].x;
+								allspheres_.position.y = all_geometry[0][parseInt(chrnum)-1].vertices[j].y;
+								allspheres_.position.z = all_geometry[0][parseInt(chrnum)-1].vertices[j].z;
+								allspheres_.name = "#Chr";
+								allspheres_.userData = {annotation : "Chromosome "+chrnum+" Atom no."+j,chrnum:parseInt(chrnum)};
+								allspheres.push(allspheres_)
+								scene.add(allspheres_);
+								allspheres[j].updateMatrix();
+			 				  allspheres[j].matrixAutoUpdate=false;
+
+							}
+
+					  }
+					}
+				checkboxArray.forEach(function(checkbox) {
+					  checkbox.addEventListener('change', confirmunCheck);
+					});
+      }
+
+
+      else {
+      	var warning = WEBGL.getWebGLErrorMessage();
+      	document.getElementById( 'container' ).appendChild( warning );
+      }
+		</script>
+
+		<!-- General function not related to threejs -->
+		<script>
+		</script>
+
+	</body>
+</html>
