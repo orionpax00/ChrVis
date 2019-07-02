@@ -1,0 +1,11 @@
+{
+  "parameters":{
+    "3d_str_params":{
+      "interpolate":true,
+      "anomaly_detection":true,
+      "extra_annotation":true,
+    },
+    "3d_net_param" : { ... },
+    "network_graph_param" : { ... }
+  }
+}
