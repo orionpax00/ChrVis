@@ -4,6 +4,7 @@
 		<title>three.js webgl - clipping planes</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 		<style>
 			body {
 				margin: 0px;
@@ -12,9 +13,14 @@
 			}
 			#tooltip {
 					position:absolute;
+					left:20px;
+					top:20px;
+					background-color: black;
+					opacity:0.7;
 			}
 			#tooltip span{
 					color:#fff;
+					font-family: 'Cinzel', sans-serif;
 			}
 			canvas{
 				background-color: #ffffff !important
@@ -46,6 +52,8 @@
 		<script src='js/LineSegments2.js'></script>
 		<script src='js/Line2.js'></script>
 		<script src='js/labels.js'></script>
+		<script src='js/clickevent.js'></script>
+		<script src='js/gui.js'></script>
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
 	  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -59,8 +67,13 @@
 			var insetWidth;
 			var insetHeight;
 			var matLine;
-			var r
-			var thick_line
+			var r;
+			var thick_line;
+			var geneGroup;
+			var globalPlane;
+			var helper;
+			var helpers;
+			var materialSphere;
 
 
 
@@ -116,7 +129,7 @@
 				// ***** Clipping planes: *****
 
 				var localPlane = new THREE.Plane( new THREE.Vector3( 0, - 1, 0 ), 0.8 );
-				var globalPlane = new THREE.Plane( new THREE.Vector3( - 1, 0, 0 ), 1 );
+				globalPlane = new THREE.Plane( new THREE.Vector3( - 1, 0, 0 ), 1 );
 
 				// Position and Color Data
 
@@ -200,6 +213,7 @@
 					vertexColors: THREE.VertexColors,
 					dashed: false,
 					transparent :true,
+					name : "line",
 				} );
 				matLine.clipping = true;
 
@@ -209,12 +223,13 @@
 
 				thick_line = new THREE.Line2( geometry, matLine );
 				thick_line.computeLineDistances();
-				thick_line.visible = true;
-				thick_line.name = "line"
+				// matLine.name = "line"
+				// matLine.uniformsNeedUpdate = true;
+				// matLine.needsUpdate = true;
 				// thick_line.material.lights = true;
 				scene.add(thick_line)
 
-				var helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxBufferGeometry( r, r, r ) ) );
+				helper = new THREE.BoxHelper( new THREE.Mesh( new THREE.BoxBufferGeometry( r, r, r ) ) );
 				helper.material.color.setHex( 0xffffff);
 				helper.material.opacity = 0.25;
 				helper.material.blending = THREE.AdditiveBlending;
@@ -222,7 +237,10 @@
 				scene.add( helper );
 
 				var geometrySphere = new THREE.SphereGeometry( 0.1, 5,5 );
-				var materialSphere = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+				materialSphere = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+
+
+				geneGroup = new THREE.Group();
 
 				for (var i = 0 ; i < data_.annot_name.length; ++i ){
 
@@ -232,16 +250,19 @@
 					z1 = parseFloat(data_.annot_position[i][2])+centerz;
 
 					sphere.position.set(x1,y1,z1);
+					sphere.name = "gene"
 					sphere.userData.name = data_.annot_name[i]
-					scene.add( sphere );
+					geneGroup.add( sphere );
 				}
+
+				scene.add(geneGroup)
 
 				// var light = new THREE.PointLight( 0xff0000, 1, 100 );
 				// light.position.set( 50, 50, 50 );
 				// scene.add( light );
 
 
-				var helpers = new THREE.Group();
+				helpers = new THREE.Group();
 				helpers.add( new THREE.PlaneHelper( globalPlane, r, 0xf00f00 ) );
 				helper.material.opacity = 0.25;
 				helpers.visible = false;
@@ -261,135 +282,11 @@
 
 				document.addEventListener('mouseup', onDocumentMouseDown, false);
 
-				var gui = new dat.GUI(),
-
-					folderGlobal = gui.addFolder( 'Clipping' ),
-					propsGlobal = {
-
-						get 'Enabled'() {
-							return !matLine.clipping;
-						},
-
-						set 'Enabled'( v ) {
-							matLine.clippingPlanes = [globalPlane] ;
-							materialSphere.clippingPlanes = [globalPlane] ;
-						},
-
-						get 'Plane'() {
-							return globalPlane.constant;
-						},
-
-						set 'Plane'( v ) {
-							globalPlane.constant = v;
-						}
-
-					};
-
-					folderplane = gui.addFolder( 'Helper Plane' ),
-					propsplane = {
-
-						get 'Enabled'() {
-							return helpers.visible;
-						},
-
-						set 'Enabled'( v ) {
-							console.log(v);
-							helpers.visible = v;
-						},
-					};
-
-				folderGlobal.add( propsGlobal, 'Enabled' );
-				folderGlobal.add( propsGlobal, 'Plane', - r/2, r/2 );
-				folderplane.add( propsplane, 'Enabled' );
-
-				// Start
-
-				startTime = Date.now();
+				initGUI();
 
 			}
 
-			// function onDocumentMouseMove(event) {
-			//
-			// 		event.preventDefault();
-			//
-			// 		mouseYOnMouseDown = - ( event.clientY / window.innerHeight ) * 2 + 1
-			// 		mouseXOnMouseDown = ( event.clientX / window.innerWidth ) * 2 - 1;
-			//
-			// 		var vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
-			// 		vector = vector.unproject(camera);
-			//
-			// 		var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
-			// 		var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
-			//
-			// 		// console.log(intersects);
-			// 		var setsphereGeometry = new THREE.SphereGeometry(2,50,50);
-			// 		var sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000,opacity:1});
-			// 		var setsphereMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00,opacity:1});
-			//
-			// 		var istooltipexist = document.getElementById('tooltip-name');
-			//
-			// 		if(intersects.length>0){
-			// 			console.log(intersects[0].object.name.slice(0,11));
-			// 			if (intersects[0].object.name === '#Chr'){
-			// 				if (intersected.length > 0) {
-			// 					console.log(intersects[0]);
-			// 					intersected[0].object.material = sphere_materials[0][parseInt(intersects[0].object.userData.chrnum)-1];
-			// 					// console.log(mouseYOnMouseDown, mouseXOnMouseDown)
-			// 				}
-			// 				istooltipexist.innerHTML = intersects[0].object.userData.annotation;
-			// 				intersects[0].object.material = setsphereMaterial;
-			// 				intersected[0] = intersects[0];
-			// 			}
-			// 		}
-			// 		else{
-			// 			istooltipexist.innerHTML = "";
-			// 		}
-			//
-			// }
 
-
-			function onDocumentMouseDown(event) {
-
-					event.preventDefault();
-
-					mouseYOnMouseDown = - ( event.clientY / window.innerHeight ) * 2 + 1
-					mouseXOnMouseDown = ( event.clientX / window.innerWidth ) * 2 - 1;
-
-					var vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
-					vector = vector.unproject(camera);
-
-					var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
-					var intersects = raycaster.intersectObjects(scene.children, true); // Circle element which you want to identify
-
-					if (intersects[0]){
-						console.log(intersects[0])
-						var lineObject = scene.getObjectByName( "line" );
-						console.log(thick_line);
-						thick_line.material.linewidth = 0.1;
-						thick_line.material.vertexColors = "";
-						thick_line.material.color.setHex( 0xffffff );
-						// thick_line.material.lights = true;
-
-						var ringObject = scene.getObjectByName( "ring" );
-						scene.remove(ringObject)
-
-
-
-						var geometry = new THREE.RingGeometry( 0.5, 0.55, 32 );
-						var material = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.DoubleSide } );
-						var mesh = new THREE.Mesh( geometry, material );
-						mesh.name = "ring"
-						mesh.position.set(intersects[0].object.position.x, intersects[0].object.position.y, intersects[0].object.position.z)
-						// console.log(intersects[0].object.position.x)
-						scene.add(mesh)
-
-						var tootlip = document.getElementById('tooltip');
-						tooltip.innerHTML = "<span>"+ intersects[0].object.userData.name +"</span>";
-					}
-
-
-
-			}
 
 
 			function onWindowResize() {
