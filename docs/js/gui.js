@@ -1,5 +1,7 @@
 function initGUI(){
+  var is_clipping=true;
   var gui = new dat.GUI(),
+
 
   folderChromosome= gui.addFolder( 'Chromosome' ),
   propsChromosome = {
@@ -27,10 +29,11 @@ function initGUI(){
     propsGlobal = {
 
       get 'Enabled'() {
-        return !matLine.clipping;
+        return !is_clipping;
       },
 
       set 'Enabled'( v ) {
+        is_clipping = false;
         matLine.clippingPlanes = [globalPlane] ;
         materialSphere.clippingPlanes = [globalPlane] ;
         console.log(thick_line)

@@ -3,9 +3,10 @@ function onDocumentMouseDown(event) {
     var isdone = false
 
 if (!isdone){
-    requestAnimationFrame( onDocumentMouseDown );
+    // requestAnimationFrame( onDocumentMouseDown );
 
-    // event.preventDefault();
+    event.preventDefault();
+
 
     isdone = true;
 
@@ -71,7 +72,7 @@ if (!isdone){
 
 
       // console.log(thick_line);
-      thick_line.material.linewidth = 0.05;
+      thick_line.material.linewidth = 1;
       // thick_line.material.wireframe = true;
       // thick_line.material.wireframeLinewidth = 0.2;
       thick_line.material.color.setHex( 0xffffff );
@@ -92,6 +93,7 @@ if (!isdone){
 
       var tootlip = document.getElementById('tooltip');
       tooltip.innerHTML = "<span> Gene Name: "+ intersects[0].object.userData.name + "<br /> Length form origin: " + length.toFixed(3) + "<br /> Present on Chromosome: " + Math.floor(Math.random() * Math.floor(23)) + "</span>";
+      nav_geneclicked()
     }
 
 
