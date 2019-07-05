@@ -30,14 +30,14 @@
       arrowStrikethrough: true,
       chosen: true,
       color: {
-        color:'red',
-        highlight:'yellow',
+        color:'#ccc',
+        highlight:'green',
         hover: '#ff00ff',
         inherit: 'from',
-        opacity:1.0,
+        opacity:0.3,
       },
       scaling:{
-        max:5,
+        max:1,
       },
       smooth:{
         enabled:false
@@ -143,7 +143,7 @@
       },
 
     physics: {
-      enabled: true,
+      enabled: false,
       barnesHut: {
         gravitationalConstant: -2000,
         centralGravity: 0.3,
@@ -176,7 +176,7 @@
       },
       maxVelocity: 50,
       minVelocity: 0.1,
-      solver: 'barnesHut',
+      solver: 'forceAtlas2Based',
       stabilization: {
         enabled: true,
         iterations: 100,
