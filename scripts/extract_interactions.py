@@ -6,7 +6,7 @@ import math
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-file_loc = 'mprobc_100kb.txt'
+file_loc = '../../mprobc_250kb.txt'
 
 with open(file_loc) as input_:
     stripped = [line.strip() for line in input_]
@@ -22,12 +22,12 @@ for counter,line in enumerate(lines[1:]):
     final_list.append(new_list)
 
 
-with open('mprobc_100kb.csv', 'wt') as out_file:
+with open('../../mprobc_250kb.csv', 'wt') as out_file:
     tsv_writer = csv.writer(out_file, delimiter=',')
     for i in final_list:
         tsv_writer.writerow(i)
 
-df = pd.read_csv('mprobc_100kb.csv',delimiter=',',header=None,index_col=None)
+df = pd.read_csv('../../mprobc_250kb.csv',delimiter=',',header=None,index_col=None)
 header = df.pop(0)
 
 scaler = MinMaxScaler()
