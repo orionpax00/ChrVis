@@ -1,0 +1,209 @@
+<!doctype html>
+<HTML>
+<HEAD>
+  <meta charset="utf-8" />
+  <TITLE>Dummy Network</TITLE>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+  <style type="text/css">
+    #mynetwork {
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+</HEAD>
+<BODY>
+<div id="mynetwork"></div>
+<div id="networkJSON-results" class="results" style="display:none"></div>
+
+<script type="text/javascript">
+
+  var options = {
+    edges: {
+      // arrows: {
+      //   to: {enabled: true, scaleFactor:0.75, type:'arrow'},
+      //   middle: {enabled: false, scaleFactor:1, type:'arrow'},
+      //   from: {enabled: true, scaleFactor:0.3, type:'arrow'}
+      // },
+      arrowStrikethrough: true,
+      chosen: true,
+      color: {
+        color:'#ccc',
+        highlight:'green',
+        hover: '#ff00ff',
+        inherit: 'from',
+        opacity:0.3,
+      },
+      scaling:{
+        max:1,
+      },
+      smooth:{
+        enabled:false
+      },
+      dashes: false,
+      font: {
+        color: '#343434',
+        size: 14, // px
+        face: 'arial',
+        background: 'none',
+        strokeWidth: 2, // px
+        strokeColor: '#ffffff',
+        align: 'horizontal',
+        multi: false,
+        vadjust: 0,
+        bold: {
+          color: '#343434',
+          size: 14, // px
+          face: 'arial',
+          vadjust: 0,
+          mod: 'bold'
+        },
+        ital: {
+          color: '#343434',
+          size: 14, // px
+          face: 'arial',
+          vadjust: 0,
+          mod: 'italic'
+        },
+        boldital: {
+          color: '#343434',
+          size: 14, // px
+          face: 'arial',
+          vadjust: 0,
+          mod: 'bold italic'
+        },
+        mono: {
+          color: '#343434',
+          size: 15, // px
+          face: 'courier new',
+          vadjust: 2,
+          mod: ''
+        }
+      },
+
+    },
+
+    nodes: {
+        shape: "circle",
+        size:0.5,
+        borderWidth:2,
+        color:{
+          background:"green",
+          border:"green",
+          hover : {
+            border:"#2B7CE9",
+            background:"#000000",
+          }
+        },
+        font: {
+
+          size: 5, // px
+          face: 'arial',
+          background: 'none',
+          strokeWidth: 0, // px
+          strokeColor: '#ffffff',
+          align: 'center',
+          multi: false,
+          vadjust: 0,
+          bold: {
+            color: '#343434',
+            size: 14, // px
+            face: 'arial',
+            vadjust: 0,
+            mod: 'bold'
+          },
+          ital: {
+            color: '#343434',
+            size: 14, // px
+            face: 'arial',
+            vadjust: 0,
+            mod: 'italic',
+          },
+          boldital: {
+            color: '#343434',
+            size: 14, // px
+            face: 'arial',
+            vadjust: 0,
+            mod: 'bold italic'
+          },
+          mono: {
+            color: '#343434',
+            size: 15, // px
+            face: 'courier new',
+            vadjust: 2,
+            mod: ''
+          }
+        },
+      },
+
+    layout: {
+        improvedLayout: false,
+      },
+
+    physics: {
+      enabled: true,
+      barnesHut: {
+        gravitationalConstant: -2000,
+        centralGravity: 0.3,
+        springLength: 17,
+        springConstant: 0.04,
+        damping: 0.09,
+        avoidOverlap: 0
+      },
+      forceAtlas2Based: {
+        gravitationalConstant: -50,
+        centralGravity: 0.01,
+        springConstant: 0.08,
+        springLength: 100,
+        damping: 0.4,
+        avoidOverlap: 0
+      },
+      repulsion: {
+        centralGravity: 0.2,
+        springLength: 200,
+        springConstant: 0.05,
+        nodeDistance: 100,
+        damping: 0.09
+      },
+      hierarchicalRepulsion: {
+        centralGravity: 0.0,
+        springLength: 100,
+        springConstant: 0.01,
+        nodeDistance: 120,
+        damping: 0.09
+      },
+      maxVelocity: 50,
+      minVelocity: 0.1,
+      solver: 'barnesHut',
+      stabilization: {
+        enabled: true,
+        iterations: 100,
+        updateInterval: 100,
+        onlyDynamicEdges: false,
+        fit: true
+      },
+      timestep: 0.5,
+      adaptiveTimestep: true
+    },
+    interaction:{
+      hover:true
+    }
+  };
+
+var json = $.getJSON("./test_visjs.json")
+  .done(function(data){
+    var data = {
+      nodes: data.nodes,
+      edges: data.edges
+    };
+    var network = new vis.Network(container, data, options);
+  });
+
+var container = document.getElementById('mynetwork');
+
+</script>
+
+</BODY>
+</HTML>
