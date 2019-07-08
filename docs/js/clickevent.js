@@ -51,15 +51,15 @@ if (!isdone){
       //normalize the direction vector (convert to vector of length 1)
       dir.normalize();
 
-      camera.position.x = x_;
-      camera.position.y = y_;
-      camera.position.z = z_;
-
-      camera.lookAt( scene.position );
-
-      camera.position.x *= 1.3;
-      camera.position.y *= 1.3;
-      camera.position.z *= 1.3;
+      // camera.position.x = x_;
+      // camera.position.y = y_;
+      // camera.position.z = z_;
+      //
+      // camera.lookAt( scene.position );
+      //
+      // camera.position.x *= 1.3;
+      // camera.position.y *= 1.3;
+      // camera.position.z *= 1.3;
 
       var origin = new THREE.Vector3( 0, 0, 0 );
       var length = Math.sqrt(x_ * x_ + y_ * y_ + z_ * z_);
