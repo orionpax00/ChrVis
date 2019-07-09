@@ -18,7 +18,7 @@
     Visualize your genome and analyse it :heart:
     <br />
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://github.com/orionpax00/ChrVis">View Demo</a>
     ·
     <a href="https://docs.google.com/document/d/13Xhju3PasUX4BQvZz-5Pi3nGKWL0ua7XiWhLqd7fJMI/edit?usp=sharing">Documentation</a>
     ·
