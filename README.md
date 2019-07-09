@@ -115,6 +115,8 @@ Distributed under the Apache License. See `LICENSE` for more information.
 ## Contact
 
 Durgesh Kumar  - dkumar@ce.iitr.ac.in
+るいす あうぐすと えいじ ながい - nagailae@hgc.jp
+朴　聖俊 (ぱく そんじゅん) - sjpark@ims.u-tokyo.ac.jp
 
 Project Link: [https://github.com/orionpax00/ChrVis](https://github.com/orionpax00/ChrVis)
 
