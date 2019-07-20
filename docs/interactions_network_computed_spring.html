@@ -1,6 +1,9 @@
 <html>
 <head>
 <style type="text/css">
+  body{
+    overflow-x: hidden; 
+  }
   #container {
     position: absolute;
     left:0px;
@@ -11,17 +14,18 @@
   }
 
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <link rel = "stylesheet"
    type = "text/css"
    href = "./css/drawer.css" />
 </head>
 <body>
-<div id="container"></div>
+<div id="container" ></div>
 
 <!-- Analysis results -->
-<div class="analysis_drawer">
-  <div id="node_details">
-    <H2></H2>
+<div class="analysis_drawer" >
+  <div id="node_details" >
+    <H2 class="animated bounce"></H2>
     <ul></ul>
       <!-- A table will be pushed here when any node will be selected -->
   </div>
@@ -85,6 +89,7 @@
       s.bind('clickNode', function(e) {
         $("#node_details ul").empty();
         $("#node_details H2").empty();
+        $(".analysis_drawer").css("right", "0px");
         var nodeId = e.data.node.id,
             toKeep = s.graph.neighbors(nodeId);
 
@@ -121,6 +126,7 @@
       s.bind('clickStage', function(e) {
         $("#node_details ul").empty();
         $("#node_details H2").empty();
+        $(".analysis_drawer").css("right", "-300px");
         s.graph.nodes().forEach(function(n) {
           n.color = n.originalColor;
         });
