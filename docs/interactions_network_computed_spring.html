@@ -2,7 +2,7 @@
 <head>
 <style type="text/css">
   body{
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
   #container {
     position: absolute;
@@ -43,6 +43,10 @@
   crossorigin="anonymous"></script>
 
 <script>
+
+    function handle_(e){
+      console.log(e.toString())
+    };
 
     sigma.classes.graph.addMethod('neighbors', function(nodeId) {
     var k,
@@ -100,7 +104,7 @@
           if (toKeep[n.id]){
             n.color = n.originalColor;
             if(n.label !== ""){
-              $("#node_details ul").append('<li>'+ n.label +'</li>');
+              $("#node_details ul").append('<li><button onclick=handle_('+n.id.toString()+')>'+ n.label +'</button></li>');
             }
           }
           else
