@@ -1,17 +1,29 @@
+li{
+  list-style: none;
+}
+#node_details h2{
+  margin-left: 20px;
+}
+#node_details ul{
+  margin-top: -10px;
+}
 .analysis_drawer{
   margin:0px;
   padding:0px;
   position:absolute;
-  right:0px;
+  right:-300px;
   top:0px;
   min-width: 300px;
   height:100vh;
+  overflow-y: scroll;
   background: #fff;
   -webkit-box-shadow: -9px 0px 5px -3px rgba(181,181,181,0.51);
   box-shadow: -9px 0px 5px -3px rgba(181,181,181,0.51);
   -moz-box-shadow: -9px 0px 5px -3px rgba(181,181,181,0.51);
+  -webkit-transition: right 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: right 0.3s;
 }
-.analysis_drawer::before {
+/* .analysis_drawer::before {
   content: "@";
   margin-left:-15px;
   margin-top:50px;
@@ -24,4 +36,4 @@
   -webkit-box-shadow: -9px 9px 5px -3px rgba(181,181,181,0.51);
   box-shadow: -9px 9px 5px -3px rgba(181,181,181,0.51);
   -moz-box-shadow: -9px 9px 5px -3px rgba(181,181,181,0.51);
-}
+} */

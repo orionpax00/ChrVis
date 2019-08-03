@@ -1,6 +1,9 @@
 <html>
 <head>
 <style type="text/css">
+  body{
+    overflow-x: hidden; 
+  }
   #container {
     position: absolute;
     left:0px;
@@ -9,18 +12,21 @@
     height: 100vh;
     margin: auto;
   }
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <link rel = "stylesheet"
    type = "text/css"
    href = "./css/drawer.css" />
 </head>
 <body>
-<div id="container"></div>
+<div id="container" ></div>
 
 <!-- Analysis results -->
-<div class="analysis_drawer">
-  <div class="drawer_pull"></div>
-  <div class="node_details">
+<div class="analysis_drawer" >
+  <div id="node_details" >
+    <H2 class="animated bounce"></H2>
+    <ul></ul>
       <!-- A table will be pushed here when any node will be selected -->
   </div>
 </div>
@@ -30,6 +36,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.parsers.json.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.parsers.gexf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.plugins.dragNodes.min.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 
 <script>
 
@@ -76,20 +87,28 @@
       // We do the same for the edges, and we only keep
       // edges that have both extremities colored.
       s.bind('clickNode', function(e) {
+        $("#node_details ul").empty();
+        $("#node_details H2").empty();
+        $(".analysis_drawer").css("right", "0px");
         var nodeId = e.data.node.id,
             toKeep = s.graph.neighbors(nodeId);
+
+        $("#node_details H2").append(nodeId);
         toKeep[nodeId] = e.data.node;
 
         s.graph.nodes().forEach(function(n) {
-          if (toKeep[n.id])
+          if (toKeep[n.id]){
             n.color = n.originalColor;
+            if(n.label !== ""){
+              $("#node_details ul").append('<li>'+ n.label +'</li>');
+            }
+          }
           else
             n.color = '#eee';
         });
 
         s.graph.edges().forEach(function(e) {
           if (toKeep[e.source] && toKeep[e.target]){
-            console.log(e);
             e.color = "#000";}
           else
             e.color = '#eee';
@@ -103,7 +122,11 @@
 
       // When the stage is clicked, we just color each
       // node and edge with its original color.
+
       s.bind('clickStage', function(e) {
+        $("#node_details ul").empty();
+        $("#node_details H2").empty();
+        $(".analysis_drawer").css("right", "-300px");
         s.graph.nodes().forEach(function(n) {
           n.color = n.originalColor;
         });
@@ -123,4 +146,6 @@
 
 </script>
 </body>
+
+
 </html>
