@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-  <img src="docs/img/submit_job.png" height=520 width=930>
+  <img src="report/images/social_image.png" height=600 width=930>
 </p>
 
 ChrVis is web suite to analyse and Visualize HiC data with a simple to use and elegant user interface and workflow.
