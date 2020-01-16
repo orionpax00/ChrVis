@@ -61,7 +61,7 @@ Completely with Python and Javascript and it's supporting libraries worth mentio
 
 <!-- GETTING STARTED -->
 ## Getting Started
-Follow the given commands and documentation to make run Dhadkan mobile app on to your local machine.
+Follow the given commands to make and run app on to your local machine.
 
 ### Prerequisites
 * Python 3.7 or above
