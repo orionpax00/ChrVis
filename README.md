@@ -1,4 +1,5 @@
 <!-- PROJECT SHIELDS -->
+[![Run on Repl.it](https://repl.it/badge/github/orionpax00/ChrVis)](https://repl.it/github/orionpax00/ChrVis)
 [![Build Status][build-shield]]()
 [![Contributors][contributors-shield]]()
 [![MIT License][license-shield]][license-url]
