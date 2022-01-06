@@ -1,6 +1,6 @@
 Django==2.2.1
 django-crispy-forms==1.7.2
-celery==4.3.0
+celery==5.2.2
 django-celery-results==1.1.2
 networkx==2.3
 pandas==0.24.2
